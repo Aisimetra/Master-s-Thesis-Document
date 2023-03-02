@@ -288,9 +288,7 @@
 % \pagenumbering{roman}
 \begin{titlepage}
   \begin{flushright}
-    \textit{E pensare che\\
-      mi iscrissi a informatica\\
-      per fare il sistemista!}
+    \textit{cose per ringraziare}
   \end{flushright}
 \end{titlepage}
 \newpage
@@ -306,218 +304,15 @@
   \tableofcontents
   \cleardoublepage
 }
-\chapter{Introduzione}
-Negli ultimi anni si è assistito a un cambio di paradigma nel campo della
-bioinformatica, ovvero il passaggio dallo studio della sequenza lineare di un
-singolo genoma a quello di un insieme di genomi, provenienti da un gran numero
-di individui, al fine di poter considerare anche le varianti
-geniche. Questo nuovo concetto è stato nominato per la prima volta, nel 2005,
-da Tettelin \cite{tettelin} con il termine di \textbf{pangenoma}. Grazie ai
-risultati ottenuti in pangenomica, ci sono stati miglioramenti sia nel 
-campo della biologia che in quello della medicina personalizzata, grazie al
-fatto che, con il pangenoma, si migliora la precisione della rappresentazione di
-multipli genomi e delle loro differenze. \\
-Il genoma umano di riferimento (GRCh38.p14) è composto da circa
-3.1 miliardi di basi, con più di 88 milioni di
-varianti tra i genomi sequenziati, secondo i risultati ottenuti nel 1000 Genome
-Project (1KGP) \cite{tutorial} \cite{1kgp}. Considerando come la quantità dei
-dati di sequenziamento sia destinata 
-ad aumentare esponenzialmente nei prossimi anni, grazie al
-miglioramento delle tecnologie di sequenziamento (Next Generation Sequencing e
-Third-Generation Sequencing), risulta necessaria la costruzione di algoritmi e
-strutture dati efficienti per gestire una tale informazione. 
-In merito, uno degli approcci più usati per rappresentare il pangenoma è un
-pannello di aplotipi \cite{pancon}, ovvero, computazionalmente, una matrice di
-$M$ righe, corrispondenti agli individui, e $N$ colonne, corrispondenti ai siti
-con le varianti. Si specifica che, con il termine
-aplotipo, si intende l'insieme di alleli, ovvero di varianti, che, a meno di
-mutazioni, un organismo eredita da ogni genitore.\\
-In questo contesto trova spazio uno dei problemi fondamentali della
-bioinformatica, ovvero quello del pattern matching. Inizialmente, tale concetto
-era relativo allo studio di un piccolo pattern all'interno di un testo di
-grandi dimensioni, ovvero il genoma di riferimento. Ora, con l'introduzione 
-del pangenoma, tale problema si è adattato alle nuove strutture
-dati.\\
-Lo scopo di questa tesi è ottimizzare il problema del pattern 
-matching, inteso come ricerca dei \textbf{set-maximal exact match}
-  ($\SMEM$) tra un aplotipo 
-esterno e un pannello di aplotipi, in una delle 
-strutture dati più utilizzata: la \textbf{trasformata di Burrows--Wheeler
-  Posizionale} ($\PBWT$) \cite{pbwt}. Il progetto di tesi ha quindi permesso lo
-sviluppo di 
-diverse strutture dati composte per la variante 
-\textbf{run-length encoded} della \textbf{PBWT} ($\RLPBWT$),
-efficienti dal punto di vista della memoria utilizzata.
-Tale progetto è stato svolto in
-collaborazione con due tra gli autori dei principali risultati ottenuti per la
-\textbf{trasformata di Burrows--Wheeler run-length encoded} ($\RLBWT$)
-\cite{rlbwt} 
-\cite{gagie2020} \cite{moni} \cite{phoni}: il 
-prof. Gagie (Dalhousie University) e la prof.ssa Boucher 
-(University of Florida).\\
-Parte delle strutture dati e degli algoritmi presentati in questa tesi sono
-inseriti in un articolo, dal titolo \textit{Compressed data structures for
-  population-scale positional Burrows--Wheeler transforms} \cite{rlpbwt}.
-Al
-momento della 
-stesura di questa tesi, tale articolo è in fase di review per la rivista
-\textit{Genome Research} (\textit{Cold Spring Harbor Laboratory Press}).
-\subsection*{Struttura della tesi}
-Nel Capitolo \ref{prechap}, si introdurranno i concetti di base, di ambito
-computazionale e bioinformatico, necessari a
-comprendere questa tesi. Nel Capitolo \ref{metchap}, verranno discussi i
-contributi di questa tesi, descrivendo le soluzioni algoritmiche e le
-metodologie utilizzate per raggiungere gli obiettivi prefissati. Nel dettaglio
-verranno presentate varie strutture dati che saranno le componenti necessarie
-alla produzione delle strutture dati composte per la $\RLPBWT$ e al calcolo
-degli $\SMEM$. Nel Capitolo 
-\ref{reschap}, si discuteranno i risultati ottenuti durante la
-sperimentazione sui dati reali della \textit{phase 3} del \textbf{1000 Genome
-  Project} \cite{1kgp}, progetto, iniziato nel 2008, che ha
-visto lo sforzo 
-della comunità scientifica internazionale per la catalogazione delle varianti
-geniche umane. Infine, nel Capitolo \ref{conchap}, si trarranno le conclusioni 
-di questo progetto di tesi, discutendone gli sviluppi futuri.
-\chapter{Preliminari}
-\label{prechap}
-In questo capitolo verranno specificati tutti i concetti fondamentali, allo
-stato dell'arte, atti a comprendere i metodi usati in questa tesi.
-Si introdurranno i concetti di:
-\begin{itemize}
-  \item bitvector
-  \item straight-line program e longest common extension query
-  \item suffix array e longest common prefix
-  \item trasformata di Burrows--Wheeler e la sua variante run-length encoded
-  \item trasformata di Burrows--Wheeler posizionale
-\end{itemize}
-% L'unione di tutte queste strutture e di queste tecniche ha permesso la creazione
-% della $\RLPBWT$.\\
-\noindent
-\textit{A livello di notazione, si specifica che, con
-  $T[i,j]$ si intende la sottostringa del testo/sequenza/riga/colonna $T$,
-  iniziante all'indice $i$ e terminante all'indice $j$ incluso. Qualora si
-  avesse $j>i$ si identifica la sottostringa nulla $\varepsilon$.}
 
-% sezione introduzione biologia
-%\input{include/bio}
+% CAPITOLI
+\input{tabele.tex}
+\input{Capitoli/Bibliografia.tex}
+\listoftables
+\listoffigures
 
 
 
-\chapter{Metodi}
-\label{metchap}
-In questo capitolo verranno illustrate le metodologie usate in questa tesi,
-trattando tutte le soluzioni
-che hanno portato alla costruzione di diverse varianti della $\RLPBWT$.\\
-Verranno discussi gli usi delle singole componenti, le stime asintotiche sia in
-tempo che in spazio, gli algoritmi di costruzione e di successivo calcolo degli
-$\SMEM$ e i pro/contro delle varie strutture dati
-ottenibili da tali componenti.
-
-
-% sezione RLPBWT naive
-% \input{include/naive_rlpbwt}
-
-% % sezione RLPBWT bitvectors
-% \input{include/bv_rlpbwt}
-
-% % sezione mapping RLPBWT
-% %\input{include/map_rlpbwt}
-
-% % sezione match massimali di RLPBWT naive/bitvectors
-% \input{include/naive_bv_matches}
-
-% % sezione RLPBWT ms
-% \input{include/ms_rlpbwt}
-
-% % sezione per struttura phi
-% \input{include/phi}
-
-
-\chapter{Risultati sperimentali}
-\label{reschap}
-Si riportano alcuni risultati sperimentali
-relativi alle diverse implementazioni della $\RLPBWT$. Nel capitolo,
-verranno discusse le modalità di sperimentazione e i
-risultati ottenuti su alcuni pannelli della phase 3 del 1KGP \cite{1kgp},
-progetto, nato nel 2008, che 
-ha visto lo sforzo della comunità 
-scientifica internazionale per la catalogazione delle varianti geniche
-umane, tramite il sequenziamento di multipli individui. Il 1KGP risulta essere
-uno dei più importanti progetti nell'ambito 
-bioinformatico. \\  
-Quindi, verranno confrontate le implementazioni degli algoritmi di calcolo degli
-$\SMEM$ della $\PBWT$ di Durbin \cite{pbwt} e delle varianti per la
-$\RLPBWT$.  
-
-
-\chapter{Conclusioni}
-\label{conchap}
-Fissato l'iniziale obiettivo di risolvere le problematiche relative alla
-memoria richiesta dall'algoritmo 5 di Durbin, le implementazioni della
-$\RLPBWT$ proposte in questa tesi, principalmente nelle strutture dati composte
-segnalate nel 
-Capitolo \ref{reschap}, hanno riportato risultati molto incoraggianti. Come
-descritto nel medesimo capitolo, la quantità di memoria richiesta per il calcolo
-degli $\SMEM$ risulta essere 
-molto inferiore rispetto a quella richiesta dall'algoritmo
-\texttt{matchIndexed}. D'altro canto, l'algoritmo \texttt{matchDynamic} di 
-Durbin, per quanto non approfondito nell'articolo del 2014 \cite{pbwt}, risulta
-essere ancor meno esoso di memoria, nonché incredibilmente più veloce dal punto
-di vista dei tempi di calcolo, a eccezione del caso limite di avere un numero
-esiguo di query. Lo svantaggio si ritrova anche nell'ordinamento dei risultati
-e nella creazione di un'ulteriore $\PBWT$
-che sembra implichino un non facile 
-riadattamento dell'algoritmo alla risoluzione di altri task,
-giudicando la letteratura degli ultimi anni, basata
-principalmente sull'algoritmo 5.\\
-Ipotizzando un possibile futuro in cui diventi comune
-interrogare pannelli di aplotipi, con singole query da
-un'interfaccia web o tramite API (alla stregua di quanto avviene
-quotidianamente con BLAST), l'uso della $\RLPBWT$, in una delle sue
-migliori varianti, avrebbe vantaggi in termini di tempo di calcolo
-degli $\SMEM$, non solo
-rispetto all'algoritmo 5 di Durbin, ma anche all'algoritmo
-\texttt{matchDynamic}, 
-alla luce dei risultati su singole query. Inoltre, quest'ultimo richiederebbe
-ogni volta la ricostruzione della permutazione, a differenza delle
-implementazioni della $\RLPBWT$ che potrebbero essere costruite e caricate in
-memoria \textit{una tantum}.\\
-Si possono rilevare alcune possibili migliorie in merito
-alle varie implementazioni della $\RLPBWT$ presentate in questa tesi,
-riferendosi essenzialmente alle soluzioni che prevedono il calcolo
-dell'array delle matching statistics: 
-\begin{itemize}
-  \item si potrebbe pensare a un metodo per gestire in modo efficiente lo
-  studio di più query contemporaneamente, migliorando i tempi di calcolo
-  complessivi. Studiando contemporaneamente tutte le query si potrebbe, alla
-  stregua di quanto visto con l'algoritmo \texttt{matchDynamic}, caricare in
-  memoria solo la 
-  colonna necessaria a un dato passo di computazione o comunque un sottoinsieme
-  di colonne. In tal modo, si ridurrebbe l'uso massimo di memoria, qualora non
-  fosse necessario caricare stabilmente la struttura per rispondere a diverse
-  query 
-  provenienti da varie fonti
-  \item studiare eventuali ottimizzazioni per la componente \texttt{MAP-BV} al
-  fine di comprendere se sia possibile tenere in
-  memoria un solo bitvector $uv_k$, che funzioni in modo similare a quanto si ha
-  con la componente \texttt{MAP-INT}
-\end{itemize}
-Inoltre, risulterebbe interessante, dal solo punto di vista teorico, una più
-approfondita caratterizzazione delle complessità asintotiche, sia in spazio che
-in tempo. Questa analisi, a causa degli algoritmi stessi e dell'uso di strutture
-dati succinte, sarebbe sicuramente molto difficile, ma potrebbe portare a nuovi
-spunti di riflessione per il campo dell'informatica teorica, oltre che della
-bioinformatica.\\
-Nonostante quanto detto, la qualità dei risultati è sufficiente
-per stabilire che una variante run-length encoded della $\PBWT$,
-come analizzato negli ultimi anni per la $\RLBWT$ con
-MONI \cite{moni} e PHONI \cite{phoni}, è possibile e possa
-permettere, nel prossimo futuro, la memorizzazione compatta delle informazioni
-necessarie allo studio di grandi pannelli di aplotipi. In un futuro in cui le
-tecnologie di sequencing produrranno sempre più dati, provenienti da sempre più
-individui, avere a disposizione strutture dati efficienti in spazio permetterà
-uno studio più approfondito dei dati stessi, in numerosi ambiti tra cui GWAS e
-medicina personalizzata. 
 % sezione sviluppi
 
 %% BIBLIOGRAFIA
