@@ -1,7 +1,7 @@
 \documentclass[a4paper,12pt, oneside]{book}
 %\documentclass[a4paper,12pt, oneside, draft]{book}
-% \usepackage{fullpage}
-\usepackage[italian]{babel}
+%\usepackage{fullpage}
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -58,6 +58,8 @@
 \usepackage{geometry}
 \usepackage{blindtext}
 \usepackage{titleps}
+%\usepackage[ backend=biber,%style=alphabetic, sorting=ynt ]{biblatex}\addbibresource{reference.bib}
+
 % \makeatletter
 % \long\def\@makecaption#1#2{%
 %   \vskip\abovecaptionskip
@@ -272,7 +274,6 @@
 \newtheorem{esercizio}{Esercizio}
 
 \algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}
-\renewcommand{\bibname}{Bibliografia}
 \renewcommand{\chaptermark}[1]{%
   \markboth{\chaptername
     \ \thechapter.\ #1}{}}
@@ -306,35 +307,27 @@
 }
 
 % CAPITOLI
-\input{tabele.tex}
-\input{Capitoli/Bibliografia.tex}
+\input{Chapter/Abstract.tex}
+\input{Chapter/Introduction.tex}
+\input{Chapter/Methods.tex}
+\input{Chapter/Data Analysis.tex}
+\input{Chapter/Result.tex}
+\input{Chapter/Conclusion and future discussion.tex}
 \listoftables
 \listoffigures
+\bibliographystyle{ieeetr}
+\bibliography{references}
 
 
 
-% sezione sviluppi
 
-%% BIBLIOGRAFIA
-% \addcontentsline{toc}{chapter}{Bibliografia e sitografia}
-% \printbibliography[title={Bibliografia e sitografia}]
-% \addcontentsline{toc}{chapter}{Bibliografia}
 \fancyhead[LO,RE]{\slshape \leftmark}
 % \fancyhead[CO,CE]{\slshape\rightmark}
 \fancyhead[LE,RO]{}
-\addcontentsline{toc}{chapter}{Bibliografia}
-\bibliographystyle{unsrt}
-\bibliography{thesis}
-%\dc{Sistemare tutte le citazione coi DOI}
-%\appendix
-% \chapter{Tabelle}
-% \input{include/tabelle}
-%\chapter{Algoritmi}
-%\input{include/pseudo}
-% \chapter{Esempi di File}
-% \input{include/file}
+%\addcontentsline{toc}{chapter}{Bibliografia}
+%\bibliographystyle{unsrt}
+%\bibliography{thesis}
 
-% ringraziamenti
 \end{document}
 
 % LocalWords:  divergence prefix primis
