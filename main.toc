@@ -1,0 +1,29 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Methods}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Protocol:First Part}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Data Collection Protocol}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Experimental Setting}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Mattress }{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Pillow and bed sheets}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Ground truth }{6}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Patient setting}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}what to wear}{6}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Lay down position}{7}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Pattern Position}{7}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}how long they have to lay down}{7}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Data Collection}{7}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Joint Data Collection}{7}{subsection.2.5.1}%
+\contentsline {subsubsection}{Breathing rate and Heart rate at rest in normal condition}{7}{section*.3}%
+\contentsline {subsubsection}{Breathing rate and Heart rate at rest during mattress movement}{7}{section*.4}%
+\contentsline {subsubsection}{Breathing rate and Heart rate after an effort}{8}{section*.5}%
+\contentsline {subsection}{\numberline {2.5.2}Heart Rate Data Collection}{8}{subsection.2.5.2}%
+\contentsline {subsubsection}{Heart rate at rest with constrained breath rate}{8}{section*.6}%
+\contentsline {subsubsection}{Heart rate at rest with constrained breath rate during mattress movement}{8}{section*.7}%
+\contentsline {section}{\numberline {2.6}Words}{8}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Data Analysis}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Result}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Mean absolute error (MAE)}{10}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Mean absolute percentage error (MAPE)}{10}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Root Mean Square Error (RMSE) }{10}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusion and future discussin}{20}{chapter.5}%
