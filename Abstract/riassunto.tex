@@ -99,18 +99,18 @@
 
 Sleep is one of the most important physiological functions. Sleep quality can affect physical 
 and mental wellness; for this reason,
- it is crucial to monitor vital signs without interfering with natural sleep. 
- The state-of-the-art to monitor physiological data during sleep is polysomnography %\cite{Penzel2016ModulationsPolysomnography}
- , which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, 
- complicated, expensive, invasive for the patient and only sometimes available in hospitals. For this reason, it is nowadays 
- acceptable to use cardiorespiratory polysomnography that does not track neurophysiological variables. This type of polysomnography
+it is crucial to monitor vital signs without interfering with natural sleep. 
+The state-of-the-art to monitor physiological data during sleep is polysomnography%\cite{Penzel2016ModulationsPolysomnography}
+, which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, 
+complicated, expensive, invasive for the patient and only sometimes available in hospitals. For this reason, it is nowadays 
+acceptable to use cardiorespiratory polysomnography that does not track neurophysiological variables. This type of polysomnography
 involves a cannula, chest belts and electrodes for an electrocardiogram (ECG) but does not involve an electroencephalogram (EEG).
 Another reason why this kind of instrument is widely used is that inside the population, we have a higher percentage of 
 sleep-related breathing disorders that can be studied and monitored with this instrument, like sleep apnoea/hypopnoea syndrome (SAS), where the individuals experience a collapse 
 of the airway in deeper sleep states. The ability to monitor it allows for a faster and closer intervention in severe cases. 
 The sleep cycle of a person is divided into two phases Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM);
- this second phase is further divided into three other stages (N1-N3). Different muscle tones, brain wave patterns, 
- eye movements, and heart and breathing rate alterations characterise every phase and stage.
+this second phase is further divided into three other stages (N1-N3). Different muscle tones, brain wave patterns, 
+eye movements, and heart and breathing rate alterations characterise every phase and stage.
 %\textbf{[explenation of sleep stages]}.
 Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate 
 which slowly becomes more stable going from the awake to the REM phase; this characterisation of the different stages gives the possibility to 
@@ -125,14 +125,14 @@ natural sleep.
 [parte sulle altre cose e le cose di privacy]
 
 
-
+\subsection*{Instruments}
 For this reason, this thesis aims to study the possibility to use an unobtrusive sensor placed over the usual mattress to retrieve 
 respiratory rate without discomfort for the person lying down on it. 
 
 
 The sensors in this project appear like a thin mattress similar in size to a common one that can be easily installed with adjustable straps.
 In particular, the sensors are pressure-sensor textiles from \textit{SensingTex®}; in our case, was used the Pressure Mat Dev Kit,
- that has a sensor area of 192 x 94 cm filled with 1056 sensors (hereafter also referred to as "Channels") 
+ that has a sensor area of 192 x 94 cm filled with 1056 sensors (hereafter also referred to as "Channels") sampled at 250hz
  with a total sensor area density of 4 sensors for 10cm$^2$.
  The raw data extracted from the mattress can be viewed together to visually see the position of the person since the sensors are pressure sensors
 the different pressures exerted by the presence/absence of a body on it or by its parts are given as a number inside an interval. 
@@ -146,28 +146,28 @@ In the laboratory where this project was carried on, was available a rocking bed
 sleep apnea, it was decided to address another question or if it is possible to retrieve the respiratory rate while the rocking bed is moving.
 The possibility of integrating SensingTex® with Somnomat could be significant to have a closer and faster intervention on sleep apnea.
 
+\subsection*{Data Analysis Pipeline}
 
-The total number of sensors is 1056; this leads to the necessity of an algorithm to discriminate the ones from whom 
+The total number of sensors is 1056 and consequently the same number of signals from the mattress.
+this leads to the necessity of an algorithm to discriminate the ones from whom 
 it is possible to extract valuable information about the respiratory rate of the person on the mattress.
 Many of these channels are with null or stationary information; others present just interference from the 
 mattress itself. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the 
-respiratory rate per minute (rpm). 
+respiratory rate per minute (rpm). Therefore becomes necessary to design a metric that underlines these channels.
 
 x-----x \\
-
-Therefore becomes necessary to design a metrics to asset the best channels, 
-
-
 
 x----X \\
 
 
+The meaning of this metric must be interpreted as confidence expressed as the goodness of the signal in percentual.
 
 
-To obtain them from all the possibilities, we have defined our confidence 
-metric to assign each sensor a percentage of confidence that it will be a suitable sensor.
+
+
 \textbf{[parlare del somnomat]}.
 
+\subsection*{Data Collection}
 Since no data and polygraphs were available from the same person
 on the SensingTex was necessary to collect new data, this gives 
 us the possibility also to understand if this kind of Instrument
@@ -190,11 +190,11 @@ x---x
 the data coming from the data collection was cleaned in this methods, than was used this approach to smoot or filtering the singal.
 than was use this to asset the number of breath
 
+\subsection*{Result}
 
-
-
-The project is carried out in collaboration with \textit{Sensory-Motor System Lab} of Prof. Robert Riener at \textit{Eidgenössische Technische Hochschule 
-(ETH) Zürich} and supervised by Alexander Breuss, Oriella Gnarra and Manuel Fujis.
+\subsection*{Acknowledgement}
+The project is carried out in collaboration with \textit{Sensory-Motor System Lab} of Prof.~Robert Riener at \textit{Eidgenössische Technische Hochschule 
+(ETH) Zürich} and supervised by Dr.~Alexander Breuss, Dr.~Oriella Gnarra and Dr.~Manuel Fujis.
 
 
 \end{document}
