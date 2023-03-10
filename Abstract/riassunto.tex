@@ -146,18 +146,45 @@ In the laboratory where this project was carried on, was available a rocking bed
 sleep apnea, it was decided to address another question or if it is possible to retrieve the respiratory rate while the rocking bed is moving.
 The possibility of integrating SensingTex® with Somnomat could be significant to have a closer and faster intervention on sleep apnea.
 
-\subsection*{Data Analysis Pipeline}
+\subsection*{Data Collection}
+The primary objective of this study is to collect data to understand the feasibility of extracting breath rate from the mat; the second goal is to understand if the movement of the rocking bed could influence the signal.
+The participant involved was 6, half male and half female, between 20-30 years old, who were asked to lie on a standard mattress covered with the sensor mattresses in a specific position. 
+After the 4 minutes, they were asked to turn around in another position following a specific pattern: supine, left side, prone, right side.
+Each participant wore a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical) that was
+monitoring respiratory inductance plethysmography (RIP) which is a method of evaluating pulmonary ventilation by measuring the movement of the chest and abdominal wall, nasal pressure, pulse and heart rate with ECG. 
+The study was divided into two phases:
 
-The total number of sensors is 1056 and consequently the same number of signals from the mattress.
-this leads to the necessity of an algorithm to discriminate the ones from whom 
+The setting for the first phase involves the pressure mat over a standard bed. During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. We asked the participant to perform a set of five jumps before lying down, so they performed a total of 20 jumps.
+The setting for the second phase, since in this part we want to collect the data while the Somnomat is moving, we fixed the period for the movement of the bed at 4 seconds (15 periods in a minute) with an acceleration of 0.25 $m/s^2$. Also, for this phase, they have been asked to turn around following the specific pattern: supine, left side, prone, right side.
+This results in a recording of 32 minutes long for each participant divided into 4 minutes in each of the 4 positions with normal bed and with Somnomat.
+
+
+\subsection*{Data Analysis Pipeline}
+The total number of sensors is 1056, and consequently, the same number of signals from the mattress; this leads to the necessity of an algorithm to discriminate the ones from whom 
 it is possible to extract valuable information about the respiratory rate of the person on the mattress.
-Many of these channels are with null or stationary information; others present just interference from the 
-mattress itself. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the 
+Many of these channels are stationary on a value; others present just interference from the 
+mattress. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the 
 respiratory rate per minute (rpm). Therefore becomes necessary to design a metric that underlines these channels.
 
+The designed pipeline aims to replicate a semi-realtime analysis using the data obtained during the data collection. 
+For this reason, it takes in input a sliding window of 60 seconds that is moving, for each position, through the 4-minute recording.
+The first step excludes those signals for the entire window length that are stationary or present only interference from the mattress.
+That interference appears as spikes but sometimes is present just in a percentage of the signal; the same could
+ happen for stationarities that can be 
+focused in just a subpart of the windows. In this case, the signal is not excluded and is assigned with confidence
+ equal to the percentage of the signal that could have meaningful information.
+ Another type is a noisy signal, which is excluded or weighted with a percentage of confidence with the same approach as the previous two.
+
+ After these preliminary analyses, the number of signals decreases drastically; 
+ on the remains ones, two different kinds of approaches are computed: Multiresolution analysis (MRA) of the maximal overlap discrete wavelet transform (MODWT)
+and Savitz-Golay filter.
+
+[approfondire gli aspetti]
+
+x-----x \\
 x-----x \\
 
-x----X \\
+
 
 
 The meaning of this metric must be interpreted as confidence expressed as the goodness of the signal in percentual.
@@ -165,25 +192,9 @@ The meaning of this metric must be interpreted as confidence expressed as the go
 
 
 
-\textbf{[parlare del somnomat]}.
-
-\subsection*{Data Collection}
-Since no data and polygraphs were available from the same person
-on the SensingTex was necessary to collect new data, this gives 
-us the possibility also to understand if this kind of Instrument
-could work with a lab project called Somnomat. A special 
-rocking bed \textbf{[parlare del somnomat e di come potrebbe essere integrato]}. The protocol involved 
-6 participants (three female /three male) between 20-30 years of age. It was divided into two phases: one 
-with the sensor mattress over a standard bed and the second on the rocking bed while this was moving. 
-Each participant had a fixed set of positions that had to be while lying on the mattress. 
-We also decide to insert variability into the data since, during sleep, respiratory rate increases in different stages. 
-In order to do that, we ask a participant to perform a set of five jumps before lying down in the first 
-phase of the protocol; for the second part, we ask them to turn around on the bed and stay on it 
-while it is moving without performing any activity.
 
 
-the data collection also involved Cardiorespiratory polysomnography. In our case, we use the nox a1 and noxturnal app. 
-\textbf{chennal selected and canulas}
+x----x
 
 x---x
 
