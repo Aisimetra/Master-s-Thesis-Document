@@ -1,0 +1,170 @@
+\documentclass[a4paper,11pt, oneside,italian]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{relsize}
+\usepackage{microtype}
+\usepackage{typearea}
+
+\hypersetup{
+  pdftitle = {Respiratory Rate Estimation using a Pressure Sensor Mattress}, 
+  pdfauthor = {Artemisia Sarteschi},
+  pdfsubject = {Riassunto della tesi},
+  pdfpagemode = UseNone
+}
+
+
+\usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhead[LE,RO]{\slshape \rightmark}
+% \fancyhead[LO,RE]{\slshape \leftmark}
+\fancyfoot[C]{\thepage}
+
+\title{Respiratory Rate Estimation using a Pressure Sensor Mattress} 
+\author{Artemisia Sarteschi\\\smaller matr.~829677}
+\date{}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{0.75ex \@plus 1ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
+\def\SLP{\mbox{\rm {\sf SLP}}}
+\def\rank{\mbox{\rm {\sf rank}}}
+\def\lcs{\mbox{\rm {\sf lcs}}}
+\def\lcp{\mbox{\rm {\sf lcp}}}
+\def\lce{\mbox{\rm {\sf lce}}}
+\def\LCE{\mbox{\rm {\sf LCE}}}
+\def\ROT{\mbox{\rm {\sf ROT}}}
+\def\select{\mbox{\rm {\sf select}}}
+\def\col{\mbox{\rm {\sf col}}}
+\def\NULL{\mbox{\rm {\sf null}}}
+\def\len{\mbox{\rm {\sf len}}}
+\def\pos{\mbox{\rm {\sf pos}}}
+\def\row{\mbox{\rm {\sf row}}}
+\def\LF{\mbox{\rm {\sf LF}}}
+\def\FL{\mbox{\rm {\sf FL}}}
+\def\W{\mbox{\rm {\sf w}}}
+\def\A{\mbox{\rm {\sf A}}}
+\def\A{\mbox{\rm {\sf A}}}
+\def\SA{\mbox{\rm {\sf SA}}}
+\def\LCP{\mbox{\rm {\sf LCP}}}
+\def\ISA{\mbox{\rm {\sf ISA}}}
+\def\PLCP{\mbox{\rm {\sf PLCP}}}
+\def\RLCP{\mbox{\rm {\sf RLCP}}}
+\def\RLBWT{\mbox{\rm {\sf RLBWT}}}
+\def\MEM{\mbox{\rm {\sf MEM}}}
+\def\KMEM{\mbox{\rm {\sf K-MEM}}}
+\def\KSMEM{\mbox{\rm {\sf K-SMEM}}}
+\def\MS{\mbox{\rm {\sf MS}}}
+\def\LCP{\mbox{\rm {\sf LCP}}}
+\def\NSV{\mbox{\rm {\sf NSV}}}
+\def\PSV{\mbox{\rm {\sf PSV}}}
+\def\RMQ{\mbox{\rm {\sf RMQ}}}
+\def\BWT{\mbox{\rm {\sf BWT}}}
+\def\BWM{\mbox{\rm {\sf BWM}}}
+\def\ITR{\mbox{\rm {\sf index\_to\_run}}}
+\def\GS{\mbox{\rm {\sf get\_symbol}}}
+\def\PBWT{\mbox{\rm {\sf PBWT}}}
+\def\MPBWT{\mbox{\rm {\sf mPBWT}}}
+\def\MRLPBWT{\mbox{\rm {\sf mRLPBWT}}}
+\def\DPBWT{\mbox{\rm {\sf dPBWT}}}
+\def\RLPBWT{\mbox{\rm {\sf RLPBWT}}}
+\def\SMEM{\mbox{\rm {\sf SMEM}}}
+\def\M{\mbox{\rm {\sf M}}}
+\def\C{\mbox{\rm {\sf C}}}
+\def\Occ{\mbox{\rm {\sf Occ}}}
+\def\L{\mbox{\rm {\sf L}}}
+\def\F{\mbox{\rm {\sf F}}}
+\def\DA{\mbox{\rm {\sf DA}}}
+\def\DM{\mbox{\rm {\sf DM}}}
+\def\PA{\mbox{\rm {\sf PA}}}
+\def\LCE{\mbox{\rm {\sf LCE}}}
+\def\UP{\mbox{\rm {\sf update}}}
+\def\lceb{\mbox{\rm {\sf lce\_bounded}}}
+\def\RM{\mbox{\rm {\sf reverse\_map}}}
+
+
+\begin{document}
+\maketitle
+\setlist{leftmargin = 2cm}
+\noindent
+
+
+
+Sleep is one of the most important physiological functions. Sleep quality can affect physical 
+and mental wellness; for this reason,
+ it is crucial to monitor vital signs without interfering with natural sleep. 
+ The state-of-the-art to monitor physiological data during sleep is polysomnography %\cite{Penzel2016ModulationsPolysomnography}
+ , which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, 
+ complicated, expensive, invasive for the patient and also not always available in hospitals. For this reason, is nowadays 
+ acceptable to just use cardiorespiratory polysomnography that does not track neurophysiological variables. This particular type of polysomnography
+involves a cannula, chest belts and electrodes for an electrocardiogram (ECG), but does not need electroencephalogram (EEG).
+Another reason why this kind of instrument is widely used is that inside the population we have a higher percentage of 
+sleep-related breathing disorders that can be studied and monitored with this instrument, like sleep apnoea/hypopnoea syndrome (SAS), where the individuals experience a collapse 
+of the airway in deeper sleep states. The ability to monitor it allows for a faster and closer intervention in severe cases. 
+The sleep cycle of a person is dived up into two  phases Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM);
+  this second phase is further divided into three other stages (N1-N3). Different muscle tones, brain wave patterns, 
+  eye movements, and heart and breathing rate alterations characterise every phase and stage.
+%\textbf{[explenation of sleep stages]}.
+Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate 
+which slowly becomes more stable going from the awake to the REM phase, this caraterizetion of the diffeernt stages give the possibility to 
+undestand the different stage of the person based just on respiratory signal \cite{Bakker2021EstimatingSeverity}. 
+%Respiration is also central in 
+% one of the most common sleep disorders, sleep apnea, in this case,  causing them to experience reduced time in stage N3 and REM sleep. si può evdere da 
+
+As said before, the state-of-art is a cumbersome device that 
+requires cables attached to the users' bodies and often interferes with 
+natural sleep. For this reason, we decided to use an unobtrusive sensor 
+placed over the typical mattress to allow us to study the possibility of
+ monitoring the patient's health. The sensor involved in this project is a 
+ pressure-sensor textile from SensingTex [x], with a sensor area of 192 x 94 
+ cm filled with 1056 sensors (sensor area density of 4 sensors for 10cm$^2$).
+
+ The high number of sensors leads to the necessity of an algorithm to discriminate the ones from whom 
+ it is possible to extract valuable information about the respiratory rate of the person that is on the mattress.
+ Many of these channels are with null or stationary information; others present just interference from the 
+ mattress itself. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the 
+ respiratory rate per minute (rpm). To obtain them from all the possibilities, we have defined our confidence 
+ metric to assign each sensor a percentage of confidence that it will be a suitable sensor.
+ \textbf{[parlare del somnomat]}.
+
+ Since no data and polygraphs were available from the same person
+ on the SensingTex was necessary to collect new data, this gives 
+ us the possibility also to understand if this kind of Instrument
+  could work with a lab project called Somnomat. A special 
+  rocking bed \textbf{[parlare del somnomat e di come potrebbe essere integrato]}. The protocol involved 
+  6 participants (three female /three male) between 20-30 years of age. It was divided into two phases: one 
+  with the sensor mattress over a standard bed and the second on the rocking bed while this was moving. 
+  Each participant had a fixed set of positions that had to be while lying on the mattress. 
+  We also decide to insert variability into the data since, during sleep, respiratory rate increases in different stages. 
+  In order to do that, we ask a participant to perform a set of five jumps before lying down in the first 
+  phase of the protocol; for the second part, we ask them to turn around on the bed and stay on it 
+  while it is moving without performing any activity.
+
+
+  the data collection also involved Cardiorespiratory polysomnography. In our case, we use the nox a1 and noxturnal app. 
+  \textbf{chennal selected and canulas}
+
+  x---x
+
+  the data coming from the data collection was cleaned in this methods, than was used this approach to smoot or filtering the singal.
+  than was use this to asset the number of breath
+
+
+
+
+
+\end{document}
+
+
+% LocalWords:  pangenoma naive sottostringa BWT sottostringhe Durbin prefix MEM
+% LocalWords:  array matching threshold divergence PBWT SMEM query statistics
+% LocalWords:  RLBWT aplotipi aplotipo Burrows Wheeler RLPBWT maximal exact LCP
+% LocalWords:  LCE

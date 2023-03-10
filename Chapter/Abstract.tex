@@ -1,11 +1,21 @@
 \chapter*{Abstract}
-Sleep is one of the most important physiological functions. Sleep quality can affect physical and mental wellness; for this reason,
- it is crucial to monitor vital signs without interfering with natural sleep. 
- The state-of-the-art to monitor physiological data during sleep is cardio-respiratory polysomnography, which involves a cannula, chest belts and electrodes for ECG.
 
- During sleep, a person cycles between two phases Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM); this second phase is further divided into three other stages (N1-N3). Different muscle tones, brain wave patterns, eye movements, and heart and breathing rate alterations characterise every phase and stage.
+
+Sleep is one of the most important physiological functions. Sleep quality can affect physical 
+and mental wellness; for this reason,
+ it is crucial to monitor vital signs without interfering with natural sleep. 
+ The state-of-the-art to monitor physiological data during sleep is polysomnography \cite{Penzel2016ModulationsPolysomnography},that involves 
+  
+ which involves a cannula, chest belts and electrodes for ECG.
+
+ During sleep, a person cycles between two phases Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM);
+  this second phase is further divided into three other stages (N1-N3). Different muscle tones, brain wave patterns, 
+  eye movements, and heart and breathing rate alterations characterise every phase and stage.
 \textbf{[explenation of sleep stages]}.
-Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate which slowly becomes more stable going from the awake to the REM phase. Respiration is also central in one of the most common sleep disorders, sleep apnea, in this case, the individuals experience a collapse of the airway in deeper sleep states, causing them to experience reduced time in stage N3 and REM sleep. 
+Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate 
+which slowly becomes more stable going from the awake to the REM phase. Respiration is also central in 
+one of the most common sleep disorders, sleep apnea, in this case, the individuals experience a collapse 
+of the airway in deeper sleep states, causing them to experience reduced time in stage N3 and REM sleep. 
 The ability to monitor it allows for a faster and closer intervention in severe cases. 
 
 As said before, the state-of-art is a cumbersome device that 
@@ -16,15 +26,25 @@ placed over the typical mattress to allow us to study the possibility of
  pressure-sensor textile from SensingTex [x], with a sensor area of 192 x 94 
  cm filled with 1056 sensors (sensor area density of 4 sensors for 10cm$^2$).
 
- The high number of sensors leads to the necessity of an algorithm to discriminate the ones from whom it is possible to extract valuable information about the respiratory rate of the person that is on the mattress.
- Many of these channels are with null or stationary information; others present just interference from the mattress itself. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the respiratory rate per minute (rpm). To obtain them from all the possibilities, we have defined our confidence metric to assign each sensor a percentage of confidence that it will be a suitable sensor.
+ The high number of sensors leads to the necessity of an algorithm to discriminate the ones from whom 
+ it is possible to extract valuable information about the respiratory rate of the person that is on the mattress.
+ Many of these channels are with null or stationary information; others present just interference from the 
+ mattress itself. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the 
+ respiratory rate per minute (rpm). To obtain them from all the possibilities, we have defined our confidence 
+ metric to assign each sensor a percentage of confidence that it will be a suitable sensor.
  \textbf{[parlare del somnomat]}.
 
  Since no data and polygraphs were available from the same person
  on the SensingTex was necessary to collect new data, this gives 
  us the possibility also to understand if this kind of Instrument
   could work with a lab project called Somnomat. A special 
-  rocking bed \textbf{[parlare del somnomat e di come potrebbe essere integrato]}. The protocol involved 6 participants (three female /three male) between 20-30 years of age. It was divided into two phases: one with the sensor mattress over a standard bed and the second on the rocking bed while this was moving. Each participant had a fixed set of positions that had to be while lying on the mattress. We also decide to insert variability into the data since, during sleep, respiratory rate increases in different stages. In order to do that, we ask a participant to perform a set of five jumps before lying down in the first phase of the protocol; for the second part, we ask them to turn around on the bed and stay on it 
+  rocking bed \textbf{[parlare del somnomat e di come potrebbe essere integrato]}. The protocol involved 
+  6 participants (three female /three male) between 20-30 years of age. It was divided into two phases: one 
+  with the sensor mattress over a standard bed and the second on the rocking bed while this was moving. 
+  Each participant had a fixed set of positions that had to be while lying on the mattress. 
+  We also decide to insert variability into the data since, during sleep, respiratory rate increases in different stages. 
+  In order to do that, we ask a participant to perform a set of five jumps before lying down in the first 
+  phase of the protocol; for the second part, we ask them to turn around on the bed and stay on it 
   while it is moving without performing any activity.
 
 
