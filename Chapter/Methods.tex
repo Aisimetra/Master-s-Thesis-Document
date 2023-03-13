@@ -1,6 +1,7 @@
 \chapter{Methods}
 
-\section{Protocol:First Part}
+\begin{comment}
+\section{{Protocol:First Part}
 \begin{itemize}
 \item 5 jumps
 \item lie down on \textbf{prone} position
@@ -91,5 +92,43 @@ This part of the protocol aims to provide a known rhythm to the breath rate acco
 \subsubsection{Heart rate at rest with constrained breath rate during mattress movement}
 This part of the protocol aims to provide a known rhythm to the breath rate according to an acoustic time while the mattress is moving. The sound will indicate when they start to inhale and exhale to the participants.
 
-\section{Words}
+\end{comment}
+
+\section{Instruments}
+\subsection{SensingTex}
+\section{Nox A1, polysomnography}
+For this reason, this thesis aims to study the possibility to use an unobtrusive sensor placed over the usual mattress to retrieve 
+respiratory rate without discomfort for the person lying down on it. 
+
+
+The sensors in this project appear like a thin mattress similar in size to a common one that can be easily installed with adjustable straps.
+In particular, the sensors are pressure-sensor textiles from \textit{SensingTex®}; in our case, was used the Pressure Mat Dev Kit,
+ that has a sensor area of 192 x 94 cm filled with 1056 sensors (hereafter also referred to as "Channels") sampled at 250hz
+ with a total sensor area density of 4 sensors for 10cm$^2$.
+ The raw data extracted from the mattress can be viewed together to visually see the position of the person since the sensors are pressure sensors
+the different pressures exerted by the presence/absence of a body on it or by its parts are given as a number inside an interval. 
+So it is possible to create a heat map (or heatmap) to show the variation in colour of the intensity of the pressure, which can create the shape of
+a person on the mattress.
+
+Looking closer into signals of singles channels is possible to see a pattern that resembles a breathing rhythm,  similar to the data that can
+ be retrieved from the nasal pressure exerted on the cannula of cardiorespiratory polysomnography.
+This pattern was the key factor in deciding to use this sensor mattress (hereafter also referred to as "Sensor Mat" or "Mat"). 
+In the laboratory where this project was carried on, was available a rocking bed (Somnomat) involved in a study of an intervention for 
+sleep apnea, it was decided to address another question or if it is possible to retrieve the respiratory rate while the rocking bed is moving.
+The possibility of integrating SensingTex® with Somnomat could be significant to have a closer and faster intervention on sleep apnea.
+
+\section{Data Collection}
+\subsection{Normal Bed}
+\subsection{Rocking Bed}
+
+The primary objective of this study is to collect data to understand the feasibility of extracting breath rate from the mat; the second goal is to understand if the movement of the rocking bed could influence the signal.
+The participant involved was 6, half male and half female, between 20-30 years old, who were asked to lie on a standard mattress covered with the sensor mattresses in a specific position. 
+After the 4 minutes, they were asked to turn around in another position following a specific pattern: supine, left side, prone, right side.
+Each participant wore a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical) that was
+monitoring respiratory inductance plethysmography (RIP) which is a method of evaluating pulmonary ventilation by measuring the movement of the chest and abdominal wall, nasal pressure, pulse and heart rate with ECG. 
+The study was divided into two phases:
+
+The setting for the first phase involves the pressure mat over a standard bed. During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. We asked the participant to perform a set of five jumps before lying down, so they performed a total of 20 jumps.
+The setting for the second phase, since in this part we want to collect the data while the Somnomat is moving, we fixed the period for the movement of the bed at 4 seconds (15 periods in a minute) with an acceleration of 0.25 $m/s^2$. Also, for this phase, they have been asked to turn around following the specific pattern: supine, left side, prone, right side.
+This results in a recording of 32 minutes long for each participant divided into 4 minutes in each of the 4 positions with normal bed and with Somnomat.
 

@@ -58,7 +58,12 @@
 \usepackage{geometry}
 \usepackage{blindtext}
 \usepackage{titleps}
+\setlength{\headheight}{15pt}
 %\usepackage[ backend=biber,%style=alphabetic, sorting=ynt ]{biblatex}\addbibresource{reference.bib}
+\usepackage{enumitem}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
 
 % \makeatletter
 % \long\def\@makecaption#1#2{%
@@ -93,69 +98,7 @@
 
 %\usepackage[textsize=scriptsize, textwidth = 25mm]{todonotes}
 \usepackage[disable, textsize=scriptsize, textwidth = 25mm]{todonotes}
-\newcommand{\dc}[1]{\todo[backgroundcolor=yellow]{\textbf{DC} #1}}
-\newcommand{\gdv}[1]{\todo[backgroundcolor=blue]{\textbf{GDV} #1}}
-\newcommand{\pb}[1]{\todo[backgroundcolor=red]{\textbf{PB} #1}}
-\newcommand{\yp}[1]{\todo[backgroundcolor=green]{\textbf{YP} #1}}
-\newcommand{\rr}[1]{\todo[backgroundcolor=pink]{\textbf{RR} #1}}
 
-\def\SLP{\mbox{\rm {\sf SLP}}}
-\def\rank{\mbox{\rm {\sf rank}}}
-\def\lcs{\mbox{\rm {\sf lcs}}}
-\def\lcp{\mbox{\rm {\sf lcp}}}
-\def\lce{\mbox{\rm {\sf lce}}}
-\def\LCE{\mbox{\rm {\sf LCE}}}
-\def\ROT{\mbox{\rm {\sf ROT}}}
-\def\select{\mbox{\rm {\sf select}}}
-\def\col{\mbox{\rm {\sf col}}}
-\def\NULL{\mbox{\rm {\sf null}}}
-\def\len{\mbox{\rm {\sf len}}}
-\def\pos{\mbox{\rm {\sf pos}}}
-\def\row{\mbox{\rm {\sf row}}}
-\def\LF{\mbox{\rm {\sf LF}}}
-\def\FL{\mbox{\rm {\sf FL}}}
-\def\W{\mbox{\rm {\sf w}}}
-\def\A{\mbox{\rm {\sf A}}}
-\def\A{\mbox{\rm {\sf A}}}
-\def\SA{\mbox{\rm {\sf SA}}}
-\def\LCP{\mbox{\rm {\sf LCP}}}
-\def\ISA{\mbox{\rm {\sf ISA}}}
-\def\PLCP{\mbox{\rm {\sf PLCP}}}
-\def\RLCP{\mbox{\rm {\sf RLCP}}}
-\def\RLBWT{\mbox{\rm {\sf RLBWT}}}
-\def\MEM{\mbox{\rm {\sf MEM}}}
-\def\KMEM{\mbox{\rm {\sf K-MEM}}}
-\def\KSMEM{\mbox{\rm {\sf K-SMEM}}}
-\def\MS{\mbox{\rm {\sf MS}}}
-\def\LCP{\mbox{\rm {\sf LCP}}}
-\def\NSV{\mbox{\rm {\sf NSV}}}
-\def\PSV{\mbox{\rm {\sf PSV}}}
-\def\RMQ{\mbox{\rm {\sf RMQ}}}
-\def\BWT{\mbox{\rm {\sf BWT}}}
-\def\BWM{\mbox{\rm {\sf BWM}}}
-\def\ITR{\mbox{\rm {\sf index\_to\_run}}}
-\def\GS{\mbox{\rm {\sf get\_symbol}}}
-\def\PBWT{\mbox{\rm {\sf PBWT}}}
-\def\MPBWT{\mbox{\rm {\sf mPBWT}}}
-\def\MRLPBWT{\mbox{\rm {\sf mRLPBWT}}}
-\def\DPBWT{\mbox{\rm {\sf dPBWT}}}
-\def\RLPBWT{\mbox{\rm {\sf RLPBWT}}}
-\def\SMEM{\mbox{\rm {\sf SMEM}}}
-\def\M{\mbox{\rm {\sf M}}}
-\def\C{\mbox{\rm {\sf C}}}
-\def\Occ{\mbox{\rm {\sf Occ}}}
-\def\L{\mbox{\rm {\sf L}}}
-\def\F{\mbox{\rm {\sf F}}}
-\def\DA{\mbox{\rm {\sf DA}}}
-\def\DM{\mbox{\rm {\sf DM}}}
-\def\PA{\mbox{\rm {\sf PA}}}
-\def\LCE{\mbox{\rm {\sf LCE}}}
-\def\UP{\mbox{\rm {\sf update}}}
-\def\uvtrick{\mbox{\rm {\sf uvtrick}}}
-\def\lceb{\mbox{\rm {\sf lce\_bounded}}}
-\def\RM{\mbox{\rm {\sf reverse\_map}}}
-
-\newcommand{\Oh}{\mathcal{O}}
 
 % \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \usepackage{fancyhdr}
@@ -307,8 +250,9 @@
 }
 
 % CAPITOLI
-\input{Chapter/Abstract.tex}
+%\input{Chapter/Abstract.tex}
 \input{Chapter/Introduction.tex}
+\input{Chapter/Preliminaries.tex}
 \input{Chapter/Methods.tex}
 \input{Chapter/Data Analysis.tex}
 \input{Chapter/Result.tex}

@@ -1,14 +1,113 @@
+
 \chapter{Introduction}
 
+\begin{comment}
+l'intro ha una sua struttura, in 3 parti (sigh ho già scritto questa 
+storia decine di volte, ma mai in generale per darla poi come lettura 
+a chi deve fare l'intro per la prima volta): da 0.5 a 1 pagina di super-short-intro, 
+questa parte non ho citazioni biblio, inizia con la stringa "scopo di questo lavoro è" 
+e dice solo cosa è stato fatto. 
+la seconda parte è quella corposa (massomeno da 2 
+a 5 pagine) e "gronda citrazioni" e descrive cosa è stato fatto dando anche il contesto
+(che ovviamente non ci sta in 0.5 - 1 pagina). la terza parte è la solita cavolata 
+dell'indice in forma discorsiva (nel capitolo x si descrive questo e quello..., e così via)
 
-%Monitoring the respiratory rate of patients during sleep in homecare or clinic can be fundamental 
+\end{comment}
 
+\subsection*{super-short-intro, inizia con lo scopo del lavoro è,solo cosa è stato fatto}
+\subsection*{citazioni, cosa è stato fatto con contesto e citazioni}
+\subsection*{indice in forma discorsiva}
+Sleep is one of the most important physiological functions. Sleep quality can affect physical 
+and mental wellness; for this reason,
+it is crucial to monitor vital signs without interfering with natural sleep. 
+The state-of-the-art to monitor physiological data during sleep is polysomnography%\cite{Penzel2016ModulationsPolysomnography}
+, which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, 
+complicated, expensive, invasive for the patient and only sometimes available in hospitals. For this reason, it is nowadays 
+acceptable to use cardiorespiratory polysomnography that does not track neurophysiological variables. This type of polysomnography
+involves a cannula, chest belts and electrodes for an electrocardiogram (ECG) but does not involve an electroencephalogram (EEG).
+Another reason why this kind of instrument is widely used is that inside the population, we have a higher percentage of 
+sleep-related breathing disorders that can be studied and monitored with this instrument, like sleep apnoea/hypopnoea syndrome (SAS), 
+where the individuals experience a collapse 
+of the airway in deeper sleep states. The ability to monitor it allows for a faster and closer intervention in severe cases. 
+The sleep cycle of a person is divided into two phases Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM);
+this second phase is further divided into three other stages (N1-N3). Different muscle tones, brain wave patterns, 
+eye movements, and heart and breathing rate alterations characterise every phase and stage.
+%\textbf{[explenation of sleep stages]}.
+Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate 
+which slowly becomes more stable going from the awake to the REM phase; this characterisation of the different stages gives the possibility to 
+understand in which stage a person is based just on the respiratory signal.
+ % \cite{Bakker2021EstimatingSeverity}. 
+%Respiration is also central in 
+% one of the most common sleep disorders, sleep apnea, in this case, causes them to experience reduced time in stage N3 and REM sleep. si può every da 
+As said before, the state-of-art is a cumbersome device that requires cables attached to the users' bodies and often interferes with natural sleep. To avoid it, in literature is possible to find new instruments like video cameras which lead to privacy concerns, radar technology that could have problems in case there are more than one person inside the room or smartwatches that are also able to track respiratory rate but involve to have something on the arm that still can lead to discomfort.
 
-%Using sensors directly integrated inside the bed makes monitoring physiological signals such as body position, respiratory rate, and heartbeat possible. The goal is to use this type of sensor not to affect the user’s comfort or cause privacy concerns while his health is monitored. The state-of-the-art to monitor physiological data during sleep is polysomnography.  However, this cumbersome device requires cables attached to the users' bodies and often interferes with natural sleep. A pressure-sensor textile placed on the mattress avoids this issue and allows us to monitor the patient's health.  The thesis will be focused on analysing signals coming from a mattress, in which a series of piezoelectric sensors have been incorporated, to estimate the respiratory rate of the patient lying on it.
+\begin{comment}
 
-
-
-%\section{Sleep Stages}
-%\section{Breath rate}
-%\section{Unobtrusive Measurement}
-%\section{Instrument}"""
+\newpage
+\begin{enumerate}
+    \item  \textbf{Introduzione} \\  strutturato in 3 parti: 0.5 a 1 pagina di super-short-intro,descrive cosa è stato fatto dando anche il contesto (con citazioni) e riassunto di cosa ci sarà nei capitoli
+    \item \textbf{Preliminaries} \\ contiene al suo interno tutta la parte di stato dell'arte dei seguenti argomenti e tutte le informaizoni necessarie per comprendere la tesi.
+    \begin{enumerate}
+        \item \textbf{Sleep Stages} \\ Il progetto nasce nel contesto di avere la necessita di poter monitorare la respirazione dei pazienti durante la notte, dalla letteratura si evince come la variazione nella respirazione possa essere usato per tracciarli.
+        \item \textbf{Respiratory Rate} \\ Parlando di repirazione durante la tesi è necessario introdurre come funzioni la respirazione e come si definisca un respiro.
+        \item \textbf{Cariorespiratory Polysomnography} \\ Come si effettuano ad oggi i montoraggi delle respirazione in ospedale, evidenzaindone i limiti.
+        \item \textbf{Unobstrusive approaches} \\ citazione di altri sistemi usati ora, non ustrusivi e i motivi per cui non si vogliano usare nel nostro caso
+        \item \textbf{Pressure Sensor Mattress} \\ stato ell'arte di cosa si possa fare con i materassi a pressione e similari
+    \end{enumerate}
+    \item \textbf{Methods} 
+    \begin{enumerate}
+        \item \textbf{Instrument} \\ strumenti coinvolti nella tesi
+        \begin{enumerate}
+            \item \textbf{SensingTex} \\ materasso grande brutto 10hz
+            \item  \textbf{polisomnografia NOXA1} \\ utilizzata per tracciare la respirazione del soggeto
+            \item \textbf{Somnomat} \\ letto che si muove, si vuole capire se sia utilizzabile insieme al materasso
+        \end{enumerate}  
+        \item  \textbf{Data Collection} \\ descrizione della necessità di avere dati per poter studiare la possibilitò di estrarre il ritmo respiratorio
+        \begin{enumerate}
+            \item \textbf{Normal Bed} \\ letto normale, le persone fanno 4 salti e poi si sdraiano in 4 posizioni diverse (totale 16 salti). serve per avere variabilità nei dati
+            \item  \textbf{rocking bed, somnomat } \\ letto che si muove, persona sdraiata sopra che si gira in 4 posizioni, serve per vedere possibili alterazioni nei dati dovute dal movimento del letto
+        \end{enumerate}  
+    \end{enumerate}  
+    \item  \textbf{Data Analysis} \\ Descrizione della pipeline, dai dati del materasso, preprocessamento, filtri vari, al numero di respiri al minuto per quel specifico minuto.
+    \begin{enumerate}
+        \item \textbf{Weighted and binary} \\ la pipeline viene creata sia dando un peso ai vari controlli effettuati sul segnale, sia rendendoli binari (o passa o non passa)
+        \item  \textbf{Pipeline} \\ Descrizione effettiva della pipeline
+        \begin{enumerate}
+            \item \textbf{Excluding criteria} \\ criteri di esclusione dei canali, non si effettuano ulteriori analisi.
+            \item  \textbf{SNR ratio} \\ deve rimanere in un intervallo, però avevo fatto casino inserendolo quindi non so se voglio citarlo
+            \item  \textbf{Wavelet} 
+            \begin{enumerate}
+                \item teoria di come funziona
+                \item applicazione nel progetto
+            \end{enumerate} 
+            \item \textbf{Savitz-Golay filter}
+            \begin{enumerate}
+                \item teoria di come funziona
+                \item applicazione nel progetto
+            \end{enumerate} 
+            \item \textbf{Subsequent analyses of the filtered signa} \\ analisi sul segnale filtrato, controllo del numero di respiri, controllo della distanza tra picchi e valli che viene intesa sia come durata (distanza sull'asse del tempo in un intervallo +-20\%) oppure distanza euclidea picco valle (sempre +- 20\%).
+        \end{enumerate} 
+        \item \textbf{Result of the Pipeline (visual)} \\ risultati visuali ottenuti dalla pipeline. quidni la possibilità di visualizzare dove son i canali migliori e farci delle considerazioni.
+    \end{enumerate} 
+    \item \textbf{Result}
+    \begin{enumerate}
+        \item \textbf{Evaluation Metrics} \\spiegazione delle metriche utilizzate e la motivazione
+        \begin{enumerate}
+            \item Mean absolute error (MAE)
+            \item Mean absolute percentage error (MAPE)
+            \item Root Mean Square Error (RMSE)
+        \end{enumerate} 
+        \item \textbf{Result for Wavelet}
+        \begin{enumerate}
+            \item Bland-Altman plot 77durante la discussione su mi hanno detto che è meglio utilizzare questi per raprpesentare i risultati. ma avendo pochi dati non saprei
+        \end{enumerate} 
+        \item \textbf{Result for sg filter}
+        \begin{enumerate}
+            \item Bland-Altman plot
+        \end{enumerate} 
+        \item \textbf{Comparison between the two approaches (wavelet and SG filter)} \\ piccolo commento su una che va meglio dell'altro, sg filter >> wavelet
+        \item  \textbf{Discussion performance on normal vs rocking bed)} \\ spiegre che funziona comnque a prescindere
+    \end{enumerate} 
+    \item \textbf{Conclusion and future discussin} \\ gli ampliamenti futuri ed un sunto sul fatto che si possa usare
+\end{enumerate}
+\end{comment}

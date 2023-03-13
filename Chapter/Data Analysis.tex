@@ -1,1 +1,52 @@
 \chapter{Data Analysis}
+\section{Weighted and binary method}
+\section{Pipeline}
+The total number of sensors is 1056, and consequently, the same number of signals from the mattress; this leads to the necessity of an algorithm to discriminate the ones from whom 
+it is possible to extract valuable information about the respiratory rate of the person on the mattress.
+Many of these channels are stationary on a value; others present just interference from the 
+mattress. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the 
+respiratory rate per minute (rpm). Therefore becomes necessary to design a metric that underlines these channels.
+The meaning of this metric must be interpreted as confidence expressed as the goodness of the signal in percentual.
+
+The designed pipeline aims to replicate a semi-realtime analysis using the data obtained during the data collection. 
+For this reason, it takes in input a sliding window of 60 seconds that is moving, for each position, through the 4-minute recording.
+The first step excludes those signals for the entire window length that are stationary or present only interference from the mattress.
+That interference appears as spikes but sometimes is present just in a percentage of the signal; the same could happen for stationarities that can be focused in just a subpart of the windows. In this case, the signal is not excluded and is assigned with confidence equal to the percentage of the signal that could have meaningful information.
+ Another type is a noisy signal, excluded or weighted with a percentage of confidence with the same approach as the previous two.
+
+ After these preliminary analyses, the number of signals decreases drastically; as a result, we obtain signals that could contain valuable information.
+We assume to count as one breath the moment between inhale and exhale, which can also be considered a peak in the signal.
+At this point, most of the signals are still noisy. To be better analysed, we decide to denoise it (NON SO CHE TERMINE USARE) using 
+two different kinds of approaches: Multiresolution analysis of the maximal overlap discrete wavelet transform (hereafter also referred to as "MODWTMRA"), and Savitz-Golay filter.
+
+The MODWTMRA is based on wavelet analysis(MOWDT) that transforms the original signal into a time-frequency domain 
+to be analysed and processed, the multiresolution analysis (MRA), which cuts the signal into components, can produce the original signal exactly when added back together.
+For our approach, we choose the Daubechies wavelet with two vanishing moments that better represent the breath signal present in our data, so we slide it across the entire signal to vary its location, where we multiply the wavelet and signal at each time step. 
+The product of this multiplication gives us a coefficient for that wavelet scale at that time step. 
+We then increase the wavelet scale and repeat the process to obtain the signal divided into different scales that combine to recreate the original signal. 
+To obtain our denoised signal, we decided to extract and sum only a subset of this scale, which allowed us to reconstruct a clear signal where the peaks could be underlined and counted.
+
+The Savitz-Golay filter, hereafter also referred to as "SG filter", is a filter used to "smooth out" a noisy signal whose frequency span (without noise) is significant. 
+They are also called digital smoothing polynomial filters or least-squares smoothing filters. 
+The idea of Savitzky-Golay filters is that each sample in the filtered sequence takes its direct neighbourhood of N neighbours and fits a polynomial to it.
+So, in the end, is possible to obtain a wave similar to the one in MODWTMRA form, which is likely to count the peaks, interpreted as the rpm.
+
+The so reconstructed signals were given as input to a pick finder to select both peaks and valleys of the signal. 
+We then exclude the channels with a signal with more than 30 rpm because the normal rpm during sleep is between 8-25 rpm, but since over 20 is predictive of cardiopulmonary arrest, we decide to keep only signals under 30 rpm.
+
+The remaining signals are further analyzed in their structure: via Euclidean distance between the signal's valley and peaks should differ by up to ±20$\%$ from the preceding breath, and also via the distance between peaks and valleys on the time axis that should vary between ±20 \% from the previous breath.
+These two last analysis also gives a percentage of confidence that the signal recreates a breath pattern.
+
+In the end, to calculate the rpm, the channels with the highest accuracy are taken into account, and the rpm is computed as the average of the number of peaks of the signals.
+It is also possible to visualize a heatmap to understand where the best channel is in respect of the body. 
+
+
+\subsection{Excluding criteria}
+\subsection{Wavelet}
+\subsubsection{theory}
+\subsubsection{using in the thesis}
+\subsection{Savitz-Golay filter}
+\subsubsection{theory}
+\subsubsection{using in the thesis}
+\subsection{Subsequent analyses of the filtered signal}
+\subsection{Result of the Pipeline (visual)}
