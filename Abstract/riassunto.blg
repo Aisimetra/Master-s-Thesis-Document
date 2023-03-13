@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/Homebrew)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: riassunto.aux
+The style file: ieeetr.bst
+Database file #1: /Users/cucciolo/Desktop/Master-s-Thesis-Document/references.bib
+Warning--entry type for "sensomative" isn't style-file defined
+--line 7 of file /Users/cucciolo/Desktop/Master-s-Thesis-Document/references.bib
+Warning--entry type for "sentex" isn't style-file defined
+--line 12 of file /Users/cucciolo/Desktop/Master-s-Thesis-Document/references.bib
+You've used 3 entries,
+            1876 wiz_defined-function locations,
+            492 strings with 4034 characters,
+and the built_in function-call counts, 469 in all, are:
+= -- 37
+> -- 34
+< -- 0
++ -- 13
+- -- 10
+* -- 32
+:= -- 77
+add.period$ -- 5
+call.type$ -- 3
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 16
+empty$ -- 46
+format.name$ -- 10
+if$ -- 107
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 1
+newline$ -- 14
+num.names$ -- 1
+pop$ -- 16
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 8
+stack$ -- 0
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 1
+width$ -- 4
+write$ -- 25
+(There were 2 warnings)

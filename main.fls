@@ -1701,6 +1701,10 @@ INPUT ./Chapter/Introduction.tex
 INPUT Chapter/Introduction.tex
 INPUT ./Chapter/Introduction.tex
 INPUT Chapter/Introduction.tex
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
 INPUT ./Chapter/Preliminaries.tex
 INPUT Chapter/Preliminaries.tex
 INPUT ./Chapter/Preliminaries.tex
@@ -1797,10 +1801,6 @@ INPUT ./main.lof
 INPUT main.lof
 INPUT main.lof
 OUTPUT main.lof
-INPUT ./main.bbl
-INPUT main.bbl
-INPUT ./main.bbl
-INPUT main.bbl
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

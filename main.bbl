@@ -1,5 +1,17 @@
 \begin{thebibliography}{1}
 
+\bibitem{Penzel2016ModulationsPolysomnography}
+T.~Penzel, J.~W. Kantelhardt, R.~P. Bartsch, M.~Riedl, J.~F. Kraemer,
+  N.~Wessel, C.~Garcia, M.~Glos, I.~Fietze, and C.~Sch{\"{o}}bel,
+  ``{Modulations of Heart Rate, ECG, and Cardio-Respiratory Coupling Observed
+  in Polysomnography},'' {\em Frontiers in physiology}, vol.~7, 10 2016.
+
+\bibitem{WinNT}
+Sensomative, ``https://sensomative.com/en/products/sensomative-science/.''
+
+\bibitem{sentex}
+SensingTex, ``https://sensingtex.com.''
+
 \bibitem{Noto2018AutomatedToolbox}
 T.~Noto, G.~Zhou, S.~Schuele, J.~Templer, and C.~Zelano, ``{Automated analysis
   of breathing waveforms using BreathMetrics: a respiratory signal processing
