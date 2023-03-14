@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/Homebrew)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Master_Thesis.aux
+The style file: ieeetr.bst
+Database file #1: biblio.bib
+Warning--entry type for "sensomative" isn't style-file defined
+--line 9 of file biblio.bib
+Warning--entry type for "sentex" isn't style-file defined
+--line 15 of file biblio.bib
+Warning--empty journal in CallejaComparisonApnoea
+Warning--empty year in CallejaComparisonApnoea
+You've used 4 entries,
+            1876 wiz_defined-function locations,
+            496 strings with 4184 characters,
+and the built_in function-call counts, 641 in all, are:
+= -- 46
+> -- 48
+< -- 0
++ -- 18
+- -- 14
+* -- 48
+:= -- 105
+add.period$ -- 5
+call.type$ -- 4
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 25
+empty$ -- 63
+format.name$ -- 14
+if$ -- 143
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 2
+newline$ -- 17
+num.names$ -- 2
+pop$ -- 23
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 10
+stack$ -- 0
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 2
+width$ -- 5
+write$ -- 31
+(There were 4 warnings)

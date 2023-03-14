@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>riassunto.bcf</file>
+      <file>Master_Thesis.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>riassunto.bbl</file>
+      <file>Master_Thesis.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -64,22 +64,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>riassunto</infile>
+      <infile>Master_Thesis</infile>
     </cmdline>
     <input>
-      <file>riassunto.bcf</file>
+      <file>Master_Thesis.bcf</file>
     </input>
     <output>
-      <file>riassunto.bbl</file>
+      <file>Master_Thesis.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>riassunto.bbl</file>
+      <file>Master_Thesis.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>riassunto.bcf</file>
-    </requires>
-    <requires type="editable">
-      <file>reference.bib</file>
+      <file>Master_Thesis.bcf</file>
     </requires>
   </external>
 </requests>
