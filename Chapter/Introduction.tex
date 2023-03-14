@@ -1,29 +1,6 @@
 
 \chapter{Introduction}
 
-\begin{comment}
-l'intro ha una sua struttura, in 3 parti (sigh ho già scritto questa 
-storia decine di volte, ma mai in generale per darla poi come lettura 
-a chi deve fare l'intro per la prima volta): da 0.5 a 1 pagina di super-short-intro, 
-questa parte non ho citazioni biblio, inizia con la stringa "scopo di questo lavoro è" 
-e dice solo cosa è stato fatto. 
-la seconda parte è quella corposa (massomeno da 2 
-a 5 pagine) e "gronda citrazioni" e descrive cosa è stato fatto dando anche il contesto
-(che ovviamente non ci sta in 0.5 - 1 pagina). la terza parte è la solita cavolata 
-dell'indice in forma discorsiva (nel capitolo x si descrive questo e quello..., e così via)
-
-@online{sensomative,
-howpublished = {\url{https://sensomative.com/}},
-  note = "visited on dd.mm.yyyy"
-  }
-}
-
-@online{sentex,
-howpublished={\url{https://sensingtex.com}},
-  note = "visited on dd.mm.yyyy"
-  }
-}
-\end{comment}
 
 %\subsection*{super-short-intro, inizia con lo scopo del lavoro è solo cosa è stato fatto}
 
@@ -37,32 +14,99 @@ In the second part, a pipeline to analyse the extracted data is created: from ea
 
 
 \subsubsection{Parte succosa}
-Sleep is one of the most important physiological functions. Sleep quality can affect physical 
-and mental wellness; for this reason, it is crucial to monitor vital signs and sleep stages without interfering with natural sleep. 
+Sleep is one of the most important physiological functions. Sleep quality can affect physical and mental wellness; for this reason, it is crucial to monitor vital signs and sleep stages without interfering with natural sleep. 
 The state-of-the-art to monitor physiological data during sleep is polysomnography \cite{Penzel2016ModulationsPolysomnography}, which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, complicated, expensive,
  invasive for the patient and only sometimes available in hospitals. Even in its simplified version, cardiorespiratory polysomnography \cite{CallejaComparisonApnoea}, where are involved just nose cannulas, chest belts and electrodes for an electrocardiogram (ECG) and does not track neurophysiological variables, the patient is subjected to physical discomfort throughout the night.
 
-Breathing monitoring is also crucial because inside the population it is present higher percentage of 
-sleep-related breathing disorders that can be studied and monitored with this instrument, like sleep apnoea/hypopnoea syndrome (SAS), 
+Breathing monitoring is also crucial because the population present a higher percentage of 
+sleep-related breathing disorders that can be studied and monitored with this instrument, like sleep apnoea/hypopnoea syndrome (SAS) \cite{SasPatients}, 
 where the individuals experience a collapse 
 of the airway in deeper sleep states. The ability to monitor it allows for a faster and closer intervention in severe cases. 
 
-Also in the study of sleep stages, it is known that every phase and stage is characterised by different muscle tones, brain wave patterns, eye movements and heart and breathing rate alterations.
-So if focused on one of the vital signs that characterise the different sleep stages like respiratory rate which in particular slowly becomes more stable in the Non-Rapid Eye Movement (NREM) phase and increases during the Rapid Eye Movement (REM) phase; this characterisation of the different stages gives the possibility to understand in which stage a person is based just on the respiratory signal.
+Also, in the study of sleep stages \cite{Gasmi2020SleepVariables}, it is known that different muscle tones, brain wave patterns, eye movements and heart and breathing rate alterations characterise every phase and stage.
+So if focused on one of the vital signs that characterise the different sleep stages, like respiratory rate, which in particular slowly becomes more stable in the Non-Rapid Eye Movement (NREM) phase and increases during the Rapid Eye Movement (REM) phase, this characterisation of the different stages gives the possibility to understand in which stage a person is based just on the respiratory signal\cite{Pal2022BreathingWakefulness}.
 
-x-----x
+Nowadays, it is possible to achieve this goal using different unobtrusive methods, such as radar technology \cite{RadarSensor}. The limitation of this approach lies in the fact that in case of the presence of another person in the room, in a hospital condition like a nurse or doctor, or even from fans or oxygen concentrators, could be a source of noise for the radar that could lead to incorrect prediction. It can also be disturbed by the movement of the patient itself \cite{LauteslagerValidation}. Another possibility is to use video cameras with infrared filters \cite{CamerasBasedVitalSigns}; even if this approach seems promising, it leads to personal privacy concerns. 
+
+On the market are also available smartwatches, like Garmin \cite{garminUrl}, that can estimate multiple vital signs with good precision \cite{GarminArticol}, but are devices that need to be worn all night that for some people could lead to discomfort, in case the batteries run out we lost the tracking and mostly does not give the possibility to extract the raw data. It is also possible to find under-mattress ballistocardiography-based sensors\cite{Tenhunen2013EmfitBreathing}, like Emfit \cite{emfitUrl}, that in case of multiple people inside the bed need to be placed in half of it and the wrong position can lead to inaccurate measurement.
+
+In this thesis, it is decided to use unobtrusive methods not to cause discomfort to the user, which could also give us the possibility to track vital signs. 
+However, the decision of which type of method it is also led from the availability, in the lab where this thesis is carried out, of a rocking bed part of the \textit{Somnomat}\cite{DevelopingSleep} project. This rocking bed aims to interact with the person and study how to improve sleep quality via vestibular stimulation. Also, in this case, the possibility of tracking vital signs could be significant, so the possibility of integrating unobtrusive methods with the Somnomat is part of this thesis.
+For all this reason, the choice fell to pressure sensor mattresses.
+They can be installed over the standard mattress and are now available as textile-sensor, which means that they can be as thin as possible and lead to less possible discomfort, but at the same time, can be used to track the respiratory rate and, depending on area density and sampling frequency, even hearth rate. 
+
+Inside the project, it is first used pressure-sensor textiles mattresses from \textit{Sensomative} \cite{sensomativeUrl} has 14 x 28 sensor elements for a total sensor area of 40cm x 80cm that can cover the width of a regular bed, visible in \ref{fig:sensomativeBed},with a sampling rate of 50Hz. Due to the small area needing to be positioned in a specific position and case, the patient moves; it is possible not to have any more information. Previous studies have brought out the possibility of estimating breathing patterns and heart rates; since the data from this mattress and the ground truth data from polysomnography are available, both possibilities are explored.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/sensomative.png}
+    \caption{Sensomative over a bed}
+    \label{fig:sensomativeBed}
+\end{figure}
+
+After evaluating a possible valid approach to this data, we decide to use it on a second mattress, from \textit{SensingTex} \cite{SensingConnectivity} that is already installed in a hospital ward of the \textit{University of Bern} for the study research on movement disorders during sleep in patients with Parkinson’s disease. Therefore the ability to estimate breath and heart rate could be helpful in this study.
+This mattress has a lower sampling frequency (10Hz) and 22 x 40 sensor elements for a total area of 94cm x 192cm that can cover a standard bed area.
 
 
-Nowadays, it is possible to achieve this goal using different unobtrusive methods, like pressure sensor mattresses.
-They can be installed over the standard mattress and are now available as textile-sensor, which means that they can be as thin as possible and lead to less possible discomfort, but at the same time, can be used to track the respiratory rate and, depending on area density and sampling frequency, even hearth rate. For this reason, this thesis used two different kinds of pressure-sensor textiles mattresses:
-
-The first, from \textit{Sensomative} \cite{sensomative}, with a higher sampling frequency and can cover a smaller area of a mattress, means that it needs to be positioned in a specific position and case the patient moves; it is possible not to have any more information. Previous studies have brought out the possibility of estimating breathing patterns and heart rates, so this thesis will explore this possibility.
-
-The second, from \textit{SensingTex} \cite{sentex}, with a lower sampling frequency, is less expensive and with a total area that covers all mattresses; in addition, it is already installed in a hospital ward of the \textit{University of Bern} for the study research on movement disorders during sleep in patients with Parkinson’s disease. Therefore the ability to estimate breath and heart rate could be helpful in this study.
-
-In the lab where this thesis is carried out is available a rocking bed (\textit{Somnomat}) aims to interact with the person and study how to improve sleep quality via vestibular stimulation. Also, in this case, the possibility of tracking vital signs could be significant, so the possibility of integrating the second mattress with the Somnomat is addressed.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/sensingtex.png}
+    \caption{Sensomative over a bed}
+    \label{fig:sensingtex}
+\end{figure}
 
 
+Raw data extracted from the mattress can be viewed together to visually see the position and the person's movement on it; it appears as a heatmap: since pressure sensors could record the different pressures exerted by the presence/absence of a body on it or by its parts. 
+%insert part image to make understand 
+So it is possible to create a heat map to show the variation in colour of the intensity of the pressure, which can produce the shape of a person on the mattress.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/sensingtex_2.jpg}
+    \caption{Sensomative over a bed}
+    \label{fig:sensingtexData}
+\end{figure}
+
+
+Looking closer into signals of singles channels is possible to see a pattern that resembles a breathing rhythm, similar to the data that can be retrieved from the nasal pressure exerted on the cannula of cardiorespiratory polysomnography.
+This pattern was the key factor in deciding to use this sensor mattress (hereafter referred to as ``sensor mat'' or ``mat"). 
+
+Since the data on the rocking bed were not collected before, it is necessary to conduct a data collection with two main objectives:
+The primary is to collect data to understand the feasibility of extracting breath rate from the mat; the second goal is to understand if the movement of the rocking bed could influence the signal.
+The participants are six, half male and half female, between 20 and 30 years old.
+Each participant wears a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical\cite{WirelessSystem}) that monitors nasal pressure, pulse, and heart rate with ECG and respiratory inductance plethysmography (RIP), which is a method of evaluating pulmonary ventilation by measuring the movement of the chest and abdominal wall. 
+
+
+The protocol is divided into two phases:
+
+The setting for the first phase involves the pressure mat over a standard bed. During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. We asked the participant to perform a set of five jumps and then lie down in a specific position for four minutes. After this period, they had to stand up, repeat the five jumps and lied down again. The total position performed is four with the following pattern: supine, left side, prone, right side and with a total of twenty jumps.
+
+
+The setting for the second phase, since in this part we want to collect the data while the Somnomat is moving, we fixed the period for the movement of the bed at 4 seconds (15 periods in a minute) with an acceleration of 0.25 $m/s^2$. Also, for this phase, they have been asked to turn around following the specific pattern: supine, left side, prone, right side and remain in that position for 4 minutes.
+
+This results in a recording of 32 minutes long for each participant divided into 4 minutes in each of the four positions with a standard bed and with Somnomat.
+
+
+SensingTex total number of sensors is 1056, but they are never all significant at the same time. A person's body can not cover the entire mattress and activate all the sensors (hereafter referred to as ``Channels") simultaneously. Consequently, this leads to the necessity of an algorithm to discriminate the ones from whom it is possible to extract valuable information.
+Many of these channels are stationary on a value; others present just interference from the mattress. It is possible to retrieve a respiratory pattern from just a few sensors and then extract the respiratory rate per minute (rpm). Therefore becomes necessary to design a metric that underlines these channels. 
+This metric must be interpreted as confidence expressed in percentual of the goodness of the signal; at the same time is necessary to have a workflow that, from mattress data, could estimate a person's respiratory rate. This led to the creation of a pipeline that estimates the rpm based on the previous minute. Since the data collected are not in real-time because they come from the data collection, the real-time replicate with a moving window of 60 seconds long that moves on the data with an interval of 10 seconds.
+
+
+
+
+$ c\longrightarrow$ 
+
+At the same time is necessary to have a workflow that from mattress data could estimate a person's respiratory rate, this led to the creation of a pipeline that estimates the rpm based on the previous minute. Since the data collected are not in real-time because they come from the data collection the real-time replicate with a moving window with an interval of 10 seconds for each window.
+
+
+$ x\longrightarrow$ 
+
+
+
+
+
+DUBBIO SUL FATTO CHE SIA FATTO IN SEMI-REALTIME
 
 \subsection*{citazioni, cosa è stato fatto con contesto e citazioni}
 

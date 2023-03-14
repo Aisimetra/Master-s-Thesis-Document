@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Penzel2016ModulationsPolysomnography}
 T.~Penzel, J.~W. Kantelhardt, R.~P. Bartsch, M.~Riedl, J.~F. Kraemer,
@@ -11,12 +11,75 @@ J.~M. Calleja, S.~Esnaola, R.~Rubio, and J.~Dur{\'{a}}, ``{Comparison of a
   cardiorespiratory device versus polysomnography for diagnosis of sleep
   apnoea},''
 
-\bibitem{sensomative}
+\bibitem{SasPatients}
+Z.~Wang, Z.~Sui, A.~Zhang, R.~Wang, Z.~Zhang, F.~Lin, J.~Chen, and S.~Gao, ``A
+  piezoresistive array based force sensing technique for sleeping posture and
+  respiratory rate detection for sas patients,'' {\em IEEE Sensors Journal},
+  pp.~1--1, 2021.
+
+\bibitem{Gasmi2020SleepVariables}
+A.~Gasmi, V.~Augusto, P.~A. Beaudet, J.~Faucheu, C.~Morin, X.~Serpaggi, and
+  F.~Vassel, ``{Sleep stages classification using cardio-respiratory
+  variables},'' {\em IEEE International Conference on Automation Science and
+  Engineering}, vol.~2020-August, pp.~1031--1036, 8 2020.
+
+\bibitem{Pal2022BreathingWakefulness}
+A.~Pal, F.~Martinez, M.~A. Akey, R.~S. Aysola, L.~A. Henderson, A.~Malhotra,
+  and P.~M. Macey, ``{Breathing rate variability in obstructive sleep apnea
+  during wakefulness},'' {\em Journal of clinical sleep medicine : JCSM :
+  official publication of the American Academy of Sleep Medicine}, vol.~18,
+  pp.~825--833, 3 2022.
+
+\bibitem{RadarSensor}
+D.~Zito, D.~Pepe, M.~Mincica, F.~Zito, A.~Tognetti, A.~Lanata, and D.~De~Rossi,
+  ``Soc cmos uwb pulse radar sensor for contactless respiratory rate
+  monitoring,'' {\em IEEE Transactions on Biomedical Circuits and Systems},
+  vol.~5, no.~6, pp.~503--510, 2011.
+
+\bibitem{LauteslagerValidation}
+T.~Lauteslager, M.~Maslik, F.~Siddiqui, S.~Marfani, G.~D. Leschziner, and A.~J.
+  Williams, ``Validation of a new contactless and continuous respiratory rate
+  monitoring device based on ultra-wideband radar technology,'' {\em Sensors},
+  vol.~21, p.~4027, Jun 2021.
+
+\bibitem{CamerasBasedVitalSigns}
+M.~van Gastel, S.~Stuijk, S.~Overeem, J.~P. van Dijk, M.~M. van Gilst, and
+  G.~de~Haan, ``Camera-based vital signs monitoring during sleep – a proof of
+  concept study,'' {\em IEEE Journal of Biomedical and Health Informatics},
+  vol.~25, no.~5, pp.~1409--1418, 2021.
+
+\bibitem{garminUrl}
+\url{https://www.garmin.com}.
+\newblock visited on dd.mm.yyyy.
+
+\bibitem{GarminArticol}
+E.~D. Chinoy, J.~A. Cuellar, K.~E. Huwa, J.~T. Jameson, C.~H. Watson, S.~C.
+  Bessman, D.~A. Hirsch, A.~D. Cooper, S.~P.~A. Drummond, and R.~R. Markwald,
+  ``{Performance of seven consumer sleep-tracking devices compared with
+  polysomnography},'' {\em Sleep}, vol.~44, 12 2020.
+
+\bibitem{Tenhunen2013EmfitBreathing}
+M.~Tenhunen, E.~Elomaa, H.~Sistonen, E.~Rauhala, and S.~L. Himanen, ``{Emfit
+  movement sensor in evaluating nocturnal breathing},'' {\em Respiratory
+  Physiology {\&} Neurobiology}, vol.~187, pp.~183--189, 6 2013.
+
+\bibitem{emfitUrl}
+``{Emfit}.''
+\newblock visited on dd.mm.yyyy.
+
+\bibitem{DevelopingSleep}
+``{Developing a robotic platform to improve the quality of sleep}.''
+\newblock visited on dd.mm.yyyy.
+
+\bibitem{sensomativeUrl}
 \url{https://sensomative.com/}.
 \newblock visited on dd.mm.yyyy.
 
-\bibitem{sentex}
-\url{https://sensingtex.com}.
+\bibitem{SensingConnectivity}
+``{Sensing Tex - Stretchable Electronics, Smarter Connectivity}.''
+
+\bibitem{WirelessSystem}
+``{Wireless and Portable Polysomnography Device: Nox A1 PSG System}.''
 \newblock visited on dd.mm.yyyy.
 
 \end{thebibliography}

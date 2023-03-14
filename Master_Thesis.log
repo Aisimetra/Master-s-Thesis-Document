@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2023.1.12)  14 MAR 2023 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2023.1.12)  14 MAR 2023 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -950,21 +950,28 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangrammax=\count419
 ) (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/titlesec/titleps.sty
 Package: titleps 2021/07/05 v2.14 Page styles
+) (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen352
+\WF@size=\dimen353
+\c@WF@wrappedlines=\count420
+\WF@box=\box134
+\WF@everypar=\toks64
+Package: wrapfig 2003/01/31  v 3.6
 ) (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2021/06/04 v1.1.5 Todonotes source and documentation.
 Package: todonotes 2021/06/04
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks64
-\XKV@tempa@toks=\toks65
+\XKV@toks=\toks65
+\XKV@tempa@toks=\toks66
 )
-\XKV@depth=\count420
+\XKV@depth=\count421
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-\c@@todonotes@numberoftodonotes=\count421
+\c@@todonotes@numberoftodonotes=\count422
 ) (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip80
@@ -978,10 +985,10 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 \f@nch@O@orf=\skip88
 )
 
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 106.
-
-
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 108.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 110.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -989,60 +996,61 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count422
-\l__pdf_internal_box=\box134
+\l__color_backend_stack_int=\count423
+\l__pdf_internal_box=\box135
 ) (./Master_Thesis.aux)
 \openout1 = `Master_Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 143.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 145.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 145.
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count423
-\scratchdimen=\dimen352
-\scratchbox=\box135
-\nofMPsegments=\count424
-\nofMParguments=\count425
-\everyMPshowfont=\toks66
-\MPscratchCnt=\count426
-\MPscratchDim=\dimen353
-\MPnumerator=\count427
-\makeMPintoPDFobject=\count428
-\everyMPtoPDFconversion=\toks67
+\scratchcounter=\count424
+\scratchdimen=\dimen354
+\scratchbox=\box136
+\nofMPsegments=\count425
+\nofMParguments=\count426
+\everyMPshowfont=\toks67
+\MPscratchCnt=\count427
+\MPscratchDim=\dimen355
+\MPnumerator=\count428
+\makeMPintoPDFobject=\count429
+\everyMPtoPDFconversion=\toks68
 ) (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count429
+\c@lstlisting=\count430
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 143.
+Package hyperref Info: Link coloring OFF on input line 145.
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1050,22 +1058,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count430
+\c@section@level=\count431
 )
-LaTeX Info: Redefining \ref on input line 143.
-LaTeX Info: Redefining \pageref on input line 143.
-LaTeX Info: Redefining \nameref on input line 143.
+LaTeX Info: Redefining \ref on input line 145.
+LaTeX Info: Redefining \pageref on input line 145.
+LaTeX Info: Redefining \nameref on input line 145.
  (./Master_Thesis.out) (./Master_Thesis.out)
 \@outlinefile=\write5
 \openout5 = `Master_Thesis.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 143.
-Package microtype Info: Applying patch `item' on input line 143.
-Package microtype Info: Applying patch `toc' on input line 143.
-Package microtype Info: Applying patch `eqnum' on input line 143.
+LaTeX Info: Redefining \microtypecontext on input line 145.
+Package microtype Info: Applying patch `item' on input line 145.
+Package microtype Info: Applying patch `toc' on input line 145.
+Package microtype Info: Applying patch `eqnum' on input line 145.
 
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 143.
+Package microtype Warning: Unable to apply patch `footnote' on input line 145.
 
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1073,7 +1081,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 143.
+LaTeX Info: Redefining \showhyphens on input line 145.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1124,7 +1132,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 143.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 145.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -1161,20 +1169,20 @@ Package todonotes Warning: The length marginparwidth is less than 2cm and will m
 <img/logo_unimib.pdf, id=135, 67.8029pt x 66.29492pt>
 File: img/logo_unimib.pdf Graphic file (type pdf)
 <use img/logo_unimib.pdf>
-Package pdftex.def Info: img/logo_unimib.pdf  used on input line 152.
+Package pdftex.def Info: img/logo_unimib.pdf  used on input line 154.
 (pdftex.def)             Requested size: 77.9727pt x 76.23854pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--161
+Underfull \hbox (badness 10000) in paragraph at lines 159--163
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 150--164
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 152--166
 [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
 
  []
 
@@ -1183,25 +1191,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
 
 {/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map} <./img/logo_unimib.pdf>]
-\c@teorema=\count431
-\c@definizione=\count432
-\c@esempio=\count433
-\c@corollario=\count434
-\c@lemma=\count435
-\c@osservazione=\count436
-\c@nota=\count437
-\c@esercizio=\count438
+\c@teorema=\count432
+\c@definizione=\count433
+\c@esempio=\count434
+\c@corollario=\count435
+\c@lemma=\count436
+\c@osservazione=\count437
+\c@nota=\count438
+\c@esercizio=\count439
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 \end{titlepage}
+l.238 \end{titlepage}
                       [1
 
 
 
 ]
-Package marginnote Info: Using workaround for absolute page number on input line 236.
+Package marginnote Info: Using workaround for absolute page number on input line 238.
  (./Master_Thesis.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
  (/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1218,7 +1226,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 ...{5.4}Bland–Altman plot}{19}{section.5.4}
+l.35 ...{5.4}Bland–Altman plot}{22}{section.5.4}
                                                   % [1
 
 ]
@@ -1232,23 +1240,44 @@ Chapter 1.
 [3
 
 
-] [4]) (./Chapter/Preliminaries.tex [5]
+] [4]
+<img/sensomative.png, id=232, 251.85pt x 215.715pt>
+File: img/sensomative.png Graphic file (type png)
+<use img/sensomative.png>
+Package pdftex.def Info: img/sensomative.png  used on input line 42.
+(pdftex.def)             Requested size: 209.12683pt x 179.12238pt.
+ [5 <./img/sensomative.png>]
+<img/sensingtex.png, id=245, 330.033pt x 273.969pt>
+File: img/sensingtex.png Graphic file (type png)
+<use img/sensingtex.png>
+Package pdftex.def Info: img/sensingtex.png  used on input line 53.
+(pdftex.def)             Requested size: 209.12683pt x 173.60048pt.
+<img/sensingtex_2.jpg, id=246, 469.755pt x 827.09pt>
+File: img/sensingtex_2.jpg Graphic file (type jpg)
+<use img/sensingtex_2.jpg>
+Package pdftex.def Info: img/sensingtex_2.jpg  used on input line 66.
+(pdftex.def)             Requested size: 209.12683pt x 368.19902pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./img/sensingtex.png>] [7 <./img/sensingtex_2.jpg>]) (./Chapter/Preliminaries.tex [8]
 Chapter 2.
-[6
+[9
 
-] [7] [8] [9]) (./Chapter/Methods.tex [10] [11]
+] [10] [11] [12]) (./Chapter/Methods.tex [13] [14]
 Chapter 3.
-[12
+[15
 
-]) (./Chapter/Data Analysis.tex [13]
+]) (./Chapter/Data Analysis.tex [16]
 Chapter 4.
-[14
-
-]) (./Chapter/Result.tex [15] [16]
-Chapter 5.
 [17
 
-] [18] (./Chapter/metrics/result_back_still.tex
+]) (./Chapter/Result.tex [18] [19]
+Chapter 5.
+[20
+
+] [21] (./Chapter/metrics/result_back_still.tex
 Overfull \hbox (30.59521pt too wide) in paragraph at lines 3--28
  [][] 
  []
@@ -1298,23 +1327,25 @@ Overfull \hbox (30.59521pt too wide) in paragraph at lines 1--26
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 67.
 
-) (./Chapter/Conclusion and future discussion.tex [19
+) (./Chapter/Conclusion and future discussion.tex [22
 
-] [20] [21] [22] [23] [24] [25] [26]
+] [23] [24] [25] [26] [27] [28] [29]
 Chapter 6.
-) [27
+) [30
 
 ] (./Master_Thesis.lot)
 \tf@lot=\write7
 \openout7 = `Master_Thesis.lot'.
 
- [28
+ [31
 
 ] (./Master_Thesis.lof)
 \tf@lof=\write8
 \openout8 = `Master_Thesis.lof'.
 
- (./Master_Thesis.bbl [29
+ (./Master_Thesis.bbl [32
+
+] [33
 
 ]
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1323,30 +1354,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 )
 
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 267.
-
-
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 269.
 
-[30
 
-] (./Master_Thesis.aux)
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 271.
+
+[34] (./Master_Thesis.aux)
 Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 02F0009034D032FEE843A33AA9D21833;5323.
  ) 
 Here is how much of TeX's memory you used:
- 45292 strings out of 478268
- 995057 string characters out of 5835366
- 1484790 words of memory out of 5000000
- 62398 multiletter control sequences out of 15000+600000
- 483858 words of font info for 143 fonts, out of 8000000 for 9000
+ 45425 strings out of 478268
+ 997551 string characters out of 5835366
+ 1486806 words of memory out of 5000000
+ 62497 multiletter control sequences out of 15000+600000
+ 484185 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,103p,1072b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Master_Thesis.pdf (32 pages, 210426 bytes).
+{/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on Master_Thesis.pdf (36 pages, 4235658 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 400 compressed objects within 4 object streams
- 100 named destinations out of 1000 (max. 500000)
- 37650 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 523 PDF objects out of 1000 (max. 8388607)
+ 451 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 37665 words of extra memory for PDF output out of 42996 (max. 10000000)
 
