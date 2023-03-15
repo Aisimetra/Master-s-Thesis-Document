@@ -1,16 +1,93 @@
 \chapter{State of Art}
 \section{Sleep Stages}
+\begin{comment}
 For this reason, it is nowadays 
 acceptable to use cardiorespiratory polysomnography that does not track neurophysiological variables. This type of polysomnography
 involves a cannula, chest belts and electrodes for an electrocardiogram (ECG) but does not involve an electroencephalogram (EEG).
 Another reason why this kind of instrument is widely used is that inside the population, we have a higher percentage of 
 sleep-related breathing disorders that can be studied and monitored with this instrument, like sleep apnoea/hypopnoea syndrome (SAS), 
 where the individuals experience a collapse 
-of the airway in deeper sleep states. The ability to monitor it allows for a faster and closer intervention in severe cases. 
-The sleep cycle of a person is divided into two phases Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM);
-this second phase is further divided into three other stages (N1-N3). Different muscle tones, brain wave patterns, 
-eye movements, and heart and breathing rate alterations characterise every phase and stage.
+of the airway in deeper sleep states. The ability to monitor it allows for a faster and closer intervention in severe cases. \end{comment}
+
+Sleep is a fundamental physiological function that occupies one-third of everyday life and affects almost every type of tissue and system in the body from the brain, heart, and lungs to metabolism, immune function, mood, and disease resistance. The quality and the quantity also can affect mental wellness, for example, lack of sleep affects our memory and ability to think clearly or sleep deprivation can lead to neurological dysfunction such as hallucinations. Moreover, those who do not get enough sleep are at higher risk of developing high blood pressure, cardiovascular disease, diabetes, depression, and obesity \cite{Colten2006SleepProblem}.
+
+The sleep cycle of a person is divided into two phases Non-Rapid Eye Movement (NREM) and Rapid Eye Movement (REM); 
+this second phase is further divided into three other stages (N1-N3). 
+Different muscle tones, brain wave patterns, eye movements, and heart and breathing rate alterations characterise every phase and stage. Each cycle is approximately 90 minutes long, over the course of the night a person goes through four to six 
+sleep cycles\cite{Patel2022PhysiologyStages}. The composition of each cycle, so time spent in each sleep stage, changes as the night goes along and depending on other factors such as age, recent sleep patterns, and alcohol consumption. 
+During an interrupted sleep, the stages progress as follows, also visible in Fig \ref{diag:slepcy}:
+\begin{itemize}
+    \item Awake to NREM stage 1 sleep.
+    \item NREM stage 1 progresses into NREM stage 2.
+    \item NREM stage 2 is followed by NREM stage 3.
+    \item NREM stage 3 to REM sleep.  
+\end{itemize}
+
+Then the cycle come back to NREM stage 1.
+
+
+\begin{figure}[H]
+    \centering
+    \smartdiagram[flow diagram:horizontal]{NREM stage 1,
+    NREM stage 2, NREM stage 3, REM}
+        \caption{Sleep Cycles}
+    \label{diag:slepcy}
+\end{figure}
+
+
+NREM sleep is composed of three stages \cite{StagesFoundation}:
+\begin{itemize}
+    \item N1: the first stage happend when a person first falls asleep, it last between one and seven minutes. The body has not fully relaxed and body and brain activities start to slow with periods of brief movements. If there are not external events a person can go into stage 2, during the nights an uninterrupted sleeper may not spend much more time in stage 1 as they move through further sleep cycles.
+    \item N2: During second stage the body has a drop in temperature,  muscles start to relax, and slowed breathing and heart rate. Simultaneously, brain activity slows, even they stil present some short bursts of activity and eye movement stops. This stage can last for 10 to 25 minutes during the first sleep cycle, and each N2 stage can become longer during the night. Jointly, half of sleep time is in N2 sleep.
+    \item N3: The last stage of NREM or deep sleep is when the body is more relaxe: muscole tone, pulse and breathing rate decress.
+    The brain activity during this period has an identifiable pattern of what are known as delta waves. For this reason, stage 3 may also be called delta sleep or slow-wave sleep (SWS). This stage is critical for restorative sleep, allowing for body to recovery and growth. Even though brain activity is reduced, there is evidence that deep sleep contributes to insightful thinking, creativity, and memory\cite{Yordanova2010DifferentialRegularity}. The duration of this stage is 20 to 40 minutes, overnight the other stages became shorter and more time gets spent in REM sleep instead.
+\end{itemize}
+
+REM sleep is characterised by brain activity near levels of awakeness, due to this at the same time the body experience atonia, which is a temporary paralysis of the muscles, with two exceptions: the eyes and the muscles that control breathing. Even though the eyes are closed, they can be seen moving quickly, which is how this stage gets its name.
+This sleep phase is essential to cognitive functions like memory, learning, and creativity and emotions \cite{Baran2012ProcessingSleep}.
+REM sleep is known for the most vivid dreams, which is explained by the significant uptick in brain activity, this is why the body experience a temporary atonia as it prevents from acting out inside dreams. Dreams can occur in any sleep stage, but they are less common and intense in the NREM periods. The first REM stage could last only a few minutes, later stages can last for around an hour.
+
+Both NREM and REM are important because they allow the brain and body to recuperate and develop. Sleepers who are frequently awoken during earlier stages, such as people with sleep apnea, may struggle to properly cycle into these deeper sleep stages. People with insomnia may not get enough total sleep to accumulate the needed time in each stage.
+
 \section{Respiratory Rate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Caridiorespiratory Polysomnography}
+
 The state-of-the-art to monitor physiological data during sleep is polysomnography \cite{Penzel2016ModulationsPolysomnography}
 , which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, 
 complicated, expensive, invasive for the patient and only sometimes available in hospitals. 
@@ -18,10 +95,14 @@ complicated, expensive, invasive for the patient and only sometimes available in
 Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate 
 which slowly becomes more stable going from the awake to the REM phase; this characterisation of the different stages gives the possibility to 
 understand in which stage a person is based just on the respiratory signal.
-\section{Polysomnography}
+
+
 \section{Pressure Sensor Mattress}
+
 As said before, the state-of-art is a cumbersome device that requires cables attached to the users' bodies and often interferes with natural sleep. To avoid it, in literature is possible to find new instruments like video cameras which lead to privacy concerns, radar technology that could have problems in case there are more than one person inside the room or smartwatches that are also able to track respiratory rate but involve to have something on the arm that still can lead to discomfort.
 
+\section{Unobstrusive approaches}
+\begin{comment}
 
 %%
     Sleep is one of the most important physiological functions. Sleep quality can affect physical 
@@ -125,8 +206,4 @@ As said before, the state-of-art is a cumbersome device that requires cables att
     In the end, to calculate the rpm, the channels with the highest accuracy are taken into account, and the rpm is computed as the average of the number of peaks of the signals.
     It is also possible to visualize a heatmap to understand where the best channel is in respect of the body. 
     
-    \subsection*{Result}
-    
-    \subsection*{Acknowledgement}
-    The project is carried out in collaboration with \textit{Sensory-Motor System Lab} of Prof.~Robert Riener at \textit{Eidgenössische Technische Hochschule 
-    (ETH) Zürich} and supervised by Dr.~Alexander Breuss, Dr.~Oriella Gnarra and Dr.~Manuel Fujis.
+\end{comment}

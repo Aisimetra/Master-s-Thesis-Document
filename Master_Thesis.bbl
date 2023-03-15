@@ -49,8 +49,8 @@ M.~van Gastel, S.~Stuijk, S.~Overeem, J.~P. van Dijk, M.~M. van Gilst, and
   vol.~25, no.~5, pp.~1409--1418, 2021.
 
 \bibitem{garminUrl}
-\url{https://www.garmin.com}.
-\newblock visited on dd.mm.yyyy.
+``{Garmin}.'' \url{https://www.garmin.com}.
+\newblock visited on 20.02.2023.
 
 \bibitem{GarminArticol}
 E.~D. Chinoy, J.~A. Cuellar, K.~E. Huwa, J.~T. Jameson, C.~H. Watson, S.~C.
@@ -64,22 +64,59 @@ M.~Tenhunen, E.~Elomaa, H.~Sistonen, E.~Rauhala, and S.~L. Himanen, ``{Emfit
   Physiology {\&} Neurobiology}, vol.~187, pp.~183--189, 6 2013.
 
 \bibitem{emfitUrl}
-``{Emfit}.''
-\newblock visited on dd.mm.yyyy.
+``{Emfit}.'' \url{https://www.emfit.com}.
+\newblock visited on 19.02.2023.
 
 \bibitem{DevelopingSleep}
 ``{Developing a robotic platform to improve the quality of sleep}.''
-\newblock visited on dd.mm.yyyy.
+  \url{https://www.news-medical.net/news/20220318/Developing-an-
+  autonomous-robotic-} \url{ platform-to-improve-the-quality-of-sleep.aspx}.
+\newblock visited on 12.02.2023.
 
 \bibitem{sensomativeUrl}
-\url{https://sensomative.com/}.
-\newblock visited on dd.mm.yyyy.
+``{Sensomative}.'' \url{https://sensomative.com/en/}.
+\newblock visited on 13.10.2022.
 
 \bibitem{SensingConnectivity}
-``{Sensing Tex - Stretchable Electronics, Smarter Connectivity}.''
+``{Sensing Tex}.'' \url{https://sensingtex.com/}.
+\newblock visited on 13.10.2022.
 
 \bibitem{WirelessSystem}
 ``{Wireless and Portable Polysomnography Device: Nox A1 PSG System}.''
-\newblock visited on dd.mm.yyyy.
+  \url{https://noxmedical.com/products/nox-a1-psg-system/}.
+\newblock visited on 13.02.2023.
+
+\bibitem{Chourpiliadis2022PhysiologyRate}
+C.~Chourpiliadis and A.~Bhardwaj, ``{Physiology, Respiratory Rate},'' {\em
+  StatPearls}, 9 2022.
+
+\bibitem{yuan2013respiratory}
+G.~Yuan, N.~A. Drost, and R.~A. McIvor, ``Respiratory rate and breathing
+  pattern,'' {\em McMaster Univ. Med. J}, vol.~10, no.~1, pp.~23--25, 2013.
+
+\bibitem{Colten2006SleepProblem}
+H.~R. Colten and B.~M. Altevogt, ``{Sleep Disorders and Sleep Deprivation: An
+  Unmet Public Health Problem},'' {\em Sleep Disorders and Sleep Deprivation:
+  An Unmet Public Health Problem}, pp.~1--404, 10 2006.
+
+\bibitem{Patel2022PhysiologyStages}
+A.~K. Patel, V.~Reddy, K.~R. Shumway, and J.~F. Araujo, ``{Physiology, Sleep
+  Stages},'' {\em StatPearls}, 9 2022.
+
+\bibitem{StagesFoundation}
+``{Stages of Sleep: What Happens in a Sleep Cycle | Sleep Foundation}.''
+  \url{https://www.sleepfoundation.org/stages-of-sleep#references-175856}.
+\newblock visited on 10.03.2023.
+
+\bibitem{Yordanova2010DifferentialRegularity}
+J.~Yordanova, V.~Kolev, U.~Wagner, and R.~Verleger, ``{Differential
+  associations of early- and late-night sleep with functional brain states
+  promoting insight to abstract task regularity},'' {\em PloS one}, vol.~5, 2
+  2010.
+
+\bibitem{Baran2012ProcessingSleep}
+B.~Baran, E.~F. Pace-Schott, C.~Ericson, and R.~M. Spencer, ``{Processing of
+  Emotional Reactivity and Emotional Memory over Sleep},'' {\em Journal of
+  Neuroscience}, vol.~32, pp.~1035--1042, 1 2012.
 
 \end{thebibliography}
