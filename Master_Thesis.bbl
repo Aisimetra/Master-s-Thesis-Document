@@ -94,6 +94,10 @@ C.~Chourpiliadis and A.~Bhardwaj, ``{Physiology, Respiratory Rate},'' {\em
 G.~Yuan, N.~A. Drost, and R.~A. McIvor, ``Respiratory rate and breathing
   pattern,'' {\em McMaster Univ. Med. J}, vol.~10, no.~1, pp.~23--25, 2013.
 
+\bibitem{ManuelZurich}
+``{Manuel Fujs – Sensory-Motor Systems Lab | ETH Zurich}.''
+  \url{https://sms.hest.ethz.ch/the-group/team/manuel_fujs.html}.
+
 \bibitem{Colten2006SleepProblem}
 H.~R. Colten and B.~M. Altevogt, ``{Sleep Disorders and Sleep Deprivation: An
   Unmet Public Health Problem},'' {\em Sleep Disorders and Sleep Deprivation:
@@ -118,5 +122,77 @@ J.~Yordanova, V.~Kolev, U.~Wagner, and R.~Verleger, ``{Differential
 B.~Baran, E.~F. Pace-Schott, C.~Ericson, and R.~M. Spencer, ``{Processing of
   Emotional Reactivity and Emotional Memory over Sleep},'' {\em Journal of
   Neuroscience}, vol.~32, pp.~1035--1042, 1 2012.
+
+\bibitem{FISHER1983223}
+C.~J. Fisher, ``Physiology of respiration,'' {\em Emergency Medicine Clinics of
+  North America}, vol.~1, no.~2, pp.~223--239, 1983.
+
+\bibitem{DelNegro2018BreathingMatters}
+C.~A. Del~Negro, G.~D. Funk, and J.~L. Feldman, ``{Breathing matters},'' {\em
+  Nature Reviews Neuroscience 2018 19:6}, vol.~19, pp.~351--367, 5 2018.
+
+\bibitem{barrett2010ganong}
+K.~E. Barrett, S.~Boitano, S.~M. Barman, and H.~L. Brooks, ``Ganong’s review
+  of medical physiology twenty,'' p.~588, 2010.
+
+\bibitem{Hong2013HowPatients}
+W.~Hong, A.~Earnest, P.~Sultana, Z.~Koh, N.~Shahidah, and M.~E.~H. Ong, ``{How
+  accurate are vital signs in predicting clinical outcomes in critically ill
+  emergency department patients},'' {\em European Journal of Emergency
+  Medicine}, vol.~20, pp.~27--32, 2 2013.
+
+\bibitem{Fieselmann1993RespiratoryInpatients}
+J.~F. Fieselmann, M.~S. Hendryx, C.~M. Helms, and D.~S. Wakefield,
+  ``{Respiratory rate predicts cardiopulmonary arrest for internal medicine
+  inpatients},'' {\em Journal of General Internal Medicine}, vol.~8,
+  pp.~354--360, 7 1993.
+
+\bibitem{Subbe2003EffectAdmissions}
+C.~P. Subbe, R.~G. Davies, E.~Williams, P.~Rutherford, and L.~Gemmell,
+  ``{Effect of introducing the Modified Early Warning score on clinical
+  outcomes, cardio-pulmonary arrests and intensive care utilisation in acute
+  medical admissions*},'' {\em Anaesthesia}, vol.~58, pp.~797--802, 8 2003.
+
+\bibitem{RUNDO2019381}
+J.~V. Rundo and R.~Downey, ``Chapter 25 - polysomnography,'' in {\em Clinical
+  Neurophysiology: Basis and Technical Aspects} (K.~H. Levin and P.~Chauvel,
+  eds.), vol.~160 of {\em Handbook of Clinical Neurology}, pp.~381--392,
+  Elsevier, 2019.
+
+\bibitem{ElectroencephalogramMedicine}
+``{Electroencephalogram (EEG) | Johns Hopkins Medicine}.''
+  \url{https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/electroencephalogram-eeg}.
+\newblock visited on 14.03.2023.
+
+\bibitem{CREEL2019495}
+D.~J. Creel, ``Chapter 33 - the electrooculogram,'' in {\em Clinical
+  Neurophysiology: Basis and Technical Aspects} (K.~H. Levin and P.~Chauvel,
+  eds.), vol.~160 of {\em Handbook of Clinical Neurology}, pp.~495--499,
+  Elsevier, 2019.
+
+\bibitem{ElectromyographySite}
+``{Electromyography (EMG) | Mayo Clinic}.''
+  \url{https://www.mayoclinic.org/tests-procedures/emg/about/pac-20393913}.
+\newblock visited on 13.03.2023.
+
+\bibitem{ElectrocardiogramNHS}
+``{Electrocardiogram (ECG) - NHS}.''
+\newblock visited on 17.03.2023.
+
+\bibitem{PulseMedicine}
+``{Pulse Oximetry | Johns Hopkins Medicine}.''
+\newblock visited on 17.03.2023.
+
+\bibitem{heitman2002validation}
+S.~J. Heitman, R.~S. Atkar, E.~A. Hajduk, R.~A. Wanner, and W.~W. Flemons,
+  ``Validation of nasal pressure for the identification of apneas/hypopneas
+  during sleep,'' {\em American journal of respiratory and critical care
+  medicine}, vol.~166, no.~3, pp.~386--391, 2002.
+
+\bibitem{Brullmann2010RespiratoryCalibration}
+G.~Br{\"{u}}llmann, K.~Fritsch, R.~Thurnheer, and K.~E. Bloch, ``{Respiratory
+  Monitoring by Inductive Plethysmography in Unrestrained Subjects Using
+  Position Sensor-Adjusted Calibration},'' {\em Respiration}, vol.~79,
+  pp.~112--120, 12 2010.
 
 \end{thebibliography}

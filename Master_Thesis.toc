@@ -1,42 +1,43 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}State of Art}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Sleep Stages}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Respiratory Rate}{10}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Caridiorespiratory Polysomnography}{11}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Pressure Sensor Mattress}{11}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Unobstrusive approaches}{11}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Methods}{12}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Instruments}{12}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Sensomative}{12}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}SensingTex}{12}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Nox A1, polysomnography}{12}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Somnomat}{14}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Preliminary Study of different approaches}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Data Collection}{14}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Normal Bed}{14}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Rocking Bed}{14}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Data Analysis}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Weighted and binary method}{16}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Pipeline}{16}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Excluding criteria}{18}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}SNR ratio}{18}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Wavelet}{18}{subsection.4.2.3}%
-\contentsline {subsubsection}{theory}{18}{section*.8}%
-\contentsline {subsubsection}{using in the thesis}{18}{section*.9}%
-\contentsline {subsection}{\numberline {4.2.4}Savitz-Golay filter}{18}{subsection.4.2.4}%
-\contentsline {subsubsection}{theory}{18}{section*.10}%
-\contentsline {subsubsection}{using in the thesis}{18}{section*.11}%
-\contentsline {subsection}{\numberline {4.2.5}Subsequent analyses of the filtered signal}{18}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Result of the Pipeline (visual)}{18}{subsection.4.2.6}%
-\contentsline {chapter}{\numberline {5}Result}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Evaluation Metrics}{19}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Mean absolute error (MAE)}{19}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Mean absolute percentage error (MAPE)}{19}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Root Mean Square Error (RMSE) }{19}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Result for Wavelet }{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Result for Savitz-Golay filter }{20}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Bland–Altman plot}{20}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Comparison between the two approaches \\ (wavelet and SG filter)}{20}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Discussion performance on normal vs rocking bed }{20}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Conclusion and future discussin}{21}{chapter.6}%
+\contentsline {chapter}{\numberline {2}State of Art}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sleep Stages}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Respiratory System}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Polysomnography}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Pressure Sensor Mattress}{18}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Unobstrusive approaches [DA FINIRE}{18}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Methods}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Instruments}{20}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Sensomative}{20}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}SensingTex}{22}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Nox A1, polysomnography}{25}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Somnomat}{26}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Preliminary Study of different approaches}{26}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Data Collection}{26}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Normal Bed}{26}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Rocking Bed}{26}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Data Analysis}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Weighted and binary method}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pipeline}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Excluding criteria}{28}{subsection.4.2.1}%
+\contentsline {subsubsection}{Spikes Signals}{30}{section*.19}%
+\contentsline {subsection}{\numberline {4.2.2}Denoised Signals}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Wavelet}{31}{subsection.4.2.3}%
+\contentsline {subsubsection}{using in the thesis}{34}{section*.24}%
+\contentsline {subsection}{\numberline {4.2.4}Savitz-Golay filter}{34}{subsection.4.2.4}%
+\contentsline {subsubsection}{theory}{34}{section*.25}%
+\contentsline {subsubsection}{using in the thesis}{34}{section*.26}%
+\contentsline {subsection}{\numberline {4.2.5}SNR ratio}{34}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Subsequent analyses of the filtered signal}{34}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Result of the Pipeline (visual)}{35}{subsection.4.2.7}%
+\contentsline {chapter}{\numberline {5}Result}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluation Metrics}{36}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Mean absolute error (MAE)}{36}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Mean absolute percentage error (MAPE)}{36}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Root Mean Square Error (RMSE) }{36}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Result for Wavelet }{37}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Result for Savitz-Golay filter }{37}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Bland Altman plot}{37}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Comparison between the two approaches (wavelet and SG filter)}{37}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Discussion performance on normal vs rocking bed }{37}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Conclusion and future discussin}{38}{chapter.6}%

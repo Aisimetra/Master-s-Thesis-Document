@@ -3,49 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Master_Thesis.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
-Warning--entry type for "garminUrl" isn't style-file defined
---line 118 of file biblio.bib
 Warning--empty journal in CallejaComparisonApnoea
 Warning--empty year in CallejaComparisonApnoea
-You've used 23 entries,
+Warning--empty journal in barrett2010ganong
+You've used 38 entries,
             1876 wiz_defined-function locations,
-            631 strings with 8839 characters,
-and the built_in function-call counts, 5530 in all, are:
-= -- 499
-> -- 306
+            728 strings with 11901 characters,
+and the built_in function-call counts, 9510 in all, are:
+= -- 900
+> -- 450
 < -- 0
-+ -- 112
-- -- 89
-* -- 434
-:= -- 816
-add.period$ -- 29
-call.type$ -- 23
-change.case$ -- 23
++ -- 166
+- -- 128
+* -- 719
+:= -- 1338
+add.period$ -- 46
+call.type$ -- 38
+change.case$ -- 38
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 237
-empty$ -- 495
-format.name$ -- 89
-if$ -- 1315
+cite$ -- 41
+duplicate$ -- 424
+empty$ -- 885
+format.name$ -- 128
+if$ -- 2311
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 16
-newline$ -- 79
-num.names$ -- 16
-pop$ -- 89
+int.to.str$ -- 38
+missing$ -- 26
+newline$ -- 128
+num.names$ -- 30
+pop$ -- 150
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 173
+skip$ -- 332
 stack$ -- 0
-substring$ -- 274
-swap$ -- 91
+substring$ -- 548
+swap$ -- 178
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 41
-width$ -- 25
-write$ -- 208
+warning$ -- 3
+while$ -- 78
+width$ -- 40
+write$ -- 346
 (There were 3 warnings)

@@ -95,32 +95,71 @@ This part of the protocol aims to provide a known rhythm to the breath rate acco
 \end{comment}
 
 \section{Instruments}
-\subsection{Sensomative}
+The project involved two textile sensor mattress: Sensomative \ref{SensomativePar} and SensingTex \ref{SensigTexPar}.
+The choosen instrument to collect the ground truth, cardiopulmonary polysomnography, is Nox A1, discuss in subsection \ref{NOXA1}.
 
-\begin{figure}[h]
+\subsection{Sensomative}\label{SensomativePar}
+Sensomative (Rothenburg, Switzerland)\cite{sensomativeUrl} is a start-up company, founded in 2015 in Switzerland, which produces textile pressure-measuring mats. These are based on the same principle as resistive touchpads. The sensor mass
+consists of two layers of conductive textile which are separated from each other by a spacer grid. 
+
+The sensor seen in Fig.\ref{fig:sensomativeBed} is composed of 14 x 28 sensor elements with a sampling frequency of 50Hz. 
+The sensing area is 40 cm x 80 cm and thus stretches almost over the entire width of a standard sized bed. Each sensor element is round and has a diameter of 2 cm.
+This mattress is commoly used to investigate position, since is possible to have the pressure distribution (example visible in Fig.\ref{fig:sensomativeData}). This mattress is used, for example, to control the sitting posture of office chairs and wheelchairs, analysing the pressure distribution is possible to discover posture errors and unven loads.\\
+
+\vspace*{0.5cm}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/sensomative.png}
+    \includegraphics[width=0.9\textwidth]{img/sensomative.png}
     \caption{Sensomative over a bed}
     \label{fig:sensomativeBed}
 \end{figure}
+\vspace*{0.5cm}
 
-\subsection{SensingTex}
-\begin{figure}[h]
+However, its dimension of 40 cm x 80 cm does not allow to cover the entire mattress so it is crucial to find the correct position to detec the desireble data. In this project the aim is to estimate the respiration rate so the position chosen is under the lungs, so from just above shoulder to middle of abdomen.
+
+This to be able to track the movment of the thorax during respiration. The movement is extracted and evalueted from the single sensor channel of the mattress, for the inhalation phase it has been seen an increase of pressure and during exhalation phase a decresing. Following a pattern [DATA] similar to nasal pressure or RIP Flow, recorder by the cardiopulmonary polysomnography \ref{NOXA1}. 
+
+The data for this mattress are a subsection of the entire data and come from a prevoius data collection of one of the supervisor of this theesis, Manul Fujis \cite{ManuelZurich}, that kindly make them avaible to inspect further the possibility to estimate respiratory and hearth rate from this mattress and also to have the data to do a preliminary study of the general feasability to exctract this physiological data. 
+\\ \vspace*{0.5cm}
+
+
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/sensingtex.png}
-    \caption{Sensomative over a bed}
+    \includegraphics[width=0.9\textwidth]{img/sensomative_2.jpg}
+    \caption{Sensomative data}
+    \label{fig:sensomativeData}
+\end{figure}
+\vspace*{0.5cm}
+
+\subsection{SensingTex} \label{SensigTexPar}
+The instrument on which this tesis is focalised then is SensigTex \cite{SensingConnectivity}, visible in Fig \ref{fig:sensingtex} this is a commercially avaible textile pressure sensore mattress. 
+The Mattress Mat Dev Kit that is capable to cover the entire area of a bed measuring 192cm x 94cm, with 48 x 22 sensor element and a sampling rate of 10Hz. This means that is five times slower than Sensomative (Chapter \ref{SensomativePar}), but that is already installed in a hospital ward of the \textit{University of Bern} for the study research on movement disorders during sleep in patients with Parkinson's disease. The ability to estimate breath and heart rate could be helpful for that study and then this project focused on this possibility.
+\\
+
+
+\vspace*{0.5cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/sensingTex.png}
+    \caption{SensigTex over a bed}
     \label{fig:sensingtex}
 \end{figure}
+\vspace*{0.5cm}
 
-\begin{figure}[h]
+dati e cose\\
+
+\vspace*{0.5cm}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/sensingtex_2.jpg}
-    \caption{Sensomative over a bed}
+    \includegraphics[width=0.7\textwidth]{img/sensingtex_2.jpg}
+    \caption{SensigTex Data}
     \label{fig:sensingtexData}
 \end{figure}
+\vspace*{0.5cm}
 
 
-\section{Nox A1, polysomnography}
+\subsection{Nox A1, polysomnography} \label{NOXA1}
 For this reason, this thesis aims to study the possibility to use an unobtrusive sensor placed over the usual mattress to retrieve 
 respiratory rate without discomfort for the person lying down on it. 
 

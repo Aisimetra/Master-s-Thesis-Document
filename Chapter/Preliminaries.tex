@@ -23,71 +23,117 @@ During an interrupted sleep, the stages progress as follows, also visible in Fig
     \item NREM stage 3 to REM sleep.  
 \end{itemize}
 
-Then the cycle come back to NREM stage 1.
-
+Then the cycle comes back to NREM stage 1.
+\vspace*{1.0cm}
 
 \begin{figure}[H]
+    \begin{center}
+        \begin{tikzpicture}[node distance=4cm]
+            %% nodi:
+            \node (inizio) [box] {Awake};
+            \node (stage1) [box, right of=inizio] {NREM\\Stage 1};
+            \node (stage2) [box, right of=stage1] {NREM\\Stage 2};
+            \node (stage3) [box, above of=stage2] {NREM\\Stage 3}; 
+            \node (rem) [box, left of=stage3] {REM}; %yshift=-3cm
+            %yshift=-1cm
+            \draw [arrow] (inizio) -- (stage1);
+            \draw [arrow] (stage1) -- (stage2);
+            \draw [arrow] (stage2) -- (stage3);
+            \draw [arrow] (stage3) -- (rem); % node[anchor=east] {Yes} 
+            %\draw [arrow] (quest) -- ++(4,0) -- ++(0,5) -- node[] {No} (if_1);
+            \draw [arrow] (rem) -- (stage1);
+        \end{tikzpicture}
+    \end{center}
+    \caption{Sleep Cycles}
+    \label{diag:slepcy}
+\end{figure}
+\vspace*{1.0cm}
+
+\begin{comment}
+\begin{figure}[H]
     \centering
-    \smartdiagram[flow diagram:horizontal]{NREM stage 1,
-    NREM stage 2, NREM stage 3, REM}
+    %\smartdiagram[flow diagram:horizontal]{NREM stage 1, NREM stage 2, NREM stage 3, REM}
         \caption{Sleep Cycles}
     \label{diag:slepcy}
 \end{figure}
-
+\end{comment}
 
 NREM sleep is composed of three stages \cite{StagesFoundation}:
 \begin{itemize}
-    \item N1: the first stage happend when a person first falls asleep, it last between one and seven minutes. The body has not fully relaxed and body and brain activities start to slow with periods of brief movements. If there are not external events a person can go into stage 2, during the nights an uninterrupted sleeper may not spend much more time in stage 1 as they move through further sleep cycles.
-    \item N2: During second stage the body has a drop in temperature,  muscles start to relax, and slowed breathing and heart rate. Simultaneously, brain activity slows, even they stil present some short bursts of activity and eye movement stops. This stage can last for 10 to 25 minutes during the first sleep cycle, and each N2 stage can become longer during the night. Jointly, half of sleep time is in N2 sleep.
-    \item N3: The last stage of NREM or deep sleep is when the body is more relaxe: muscole tone, pulse and breathing rate decress.
-    The brain activity during this period has an identifiable pattern of what are known as delta waves. For this reason, stage 3 may also be called delta sleep or slow-wave sleep (SWS). This stage is critical for restorative sleep, allowing for body to recovery and growth. Even though brain activity is reduced, there is evidence that deep sleep contributes to insightful thinking, creativity, and memory\cite{Yordanova2010DifferentialRegularity}. The duration of this stage is 20 to 40 minutes, overnight the other stages became shorter and more time gets spent in REM sleep instead.
+    \item N1: the first stage happens when a person first falls asleep, it last between one and seven minutes. The body has not fully relaxed and body and brain activities start to slow with periods of brief movements. If there are no external events a person can go into stage 2, during the night an uninterrupted sleeper may not spend much more time in stage 1 as they move through further sleep cycles.
+    \item N2: During the second stage the body has a drop in temperature,  muscles start to relax, and slowed breathing and heart rate. Simultaneously, brain activity slows, even if they still present some short bursts of activity and eye movement stops. This stage can last for 10 to 25 minutes during the first sleep cycle, and each N2 stage can become longer during the night. Jointly, half of the sleep time is in N2 sleep.
+    \item N3: The last stage of NREM or deep sleep is when the body is more relaxed: muscle tone, pulse and breathing rate decrease.
+    The brain activity during this period has an identifiable pattern of what is known as delta waves. For this reason, stage 3 may also be called delta sleep or slow-wave sleep (SWS). This stage is critical for restorative sleep, allowing for the body to recover and grow. Even though brain activity is reduced, there is evidence that deep sleep contributes to insightful thinking, creativity, and memory\cite{Yordanova2010DifferentialRegularity}. The duration of this stage is 20 to 40 minutes, overnight the other stages became shorter and more time gets spent in REM sleep instead.
 \end{itemize}
 
 REM sleep is characterised by brain activity near levels of awakeness, due to this at the same time the body experience atonia, which is a temporary paralysis of the muscles, with two exceptions: the eyes and the muscles that control breathing. Even though the eyes are closed, they can be seen moving quickly, which is how this stage gets its name.
-This sleep phase is essential to cognitive functions like memory, learning, and creativity and emotions \cite{Baran2012ProcessingSleep}.
-REM sleep is known for the most vivid dreams, which is explained by the significant uptick in brain activity, this is why the body experience a temporary atonia as it prevents from acting out inside dreams. Dreams can occur in any sleep stage, but they are less common and intense in the NREM periods. The first REM stage could last only a few minutes, later stages can last for around an hour.
+This sleep phase is essential to cognitive functions like memory, learning, creativity and emotions \cite{Baran2012ProcessingSleep}.
+REM sleep is known for the most vivid dreams, which is explained by the significant uptick in brain activity, this is why the body experiences a temporary atonia as it prevents from acting out inside dreams. Dreams can occur in any sleep stage, but they are less common and intense in the NREM periods. The first REM stage could last only a few minutes, and later stages can last for around an hour.
 
 Both NREM and REM are important because they allow the brain and body to recuperate and develop. Sleepers who are frequently awoken during earlier stages, such as people with sleep apnea, may struggle to properly cycle into these deeper sleep stages. People with insomnia may not get enough total sleep to accumulate the needed time in each stage.
 
-\section{Respiratory Rate}
+\section{Respiratory System}
 
 
+Respiration is the physiological process\cite{FISHER1983223} of our body to exchange carbon dioxide (CO$_2$) with oxygen (O$_2$). This process has an external phase that consists of the exchange of gases with the environment and the transfer of gas across the blood-gas barrier, and an internal phase that begins with the loading of oxygen onto the haemoglobin molecule and is followed by the transportation, delivery, and transfer of O$_2$ to the tissue. CO$_2$ is delivered back to the lung and ventilated out to the environment with the reversed process.
+
+Normal tidal breathing is comprised of inspiratory and expiratory phases and occurs with the synchronous movement of the thorax and abdomen.
+In particular, during inhalation (Fig.\ref{fig:resp}.a ), when we have the loading of O$_2$ into haemoglobin, the diaphragm moves downward toward the abdomen, and the rib muscles pull the ribs upward and outward making the chest cavity bigger and pulling air through the nose or mouth into the lungs. In exhalation,(Fig.\ref{fig:resp}.b), when the CO$_2$ leave the body, the diaphragm moves upward and the chest wall muscles relax, causing the chest cavity to get smaller and push air out of the respiratory system through the nose or mouth.
+
+This movement can be automatic or can be controlled voluntarily and it is adjusted based on the activity performed at that moment like coughing, sneezing, yawning, or speaking if a person is eating it is coordinated to chew and swallow to avoid choking. It could also increase as a response to physical activity, like running or climbing stairs\cite{DelNegro2018BreathingMatters}.\\
+
+\vspace*{1.0cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/j338_ps1n_201111.png}
+    \caption{Respiratory sistem}
+    \label{fig:resp}
+\end{figure}
+\vspace*{1.0cm}
 
 
+The respiration and the tidal volume vary in response to metabolic demand or diseases such as infection. Patients with elevated respiratory rates, reflected by the magnitude of the metabolic demand, often have a more serious illness. 
+
+The respiratory rate per minute (rpm) varies by age, focusing on healthy adults the average respiratory rate at rest is between 12 and 15 breaths per minute\cite{barrett2010ganong}.
+
+Some studies found that a respiratory rate greater than 20 breaths per min was predictive of cardiopulmonary arrest within 72 hours and death within 30 days\cite{Hong2013HowPatients}; greater than 27 breaths per minute was predictive of cardiopulmonary arrest within 72 hours \cite{Fieselmann1993RespiratoryInpatients}; also a prospective observational study of acute medical admissions, patients with a composite outcome of cardiopulmonary arrest, intensive care admission, or death within 24 hours had a mean respiratory rate of 27\cite{Subbe2003EffectAdmissions}.
 
 
+\section{Polysomnography}
+
+Polysomnography (PSG) is the state-of-art to monitor physiological data during sleep and is used to diagnose sleep disorders \cite{Penzel2016ModulationsPolysomnography, RUNDO2019381}, such as obstructive sleep apnea (OSA), sleep-related hypoventilation/hypoxia, nocturnal seizure, or periodic limb movement disorder. PSG require a complex monitor system because it consists of several instruments that the patient has to wear, visible in Fig \ref{fig:PSGComplete}.
+
+This procedure involves:
+\begin{itemize}
+    \item electroencephalogram(EEG)\cite{ElectroencephalogramMedicine}: this test measures electrical activity in the brain using electrodes, small metal discs with wires pasted on the scalp.
+    \item electrooculogram(EOG)\cite{CREEL2019495}: this test measures the corne-positive stain potential relative to the back of the eye, it is performed using skin electrodes outside the eye.
+    \item electromyogram(EMG)\cite{ElectromyographySite}: this diagnostic procedure can reveal nerve dysfunction, muscle dysfunction or problem with nerve-to-muscle signal transmission since is used to assess the health of muscles and the nerve cells that control them.
+    \item electrocardiogram(ECG)\cite{ElectrocardiogramNHS}: this test can be used to check the heart's rhythm and electrical activity.
+    \item pulse oximetry\cite{PulseMedicine}: this electronic device measures the saturation of oxygen carried in red blood cells, it is used to understand how well the oxygen is being sent to the part of the body furthest from the heart.
+    \item cannula: this instrument via nasal pressure monitor the airflow and respiratory effort\cite{heitman2002validation}.
+    \item respiratory inductance plethysmography(RIP)\cite{Brullmann2010RespiratoryCalibration}: which is a method of evaluating pulmonary ventilation by measuring the movement of the chest and abdominal wall.
+\end{itemize}
+As part of PSG are also monitored limb movement, body position and as derived data sleep stages. 
+After the test is completed a ``score" analyzes the data by 30-second ``epochs"
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/PSG test.png}
+    \caption{Polysomnography}
+    \label{fig:PSGComplete}
+\end{figure}
+
+\vspace*{1.0cm}
+\begin{comment}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\end{comment}
 
 
 
 
 \newpage
-\section{Caridiorespiratory Polysomnography}
-
+\subsection*{Caridiorespiratory Polysomnography}
 The state-of-the-art to monitor physiological data during sleep is polysomnography \cite{Penzel2016ModulationsPolysomnography}
 , which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, 
 complicated, expensive, invasive for the patient and only sometimes available in hospitals. 
@@ -95,13 +141,48 @@ complicated, expensive, invasive for the patient and only sometimes available in
 Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate 
 which slowly becomes more stable going from the awake to the REM phase; this characterisation of the different stages gives the possibility to 
 understand in which stage a person is based just on the respiratory signal.
+\vspace*{1.0cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/CardioPSG.jpg}
+    \caption{CaridiorespiratoryPolysomnography}
+    \label{fig:PSGCardio}
+\end{figure}
+\vspace*{1.0cm}
 
-
+\newpage
 \section{Pressure Sensor Mattress}
 
 As said before, the state-of-art is a cumbersome device that requires cables attached to the users' bodies and often interferes with natural sleep. To avoid it, in literature is possible to find new instruments like video cameras which lead to privacy concerns, radar technology that could have problems in case there are more than one person inside the room or smartwatches that are also able to track respiratory rate but involve to have something on the arm that still can lead to discomfort.
 
-\section{Unobstrusive approaches}
+\section{Unobstrusive approaches [DA FINIRE]}
+This section rst explains the dierent sensor systems that can be used for classifying
+lying position. Then three dierent sensors and their characteristics are compared and
+the most suitable model is selected.
+2.1 Sensors for Position Detection
+There are many diferent approaches to determine the sleep position. It is of great interest
+that the measurement is non-intrusive. The gold standard for sleep monitoring is by
+using Polysomnography most often in combination with a camera setup. Polysomnography
+others the possibility to detect the angular position of the test person by means of
+acceleration sensors. However, this is an intrusive measurement method. Sensor systems
+with a non-intrusive measurement approach used in research to date are based on the
+following sensor principles:
+Optical: Using an infrared camera, high-contrast images can be generated even in darkness.
+As shown by [3], machine learning approaches are mostly used to classify the sleep
+position based on the camera images. However, the use of cameras in private areas such
+as the bed is often perceived as uncomfortable and thus the compliance of such systems
+may decrease.
+Radar: By using the doppler effect, the breathing rate of a person lying still can be determined. [15] has shown that the sleep position can also be detected using radar technology.
+However, such systems reach their limits when there is more than one person in
+the room.
+Force Sensors: Although force sensors are not contact-free, they are not noticed by the
+user due to their soft material properties and therefore also belong to the non-intrusive
+measurement methods. The resolution of such force sensors can vary greatly, ranging from
+a few pressure-sensing elements to over 1000 sensor elements distributed over an entire
+bed surface.
+In this work we only focus on classifying the user's lying position by using force sensors.
+3
+2
 \begin{comment}
 
 %%
