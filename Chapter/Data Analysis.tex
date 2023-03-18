@@ -5,7 +5,7 @@ Many of these channels present a signal that is stationary on a value; others pr
 
 The designed pipeline aims to replicate a semi-realtime analysis using the data obtained during the data collection. 
 For this reason, it takes in input a sliding window of 60 seconds that is moving, for each position, through the 4-minute recording.
-In figure Fig. \ref{fig:pipeline} it is possible to visualize a scheme of the entire pipeline.
+In Figure\ref{fig:pipeline} it is possible to visualize a scheme of the entire pipeline.
 
 \begin{figure}[p]
     \centering
@@ -17,11 +17,11 @@ In figure Fig. \ref{fig:pipeline} it is possible to visualize a scheme of the en
 \subsection{Weighted and binary method}
 The metric has been designed as a confidence expressed as the goodness of the signal in percentual. To create this percentual has been decided to use create a series of criteria that each signal has to follow. 
 
-Some of this criteria, such as in Chapter \ref{cap:excCrit}, are excluding criteria, that are referred to a particular phonomena that if present for the entire length lead to have an unusable signal.
-If one of this criteria is not passed the signal is not further analysed, but if they present the phenoment but not for the enteir lenght, it has been decided to keep them and understand if in another part they could be meaningful. So they can express the percentage of the signal that follow that criteria or just that they present a possible meaningful part. 
+Some of these criteria, such as in Chapter \ref{cap:excCrit}, are excluding criteria, that are referred to particular phenomena that if present for the entire length lead to having an unusable signal.
+If one of these criteria is not passed the signal is not further analysed, but if they present the phenomena but not for the entire length, it has been decided to keep them and understand if in another part they could be meaningful. So they can express the percentage of the signal that follow those criteria or just that they present a possible meaningful part. 
 
-For this reason, it has been implemented a version of the pipeline where the criteria are binary, they can be pass or not (1 passed, 0 not passed), and a version where some criteria give as answer the percentage of the channel that could cointain a valuable information (hereafter also referred to as "weighted method"). For each criteria, in the following section will be explain the different output of the metrics, in case of binary or weighted approach.
-In both cases, the final confidence is the mean of percentages of each criteria.
+For this reason, it has been implemented a version of the pipeline where the criteria are binary, they can be passed or not (1 passed, 0 not passed), and a version where some criteria give as an answer the percentage of the channel that could contain valuable information (hereafter also referred to as "weighted method"). For each criterion, the following section will explain the different outputs of the metrics, in the case of binary or weighted approach.
+In both cases, the final confidence is the mean of percentages of each criterion.
 
 \begin{comment}
 In Table \ref{tab:metrics} are summurized the criteria explained int Chapter\ref{cap:excCrit}.
@@ -56,14 +56,14 @@ In Table \ref{tab:metrics} are summurized the criteria explained int Chapter\ref
 \end{comment}
 
 \subsection{Excluding criteria}\label{cap:excCrit}
-The first step of this pipeline excludes those signals for the entire window length that is stationary on value, with small amplitude, or present only interference from the mattress. So channels do not have meaningful information, in case this behaviour is present in a part of the signal the output for the metric is different based on binary or weighted approach. Only for artifacts are a excluding only criteria.
+The first step of this pipeline excludes those signals for the entire window length that is stationary on value, with small amplitude, or present only interference from the mattress. So channels do not have meaningful information, in case this behaviour is present in a part of the signal the output for the metric is different based on the binary or weighted approach. Only artefacts are an excluding only criterion.
 
 \subsubsection*{Stationary signals on a value}\label{cap:stationary}
 A stationary signal on a value is defined as a signal that remains on the same value for the entire length of the window.
 
-An example of the stationary signal on a value is shown in Fig. \ref{fig:stationaryTotal}, in this case, the channel, for this window, is excluded and not further analysed.
+An example of the stationary signal on a value is shown in Figure\ref{fig:stationaryTotal}, in this case, the channel, for this window, is excluded and not further analysed.
 However, since it is used as a moving window it will take again into account in the next window and, if it presents a different behaviour, it maybe is considered. 
-Nevertheless, If the channel presents only a part of the signal stationary on a value as in Fig. \ref{fig:spikePartial}, the channel is given as a percentage of confidence, the percentage of the non-stationary on a value signal for weighted approach or 1 for binary if the non-stationary value is more than 20\%.
+Nevertheless, If the channel presents only a part of the signal stationary on a value as in Figure\ref{fig:spikePartial}, the channel is given as a percentage of confidence, the percentage of the non-stationary on a value signal for weighted approach or 1 for binary if the non-stationary value is more than 20\%.
 \vspace*{0.5cm}
 \begin{figure}[H]
     \centering
@@ -81,8 +81,8 @@ Nevertheless, If the channel presents only a part of the signal stationary on a 
 
 \subsubsection*{Signal with small amplitude}\label{cap:noisy}
 
-Several channels present a signal with a small amplitude, between [intervall], an example is visible in Fig. \ref{fig:noisy}, so after verifying if they are not stationary on a value case (Chapter \ref{cap:stationary}), if the signal present a small amplitude for the entire length of the window that could not represent a respiratory pattern is excluded. 
-Otherwise, if part of the signal not have a small amplitude: for weighted approach, the percentage of confidence in output is equal to the percentage of signal without small amplitude.; for binary approach, the criteria is passed if the small amplitude is present in less than 20\% of the signal.
+Several channels present a signal with a small amplitude, between [intervall], an example is visible in Figure \ref{fig:noisy}, so after verifying if they are not stationary on a value case (Chapter \ref{cap:stationary}), if the signal presents a small amplitude for the entire length of the window that could not represent a respiratory pattern is excluded. 
+Otherwise, if part of the signal does not have a small amplitude: for the weighted approach, the percentage of confidence in output is equal to the percentage of a signal without a small amplitude.; for the binary approach, the criteria is passed if the small amplitude is present in less than 20\% of the signal.
 As in the previous case, due to the moving window nature of the pipeline after the shift of 10 seconds, the channel could have a different behaviour and be further analysed.\\
 
 
@@ -96,8 +96,8 @@ As in the previous case, due to the moving window nature of the pipeline after t
 
 
 \subsubsection{Spikes Signals} \label{spikes}
-The mattress can produce artefacts, that are visible in the channels as spikes as in Fig.\ref{fig:spikeTotal}. 
-Since these artefacts are visible also in channels that present a good respiratory pattern (Fig.\ref{fig:goodSignal}), after evaluating different thresholds it has been decided to accept the channel that has a percentage of spikes under 30\%. In this case, both methods (binary and weighted), has the same output 100\% or 1 in case of passed criteria, 0 otherwise.\\
+The mattress can produce artefacts, that are visible in the channels as spikes as in Figure \ref{fig:spikeTotal}. 
+Since these artefacts are visible also in channels that present a good respiratory pattern (Figure \ref{fig:goodSignal}), after evaluating different thresholds it has been decided to accept the channel that has a percentage of spikes under 30\%. In this case, both methods (binary and weighted), has the same output 100\% or 1 in case of passed criteria, 0 otherwise.\\
 
 
 \begin{figure}[H]
@@ -140,12 +140,12 @@ and $J_0$ is the number of levels of wavelet decomposition calculated as $floor(
 The first sum represents the first approximation of the signal and then the successive scales.
 MODWT returns the $N$ coefficients $\{c_k\}$ and the $(J_0 $ X $ N)$ detail coefficients $\{d_{j,k}\}$ of the expansion. 
 
-Since it has been used the MODWTMRA, instead of just MODWT, the returns is the projections of the function $f(x)$ onto the various wavelet subspaces and final scaling space. That is, MODWTMRA returns 
+Since it has been used the MODWTMRA, instead of just MODWT, the returns are the projections of the function $f(x)$ onto the various wavelet subspaces and final scaling space. That is, MODWTMRA returns 
 $$\sum_{k=0}^{N-1} c_k 2^{-J_0/2} \phi(2^{-J0}x-k)$$\newline
 and the $J_0$-many $\{f_j(x)\}$ evalutaed at $N$ time points.
 It is then obtained a projection of $f(x)$ onto a different subspace, the original signal can be recovered by adding all the projections. 
 
-For our approach, we choose the Daubechies wavelet with two vanishing moments (Fig.\ref{fig:Daubechies}) that better represent the breath signal present in our data.
+For our approach, we choose the Daubechies wavelet with two vanishing moments (Figure \ref{fig:Daubechies}) that better represent the breath signal present in our data.
 
 \begin{figure}[h]
     \centering
@@ -155,7 +155,7 @@ For our approach, we choose the Daubechies wavelet with two vanishing moments (F
 \end{figure}
 
 
-The decomposition of the signal of channel 404 (Fig.\ref{fig:404}), is shown in Fig.\ref{fig:level1}. The raw data has been decomposed into 13 levels to obtain our denoised signal, it has been decided to sum only a subset of this scale, which allowed us to reconstruct a clear signal where the peaks could be underlined and counted. 
+The decomposition of the signal of channel 404 (Figure \ref{fig:404}), is shown in Figure \ref{fig:level1}. The raw data has been decomposed into 13 levels to obtain our denoised signal, it has been decided to sum only a subset of this scale, which allowed us to reconstruct a clear signal where the peaks could be underlined and counted. 
 
 \begin{figure}[p]
     \centering
@@ -167,10 +167,10 @@ The decomposition of the signal of channel 404 (Fig.\ref{fig:404}), is shown in 
 
 %%%%%  APPLICAZIONE WAVELET %%%%%
 \subsubsection{Application in the Pipeline}
-To show the application of the MOWDTMRA in the pipeline, the signal in Fig. \ref{fig:404}, which has not been excluded by the criteria explained in Chapter \ref{cap:excCrit} is taken as an example.
+To show the application of the MOWDTMRA in the pipeline, the signal in Figure \ref{fig:404}, which has not been excluded by the criteria explained in Chapter \ref{cap:excCrit} is taken as an example.
 
-The signal is decomposed in 13 levels, as shown in Fig. \ref{fig:level1}, and choose the levels that are added together to reconstruct the signal of breath rate, in the context of this project the $9^{th}$ and $10^{th}$ level. The levels are chosen to recreate a wave that best fits the original wave of the signal but excludes the noise.
-The resulting wave is given as input to a peak finder to point out the moment between inhaling and exhaling, visible as a peak in the wave and counted as a breath. Since the window is 60 seconds long, these peaks are interpreted as rpm. The resulting plot is shown in Fig.\ref{fig:404Filt}.
+The signal is decomposed in 13 levels, as shown in Figure \ref{fig:level1}, and choose the levels that are added together to reconstruct the signal of breath rate, in the context of this project the $9^{th}$ and $10^{th}$ level. The levels are chosen to recreate a wave that best fits the original wave of the signal but excludes the noise.
+The resulting wave is given as input to a peak finder to point out the moment between inhaling and exhaling, visible as a peak in the wave and counted as a breath. Since the window is 60 seconds long, these peaks are interpreted as rpm. The resulting plot is shown in Figure \ref{fig:404Filt}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{img/404.jpg}
@@ -229,7 +229,7 @@ $$
 
 \vspace*{0.5cm}
 
-An example of how the Savitzky–Golay filter works is shown in Fig. \ref{fig:4sg explain}.
+An example of how the Savitzky–Golay filter works is shown in Figure \ref{fig:4sg explain}.
 
 \begin{figure}[p]
     \centering
@@ -243,10 +243,10 @@ An example of how the Savitzky–Golay filter works is shown in Fig. \ref{fig:4s
 
 \subsubsection{Application in the Pipeline}
 
-To show the application of the Savitz-Golay filter in the pipeline, the signal in Fig. \ref{fig:404}, which has not been excluded by the criteria explained in Chapter \ref{cap:excCrit} is taken as an example.
+To show the application of the Savitz-Golay filter in the pipeline, the signal in Figure \ref{fig:404}, which has not been excluded by the criteria explained in Chapter \ref{cap:excCrit} is taken as an example.
 
 For the filter is chosen a $9th$ order polynomial, that allows for obtaining a wave similar to the one in MODWTMRA form.
-The resulting wave is given as input to a peak finder to point out the moment between inhaling and exhaling, visible as a peak in the wave and counted as a breath and since the window is 60 second long, these peaks are interpreted as rpm. The resulting plot is shown in Fig.\ref{fig:404sg}.
+The resulting wave is given as input to a peak finder to point out the moment between inhaling and exhaling, visible as a peak in the wave and counted as a breath and since the window is 60 seconds long, these peaks are interpreted as rpm. The resulting plot is shown in Figure \ref{fig:404sg}.
 
 \vspace*{0.5cm}
 
@@ -263,17 +263,17 @@ The resulting wave is given as input to a peak finder to point out the moment be
 %\subsection{SNR ratio}
 
 \subsection{Subsequent analyses of the filtered signal}
-The reconstructed signal with MODWTMRA or Savitzky–Golay filter is then further analysed, based on physiological information. This criteria are considered binary,so the weighted approach follow the scheme 1000\% in case of passed and 0\% otherwise.
+The reconstructed signal with MODWTMRA or Savitzky–Golay filter is then further analysed, based on physiological information. This criterion is considered binary, so the weighted approach follows the scheme 1000\% in case of passed and 0\% otherwise.
 
 \subsubsection{Respiratory Rate over a Threshold}\label{threshold}
-Since this project is a preliminary analysis of the feasibility to use pressure sensor mattresses to estimate respiratory rate per minute (rpm). It has been decided to choose a threshold over which a respiratory rate of a person should not go %and set an alarm if the rpm goes over it. The choosen 
-, the threshold is 30rpm, because as discussed in Chapter \ref{cap:respiratorySystem} a rpm greater than 20 breaths per min was predictive of cardiopulmonary arrest within 72 hours and death within 30 days\cite{Hong2013HowPatients}; greater than 27 breaths per minute were predictive of cardiopulmonary arrest within 72 hours \cite{Fieselmann1993RespiratoryInpatients}.
+Since this project is a preliminary analysis of the feasibility to use pressure sensor mattresses to estimate a respiratory rate per minute (rpm). It has been decided to choose a threshold over which a respiratory rate of a person should not go %and set an alarm if the rpm goes over it. The choosen 
+, threshold is 30rpm because as discussed in Chapter \ref{cap:respiratorySystem} an rpm greater than 20 breaths per min was predictive of cardiopulmonary arrest within 72 hours and death within 30 days\cite{Hong2013HowPatients}; greater than 27 breaths per minute were predictive of cardiopulmonary arrest within 72 hours \cite{Fieselmann1993RespiratoryInpatients}.
 So %exclude 
-the channels with a signal with more than 30 rpm, to admit a part of error in our reconstruction and arrive to the limit given by literature between healty and problematic and lead to a 0\% percentage of confidence.
+the channels with a signal with more than 30 rpm, to admit a part of the error in our reconstruction and arrive at the limit given by literature between healthy and problematic and lead to a 0\% percentage of confidence.
 
 \subsubsection{Distance peaks valley} \label{cap:Euclidian}
-The signal is than give as input to an algorithm that point out the vally of the filtered signal and not only the peaks.
-The distance between vally and peaks is calculated with Euclidean distance, if the value between the signal's valley and peaks should differ inside the interval of ±20$\%$ from the preceding breath the signal is considered to be meaningful and lead to a 100\% percentage of confidence.
+The signal is then given as input to an algorithm that points out the valley of the filtered signal and not only the peaks.
+The distance between valley and peaks is calculated with Euclidean distance, if the value between the signal's valley and peaks should differ inside the interval of ±20$\%$ from the preceding breath the signal is considered to be meaningful and lead to a 100\% percentage of confidence.
 \vspace*{0.5cm}
 
 \begin{figure}[H]
@@ -285,7 +285,7 @@ The distance between vally and peaks is calculated with Euclidean distance, if t
 \vspace*{0.3cm}
 
 \subsubsection{Lenght of breath} \label{cap:BrethLength}
-The valley calculed in Chapter \ref{cap:BrethLength} are taken into accounto to calculate the distance between peaks and valleys on the time axis, so to check the length of inspiration and expiratory phase. The different should not vary between ±20 \% from the previous breath. If the signal is in this range the channel is considered meaningful and lead to a 100\% percentage of confidence.\\
+The valley calculated in Chapter \ref{cap:BrethLength} are taken into account to calculate the distance between peaks and valleys on the time axis, to check the length of inspiration and expiratory phase. The difference should not vary between ±20 \% from the previous breath. If the signal is in this range the channel is considered meaningful and leads to a 100\% percentage of confidence.\\
 \vspace*{0.5cm}
 
 \begin{figure}[H]
@@ -298,22 +298,22 @@ The valley calculed in Chapter \ref{cap:BrethLength} are taken into accounto to 
 
 \subsection{Compute the Respiratory Rate}
 
-At the end of the pipeline, for each methods: binary or weighted; for each approach: MODWTMRA and Savitzky–Golay filter, it has been saved the result of each of them. In case it is been decided to perform approach and methods, there are a total of four combination:
+At the end of the pipeline, for each method: binary or weighted; for each approach: MODWTMRA and Savitzky–Golay filter, it has been saved the result of each of them. In case it is been decided to perform the approach and methods, there are a total of four combinations:
 \begin{itemize}
-    \item MODWTMRA filter with binary approach
+    \item MODWTMRA filter with a binary approach
     \item MODWTMRA filter with MODWTMRA approach
-    \item Savitzky–Golay filter with binary approach
+    \item Savitzky–Golay filter with a binary approach
     \item Savitzky–Golay filter with MODWTMRA approach   
 \end{itemize}
 
-In the end, to calculate the rpm, the channels with the highest accuracy, that can be choosed at the beginning of the pipeline, are taken into account, and the rpm is computed as the average of the number of peaks of the signals.
+In the end, to calculate the rpm, the channels with the highest accuracy, which can be chosened at the beginning of the pipeline, are taken into account, and the rpm is computed as the average of the number of peaks of the signals.
 
 \subsection{Result of the Pipeline (visual)}
-As a result of the pipeline is also avaible a heatmap that allow to visualize where the channels with the highest percentage of confidence, to understand where are in respect of the body. Figure \ref{fig:heat}, is an example of the result heatmap, where the channels with the highest value are red and with lower are green up to blue when the channels has the 0\% of represent a respiratory pattern.
+As a result, the pipeline is also available a heatmap that allows visualizing where the channels with the highest percentage of confidence, understand where are in respect of the body. Figure \ref{fig:heat}, is an example of the resulting heatmap, where the channels with the highest value are red and with lower are green up to blue when the channels have the 0\% of representing a respiratory pattern.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\textwidth]{img/total.png}
-    \caption{Heatmap of channels with highest confidence}
+    \caption{Heatmap of channels with the highest confidence}
     \label{fig:heat}
 \end{figure}
