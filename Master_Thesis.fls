@@ -1894,7 +1894,16 @@ INPUT ./img/sensingtex_2.jpg
 INPUT img/sensingtex_2.jpg
 INPUT ./img/sensingtex_2.jpg
 INPUT ./img/sensingtex_2.jpg
-INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/tfm/jknappen/ec/tcti1200.tfm
+INPUT ./img/1.png
+INPUT ./img/1.png
+INPUT img/1.png
+INPUT ./img/1.png
+INPUT ./img/1.png
+INPUT ./img/somnomat.png
+INPUT ./img/somnomat.png
+INPUT img/somnomat.png
+INPUT ./img/somnomat.png
+INPUT ./img/somnomat.png
 INPUT ./Chapter/Data Analysis.tex
 INPUT Chapter/Data Analysis.tex
 INPUT ./Chapter/Data Analysis.tex
@@ -1987,6 +1996,22 @@ INPUT ./Chapter/Result.tex
 INPUT Chapter/Result.tex
 INPUT ./Chapter/Result.tex
 INPUT Chapter/Result.tex
+INPUT ./Chapter/metrics/result_back_still.tex
+INPUT Chapter/metrics/result_back_still.tex
+INPUT ./Chapter/metrics/result_back_still.tex
+INPUT Chapter/metrics/result_back_still.tex
+INPUT ./Chapter/metrics/result_back_still_metrics.tex
+INPUT Chapter/metrics/result_back_still_metrics.tex
+INPUT ./Chapter/metrics/result_back_still_metrics.tex
+INPUT Chapter/metrics/result_back_still_metrics.tex
+INPUT ./Chapter/metrics/result_back_mov.tex
+INPUT Chapter/metrics/result_back_mov.tex
+INPUT ./Chapter/metrics/result_back_mov.tex
+INPUT Chapter/metrics/result_back_mov.tex
+INPUT ./Chapter/metrics/result_back_mov_metrics.tex
+INPUT Chapter/metrics/result_back_mov_metrics.tex
+INPUT ./Chapter/metrics/result_back_mov_metrics.tex
+INPUT Chapter/metrics/result_back_mov_metrics.tex
 INPUT ./Chapter/Conclusion and future discussion.tex
 INPUT Chapter/Conclusion and future discussion.tex
 INPUT ./Chapter/Conclusion and future discussion.tex
@@ -2026,4 +2051,3 @@ INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/publi
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
-INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb

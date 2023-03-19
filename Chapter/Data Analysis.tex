@@ -1,5 +1,8 @@
 \chapter{Data Analysis}
-\section{Pipeline}
+%%%%% PRELIMINARY STUDY %%%%%
+\section{Preliminary Study of different approaches} \label{cap:Preliminary}
+%%%%% PIPELINE %%%%%
+\section{Pipeline}\label{cap:pipeline}
 The total number of sensors is 1056, and consequently, the same number of signals from the mattress; this leads to the necessity of an algorithm to discriminate the ones from whom it is possible to extract valuable information about the respiratory rate of the person on the mattress. A person's body can not cover the entire mattress and activate all sensors (hereafter referred to as “Channels”) simultaneously.
 Many of these channels present a signal that is stationary on a value; others present just interference from the mattress. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the respiratory rate per minute (rpm). Therefore becomes necessary to design a metric that underlines these channels. The meaning of this metric must be interpreted as confidence expressed as the goodness of the signal in percentual.
 
