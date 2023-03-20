@@ -124,7 +124,7 @@ However, its dimension of 40 cm x 80 cm does not allow it to cover the entire ma
 
 This is to be able to track the movement of the thorax during respiration. The movement is extracted and evaluated from the single sensor channel of the mattress, for the inhalation phase it has been seen an increase in pressure and during the exhalation phase a decrease. Following a pattern [DATA] similar to nasal pressure or RIP Flow, recorded by the cardiopulmonary polysomnography \ref{cap:NOXA1}. 
 
-The data for this mattress are a subsection of the entire data and come from a previous data collection of one of the supervisors of this thesis, Manul Fujis \cite{ManuelZurich}, who kindly make them available to inspect further the possibility to estimate respiratory and hearth rate from this mattress and also to have the data to do a preliminary study of the general feasibility to extract this physiological data. 
+The data for this mattress are a subsection of the entire data and come from a previous data collection of one of the supervisors of this thesis, Manul Fujis \cite{ManuelZurich}, who kindly make them available to inspect further the possibility to estimate respiratory rate from this mattress and also to have the data to do a preliminary study of the general feasibility to extract this physiological data. 
 
 
 
@@ -141,7 +141,7 @@ The data for this mattress are a subsection of the entire data and come from a p
 The instrument on which this thesis is focalised then is SensigTex \cite{SensingConnectivity}, visible in Fig \ref{fig:sensingtex} this is a commercially available textile pressure sensor mattress. 
 The Mattress Mat Dev Kit is capable to cover the entire area of a bed measuring 192cm x 94cm, with 48 x 22 sensor elements and a sampling rate of 10Hz. This means that is five times slower than Sensomative (Chapter \ref{cap:SensomativePar}), but that is already installed in a hospital ward of the \textit{University of Bern} for the study research on movement disorders during sleep in patients with Parkinson's disease. The ability to estimate breath could be helpful for that study and then this project focused on this possibility.
 
-This mattress is already implemented in the context of position classification, because as shown in Figure \ref{fig:sensingtexData}, is possible to retrieve the position of the person on it. The raw data has is own scale between in range 0-256 (minimum-maximum). 
+This mattress is already implemented in the context of position classification because as shown in Figure \ref{fig:sensingtexData}, is possible to retrieve the position of the person on it. The raw data has a scale in the range of 0-256 (minimum-maximum). 
 
 Looking closer into signals of singles channels is possible to see a pattern that resembles a breathing rhythm,  similar to the data that can
  be retrieved from the nasal pressure exerted on the cannula of cardiorespiratory polysomnography, as shown in Figure \ref{fig:404}.
@@ -166,21 +166,21 @@ Looking closer into signals of singles channels is possible to see a pattern tha
 
 %%%%% NOXA1 %%%%%
 \subsection{Nox A1, polysomnography} \label{cap:NOXA1}
-As explained in Chapter \ref{cap:cardiorespiratory} the cardiopulmonary polysomnography is an accepted method to monitor physiological data during sleep.
+As explained in Chapter \ref{cap:cardiorespiratory} cardiopulmonary polysomnography is an accepted method to monitor physiological data during sleep.
 
-Since in the data collection conducted during the thesis, further explained in Chaper \ref{cap:dataCollection}, it has been necessary to have a gold standard to track respiratory rate and validate estimated respiratory rate from the pipeline, described in Chapter\ref*{cap:pipeline}.
+Since in the data collection conducted during the thesis, further explained in Chapter \ref{cap:dataCollection}, it has been necessary to have a gold standard to track the respiratory rate and validate estimated respiratory rate from the pipeline, described in Chapter\ref*{cap:pipeline}.
 
-The istrument chosen it has been Nox A1 of NoxMedical, shown in Figure \ref{fig:NOXA1}, a wireless and portable PSG recording the following physiological parameters: 
+The instrument chosen has been Nox A1 of NoxMedical, shown in Figure \ref{fig:NOXA1}, a wireless and portable PSG recording the following physiological parameters: 
 
 \begin{itemize}
     \item Nasal pressure and Nasal Flow via nasal cannula.
-    \item Chest and Abdomen Movement with respiratory inductance plethysmography (RIP) gathered toghther in a parameter called "RIP Flow"
+    \item Chest and Abdomen Movement with respiratory inductance plethysmography (RIP) gathered together in a parameter called "RIP Flow"
     \item Heart Rate (ECG)
-    \item SPO2 and Pulse with a finger tip
+    \item SPO2 and Pulse with a fingertip
 \end{itemize}
 
-In the pipeline (Chapter\ref*{cap:pipeline}) it has been decided to use the Resp Rate (respiratory rate) calculeted by the NOX A1 and displayed as respirations per minute or [rpm] based on RIP Flow data.
-However, to further undestand if the channels in the mattress represent the correct respiratory rate are also used Nasal pressure and Nasal Flow.
+In the pipeline (Chapter\ref*{cap:pipeline}) it has been decided to use the Resp Rate (respiratory rate) calculated by the NOX A1 and displayed as respirations per minute or [rpm] based on RIP Flow data.
+However, to further understand if the channels in the mattress represent the correct respiratory rate also used Nasal pressure and Nasal Flow.
 
 \begin{figure}[H]
     \centering
@@ -191,12 +191,12 @@ However, to further undestand if the channels in the mattress represent the corr
 
 %%%%% SOMNOMAT %%%%%
 \subsection{Somnomat Casa} \label{cap:Somnomat}
-The lab, where this thesis is carried out, has one of the main focus on sleep robotics. Inside the Somnomat project, there are two research domain: one covers controlled positional therapy and the other investigates potential benefits of rocking movements on sleep.
+The lab, where this thesis is carried out, has one of the main focuses on sleep robotics. Inside the Somnomat project, there are two research domains: one covers controlled positional therapy and the other investigates the potential benefits of rocking movements on sleep.
 
-The second research domain aim to replicate the rocking movment made from mother to help babies to fall asleep, replicating a back-and-forth motions. The Somnomat Casa, shown in Figure\ref{fig:somnomat}, looks like a conventional bed but fits into private bedrooms and can be operated by the push of a button. 
-Rocking movment has determining suitable motion parameters and a mechanical adaptations to have a inaudible rocking mechanism.
+The second research domain aims to replicate the rocking movement made by the mother to help babies to fall asleep, replicating back-and-forth motions. The Somnomat Casa, shown in Figure\ref{fig:somnomat}, looks like a conventional bed but fits into private bedrooms and can be operated by the push of a button. 
+Rocking movement has determined suitable motion parameters and mechanical adaptations to have an inaudible rocking mechanism.
 
-The possibility to estimate the respiratory rate of a person while the rocking bed is moving, could be important to discover how this movment could help to fall asleep, based also on the respiration rate. As discussed in Chapter \ref{cap:sleepStages}, breathing is one of the parameter that highlite the sleep stage in which the person is in that moment. This knoledge could be used to further implement the intervention.
+The possibility to estimate the respiratory rate of a person while the rocking bed is moving could be important to discover how this movement could help to fall asleep, based also on the respiration rate. As discussed in Chapter \ref{cap:sleepStages}, breathing is one of the parameters that highlight the sleep stage in which the person is in that moment. This knowledge could be used to further implement the intervention.
 
 
 \begin{figure}[H]
@@ -210,24 +210,58 @@ The possibility to estimate the respiratory rate of a person while the rocking b
 %%%%% DATA COLLECTION %%%%%
 \section{Data Collection} \label{cap:dataCollection}
 
-During the thesis' project has been conducted a data collection because the data from Sensingtex where not has been collected yet.
-However, the availability of a rocking bed give to this data collection a second objective.
+In the course of the thesis project been conducted data collection because the data from Sensingtex where not has been collected yet.
+However, the availability of a rocking bed gives this data collection a second objective.
 The primary objective has been to collect data from SensingTex to understand the feasibility of extracting breath rate from the mat; 
 the second goal is to understand if the movement of the rocking bed could influence the signal.
 
 The participant involved was 6, half male and half female, between 20-30 years old, who were asked to lie on a standard mattress covered with the sensor mattresses in a specific position, for the first part of the data collection (described in Chapter \ref{cap:NormalBed}), and on a rocking bed while it is moving, for the second part of the data collection (described in Chapter \ref{cap:RockingBed}).
-Each participant wore a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical), described in Chapter \ref{cap:NOXA1}. The total length of the data collection for each participant it is 32 minutes long.
+Each participant wore a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical), described in Chapter \ref{cap:NOXA1}. The total length of the data collection for each participant is 36 minutes long divided into 4 minutes in each of the 4 positions with normal bed and with Somnomat.
 
 %%%%% NORMAL BED %%%%%
 \subsection{Normal Bed}\label{cap:NormalBed}
-The first part of the data collection aims to undestand the feasibility of extracting breath rate from the mat, so the setting involves the pressure mat over a standard bed.  
+The first part of the data collection aims to understand the feasibility of extracting breath rate from the mat, so the setting involves the pressure mat over a standard bed.  
 
-During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. Since this study is performed in a laboratory condition to recreiate this it has been asked to the participant to perform a set of five jumps before lying down, so it is expected to find in the data this varaibility that is firstly checked with the data coming from the ground truth.
+During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. Since this study is performed in a laboratory condition to recreate this it has been asked to the participant to perform a set of five jumps before lying down, so it is expected to find in the data this variability that is firstly checked with the data coming from the ground truth.
 
-The participant perform the jumps and tha lying down on mattress in a specific position for 4 minutes.
-After that they were asked to stand up, performe other 4 jumps and lydown again. This is done for each of the position of the pattern: supine, left side, prone, right side. The total number of performed jumps are 20 and the toal time for this part is around 18 minutes (compreise of the jumps time).
+The participant performs the jumps and then lies down on a mattress in a specific position for 4 minutes.
+After that, they were asked to stand up, perform the other 4 jumps and go down again. This is done for each of the positions of the pattern: supine left side, prone, and right side. The total number of jumps performed is 20 and the Toal time for this part is about 18 minutes (including getting in and out of bed and jump time).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/PLACE HOLDER.pdf}
+    \caption{Place holder normal bed}
+    \label{fig:normalBed}
+\end{figure}
+
 %%%%% ROCKING BED %%%%%
 \subsection{Rocking Bed}\label{cap:RockingBed}
-The setting for the second phase, since in this part we want to collect the data while the Somnomat is moving, we fixed the period for the movement of the bed at 4 seconds (15 periods in a minute) with an acceleration of 0.25 $m/s^2$. Also, for this phase, they have been asked to turn around following the specific pattern: supine, left side, prone, right side.
-This results in a recording of 32 minutes long for each participant divided into 4 minutes in each of the 4 positions with normal bed and with Somnomat.
+The second part of the data collection aims to understand if the movement of the rocking bed could influence the signal.
 
+ Since the data are collected while the Somnomat Casa is moving, it has been fixed the period for the movement of the bed at 4 seconds (15 periods in a minute) with an acceleration of 0.25 $m/s^2$. 
+ The participant has not been asked to perform any jumps, to have less variability in breath patterns and see the possible interference from the mattress.
+They have been asked to lie down in a supine position for 4 minutes, and after that, they have been asked to turn around on the left side. This has been asked to perform for all the positions: supine, left side, prone, and right side.
+The total time for this part is about 18 minutes, including the necessary time to turn around on the bed and stop the movement between each position.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/PLACE HOLDER.pdf}
+    \caption{Place holder rocking bed}
+    \label{fig:rockingBed}
+\end{figure}
+
+\subsection{Data processing} \label{cap:dataProcessing}
+
+After the data collection, it has been necessary to clean the data in order to remove the moment when the participant was getting in and out of the bed.\newline
+
+ For each recording, based on different data extracted from the PSG and pressure mattress, is possible to retrieve when the person stands up to perform the jumps or to turn around in another position. As shown in Figure \ref{fig:recordingCutfull}, based on nasal pressure data, is possible to recognize the different moments. In the left part of the plot the four positions on the stationary bed and in the right part the four positions on the moving bed.
+ In the end, for each participant are available eight different recordings, 4 minutes long, one for each position of the different phases in which the data collection is divided.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{img/full.pdf}
+    \caption{Full recording}
+    \label{fig:recordingCutfull}
+\end{figure}

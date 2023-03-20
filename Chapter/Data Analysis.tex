@@ -1,14 +1,62 @@
 \chapter{Data Analysis}
+
+The data analysis focuses, in the first section \ref{cap:Preliminary}, on the preliminary study conducted to understand the feasibility to estimate respiratory rate from a pressure sensor mattress. The data involved in the first part belong to the Sensomative mattress (Chapter \ref{cap:SensomativePar}), collected by a supervisor of this thesis, Manuel Fujis \cite{ManuelZurich}, who kindly make them available.
+During the second section \ref{cap:pipeline} is presented the pipeline to analyse the data extracted with the data collection. This pipeline aims to find the best channels, that represent a respiratory pattern, in the mattress and from them estimate the respiratory rate per minute.
+
+
+
+
 %%%%% PRELIMINARY STUDY %%%%%
-\section{Preliminary Study of different approaches} \label{cap:Preliminary}
+\section{Preliminary Study on Sensomative Mattress} \label{cap:Preliminary}
+
+A preliminary study on the feasibility of estimating breathing rate from a mattress is conducted on a subsect of the available data belonging to Sensomative mattress (Chapter \ref{cap:SensomativePar}).
+
+From the comparison of raw mattress data and nasal pressure (PSG), as shown in Figure \ref{fig:breathPresent}, is possible to retrieve a respiratory pattern. This is the starting point of the preliminary study.\\
+
+
+\begin{figure}[H]
+    \centering   
+    \includegraphics[width=\textwidth]{img/breath_presentation.jpg}
+    \caption{Breath pattern}
+    \label{fig:breathPresent}
+\end{figure}
+
+\vspace*{0.5cm}
+
+The moment between inhaling and exhaling, visible as a peak in the raw data and the PSG data, is counted as a breath. The raw data are too noisy to be given as input to a peak finder, for this reason, is applied a multiresolution overlap discrete wavelet transform, explained later in Chapter \ref{Wavelet}.
+
+\vspace*{0.5cm}
+
+\begin{figure}[H]
+    \centering    
+    \includegraphics[width=\textwidth]{img/sensomative_manu.png}
+    \caption{MODWTMRA reconstruction}
+    \label{fig:seonsmativeDataManu}
+ 
+\end{figure}
+
+The so reconstruct signal is given as input to a peak finder that allows counting them and obtaining the respiration rate per minute (rpm).
+
 %%%%% PIPELINE %%%%%
 \section{Pipeline}\label{cap:pipeline}
-The total number of sensors is 1056, and consequently, the same number of signals from the mattress; this leads to the necessity of an algorithm to discriminate the ones from whom it is possible to extract valuable information about the respiratory rate of the person on the mattress. A person's body can not cover the entire mattress and activate all sensors (hereafter referred to as “Channels”) simultaneously.
+The designed pipeline aims to replicate a semi-realtime analysis using the data obtained from the SensingTex mattress, during the data collection. \newline
+
+The SensingTex has a total number of sensors of 1056, and consequently, the same number of signals from the mattress; this leads to the necessity of an algorithm to discriminate the ones from whom it is possible to extract valuable information about the respiratory rate of the person on the mattress. A person's body can not cover the entire mattress and activate all sensors (hereafter referred to as “Channels”) simultaneously.
 Many of these channels present a signal that is stationary on a value; others present just interference from the mattress. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the respiratory rate per minute (rpm). Therefore becomes necessary to design a metric that underlines these channels. The meaning of this metric must be interpreted as confidence expressed as the goodness of the signal in percentual.
 
-The designed pipeline aims to replicate a semi-realtime analysis using the data obtained during the data collection. 
-For this reason, it takes in input a sliding window of 60 seconds that is moving, for each position, through the 4-minute recording.
-In Figure\ref{fig:pipeline} it is possible to visualize a scheme of the entire pipeline.
+Since the designed pipeline aims to replicate a semi-realtime analysis, it takes in input a sliding window of 60 seconds that is moving, for each position, through the 4-minute recording obtained after the cleaning of the data (Chapter \ref{cap:dataProcessing}). Figure \ref{fig:recordingCut4} shows a 4-minute recording with a highlighted window of 60 seconds, which can be consulted in more detail in figure \ref{fig:recordingCut1}.
+
+\begin{figure}[h]
+    \centering    
+    \includegraphics[width=1.1\textwidth]{img/4minute.pdf}
+    \caption{4 minute}
+    \label{fig:recordingCut4}
+    \includegraphics[width=1.1\textwidth]{img/1minute.pdf}
+    \caption{1 minute}
+    \label{fig:recordingCut1}
+\end{figure}
+
+In Figure \ref{fig:pipeline} it is possible to visualize a scheme of the entire pipeline.
 
 \begin{figure}[p]
     \centering
@@ -127,7 +175,7 @@ It is possible to choose which approach to use in the context of the data, in th
 
 
 %%%%%%%% WAVELET %%%%%%%%
-\subsection{Wavelet} \label{Wavelet}
+\subsection{Multiresolution Overlap Discrete Wavelet Transform} \label{Wavelet}
 
 The Multiresolution Overlap Discrete Wavelet Transform (hereafter also referred to as "MODWTMRA") is based on wavelet analysis (MOWDT) that transforms the original signal into a time-frequency domain to be analysed and processed, the multiresolution analysis (MRA), which cuts the signal into components, can produce the original signal exactly when added back together.
 
