@@ -6,45 +6,45 @@ Database file #1: biblio.bib
 Warning--empty journal in CallejaComparisonApnoea
 Warning--empty year in CallejaComparisonApnoea
 Warning--empty journal in barrett2010ganong
-You've used 38 entries,
+You've used 44 entries,
             1876 wiz_defined-function locations,
-            728 strings with 11901 characters,
-and the built_in function-call counts, 9510 in all, are:
-= -- 900
-> -- 450
+            769 strings with 13425 characters,
+and the built_in function-call counts, 11658 in all, are:
+= -- 1117
+> -- 537
 < -- 0
-+ -- 166
-- -- 128
-* -- 719
-:= -- 1338
-add.period$ -- 46
-call.type$ -- 38
-change.case$ -- 38
++ -- 197
+- -- 153
+* -- 879
+:= -- 1628
+add.period$ -- 52
+call.type$ -- 44
+change.case$ -- 44
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 424
-empty$ -- 885
-format.name$ -- 128
-if$ -- 2311
+cite$ -- 47
+duplicate$ -- 530
+empty$ -- 1070
+format.name$ -- 153
+if$ -- 2840
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 26
-newline$ -- 128
-num.names$ -- 30
-pop$ -- 150
+int.to.str$ -- 44
+missing$ -- 32
+newline$ -- 146
+num.names$ -- 36
+pop$ -- 164
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 332
+skip$ -- 423
 stack$ -- 0
-substring$ -- 548
-swap$ -- 178
+substring$ -- 733
+swap$ -- 234
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 78
-width$ -- 40
-write$ -- 346
+while$ -- 99
+width$ -- 46
+write$ -- 406
 (There were 3 warnings)

@@ -1,4 +1,5 @@
 \chapter{State of Art}
+%%%%%% SLEEP STAGES %%%%%%
 \section{Sleep Stages} \label{cap:sleepStages}
 \begin{comment}
 For this reason, it is nowadays 
@@ -72,8 +73,9 @@ REM sleep is known for the most vivid dreams, which is explained by the signific
 
 Both NREM and REM are important because they allow the brain and body to recuperate and develop. Sleepers who are frequently awoken during earlier stages, such as people with sleep apnea, may struggle to properly cycle into these deeper sleep stages. People with insomnia may not get enough total sleep to accumulate the needed time in each stage.
 
-\section{Respiratory System} \label{cap:respiratorySystem}
 
+%%%%%% RESPIRATORY SYSTEM %%%%%%
+\section{Respiratory System} \label{cap:respiratorySystem}
 
 Respiration is the physiological process\cite{FISHER1983223} of our body to exchange carbon dioxide (CO$_2$) with oxygen (O$_2$). This process has an external phase that consists of the exchange of gases with the environment and the transfer of gas across the blood-gas barrier, and an internal phase that begins with the loading of oxygen onto the haemoglobin molecule and is followed by the transportation, delivery, and transfer of O$_2$ to the tissue. CO$_2$ is delivered back to the lung and ventilated out to the environment with the reversed process.
 
@@ -82,12 +84,14 @@ In particular, during inhalation (Fig.\ref{fig:resp}.a ), when we have the loadi
 
 This movement can be automatic or can be controlled voluntarily and it is adjusted based on the activity performed at that moment like coughing, sneezing, yawning, or speaking if a person is eating it is coordinated to chew and swallow to avoid choking. It could also increase as a response to physical activity, like running or climbing stairs\cite{DelNegro2018BreathingMatters}.\\
 
+\vspace{0.6cm}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{img/j338_ps1n_201111.png}
     \caption{Respiratory sistem}
     \label{fig:resp}
 \end{figure}
+\vspace{0.7cm}
 
 
 The respiration and the tidal volume vary in response to metabolic demand or diseases such as infection. Patients with elevated respiratory rates, reflected by the magnitude of the metabolic demand, often have a more serious illness. 
@@ -96,8 +100,8 @@ The respiratory rate per minute (rpm) varies by age, focusing on healthy adults 
 
 Some studies found that a respiratory rate greater than 20 breaths per min was predictive of cardiopulmonary arrest within 72 hours and death within 30 days\cite{Hong2013HowPatients}; greater than 27 breaths per minute was predictive of cardiopulmonary arrest within 72 hours \cite{Fieselmann1993RespiratoryInpatients}; also a prospective observational study of acute medical admissions, patients with a composite outcome of cardiopulmonary arrest, intensive care admission, or death within 24 hours had a mean respiratory rate of 27\cite{Subbe2003EffectAdmissions}.
 
-
-\section{Polysomnography}
+%%%%%% POLYSOMNOGRAPHY %%%%%%
+\section{Polysomnography} \label{cap:POLYSOMNOGRAPHY}
 
 Polysomnography (PSG) is the state-of-art to monitor physiological data during sleep and is used to diagnose sleep disorders \cite{Penzel2016ModulationsPolysomnography, RUNDO2019381}, such as obstructive sleep apnea (OSA), sleep-related hypoventilation/hypoxia, nocturnal seizure, or periodic limb movement disorder. PSG require a complex monitor system because it consists of several instruments that the patient has to wear, visible in Fig \ref{fig:PSGComplete}.
 
@@ -121,53 +125,74 @@ After the test is completed a ``score" analyzes the data by 30-second ``epochs".
     \label{fig:PSGComplete}
 \end{figure}
 
-\subsection{Caridiorespiratory Polysomnography} \label{cap:cardiorespiratory}
-The state-of-the-art to monitor physiological data during sleep is polysomnography \cite{Penzel2016ModulationsPolysomnography}
-, which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, 
-complicated, expensive, invasive for the patient and only sometimes available in hospitals. 
+%%%%%% CARDIO RESPIRATORY %%%%%%
+\subsection{Cardiorespiratory Polysomnography} \label{cap:cardiorespiratory}
+The state-of-the-art to monitor physiological data during sleep is polysomnography (PSG) \cite{Penzel2016ModulationsPolysomnography}, described in Chapter (\ref{cap:POLYSOMNOGRAPHY}, which involves recording sleep stages, respiratory rate, heart and other parameters. However, this procedure is time-consuming, complicated, expensive, invasive for the patient and only sometimes available in hospitals. 
 %\textbf{[explenation of sleep stages]}.
-Focusing on one of the vital signs that characterise the different sleep stages is the respiratory rate 
-which slowly becomes more stable going from the awake to the REM phase; this characterisation of the different stages gives the possibility to 
-understand in which stage a person is based just on the respiratory signal. \\
+Focusing on sleep-related breathing disorders, like sleep apnoea/hypopnoea syndrome (SAS), there is the possibility to use cardiorespiratory polysomnography instead of full PSG. This type of PSG involves fewer instruments, as shown in Figure\ref{fig:PSGCardio}, and in particular, does not record neurophysiological variables avoiding using EEG electrodes that can cause high discomfort for the patient.  
+Even if this method compared to full PSG can collect less parameters, it is used to diagnose SAS \cite{Calleja1505} and Obstructive sleep apnea(OSA) and other breath-related disturbs or also to track the effectiveness of other treatments during sleep.
 
-\begin{figure}[H]
+Focusing on one of the vital signs that characterise the different sleep stages, respiratory rate (as discussed in Chapter \ref{cap:sleepStages}). It is described by becoming slowly and more stable going from the awake to the REM phase and increasing its rate going to the NREM phase.
+This fluctuation characterizes the different stages and gives the possibility to understand in which stage a person is based on the parameter extracted via cardiorespiratory PSG \cite{7318373}, such as respiratory inductance plethysmography and nasal pressure. In some studies, the sleep stages, are often classified using a combination of respiratory signals and heart rate \cite{1597499}, that cardiorespiratory PSG monitor.
+
+This instrument is increasingly used in a medical context, for the reasons mentioned above and because cardiorespiratory PSG devices are
+becoming smaller and more portable, such as NOX A1 described in Chapter\ref{cap:NOXA1}, with accuracy and user-friendliness that allow being used in a home environment.
+
+\vspace{0.5cm}
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{img/CardioPSG.jpg}
     \caption{CaridiorespiratoryPolysomnography}
     \label{fig:PSGCardio}
 \end{figure}
 
-\section{Pressure Sensor Mattress}
+%%%%%% PRESSURE SENSOR MATTRESS %%%%%%
+\section{Unobstrusive sensors} \label{cap:unobstrusiveSensors}
 
-As said before, the state-of-art is a cumbersome device that requires cables attached to the users' bodies and often interferes with natural sleep. To avoid it, in literature is possible to find new instruments like video cameras which lead to privacy concerns, radar technology that could have problems in case there are more than one person inside the room or smartwatches that are also able to track respiratory rate but involve to have something on the arm that still can lead to discomfort.
+As said before, the state-of-art is a cumbersome device that requires cables attached to the users' bodies and often interferes with natural sleep. To avoid it, in literature is possible to find new instruments such as video cameras, which lead to privacy concerns; radar technology, which could have problems in case there are more than one person inside the room; or smartwatches, which are also able to track respiratory rate but involve to have something on the arm that for some person can lead to discomfort.
+\newline
+The research field focused on discovering unobtrusive sensors to track vital signs proposed bed pressure sensors as a possible solution to these concerns. 
+The pressure sensors used today are different and with different kinds of sensors like piezo-electric, inductive and capacitive. As an instrument, in literature is possible to find: pneumatic sensor array \cite{Holtzman2010ValidationEnvironments}, as shown in Figure\ref{fig:sensorArray}, that can be placed between the mattress and the box spring; micro bend optic fiber sensors mattress \cite{Sadek2017NonintrusiveStudy}, shown in Figure\ref{fig:sadek}, that are small, lightweight and affordable and also immune to electromagnetic and radio frequency interference, that can be placed directly under body's person; air-mattress \cite{articleAir}, shown in Figure\ref{fig:airmat}, that measure changes in air pressure inside single air comportment of an inflatable mattress.
 
-\section{Unobstrusive approaches [DA FINIRE]}
-This section first explains the different sensor systems that can be used for classifying
-lying positions. Then three different sensors and their characteristics are compared and
-the most suitable model is selected.
-2.1 Sensors for Position Detection
-There are many different approaches to determining sleep position. It is of great interest
-that the measurement is non-intrusive. The gold standard for sleep monitoring is by
-using Polysomnography most often in combination with a camera setup. Polysomnography
-others the possibility to detect the angular position of the test person by means of acceleration sensors. However, this is an intrusive measurement method. Sensor systems
-with a non-intrusive measurement approach used in research to date are based on the
-following sensor principles:
-Optical: Using an infrared camera, high-contrast images can be generated even in darkness.
-As shown by [3], machine learning approaches are mostly used to classify the sleep
-position based on the camera images. However, the use of cameras in private areas such
-as the bed is often perceived as uncomfortable and thus the compliance of such systems
-may decrease.
-Radar: By using the doppler effect, the breathing rate of a person lying still can be determined. [15] has shown that the sleep position can also be detected using radar technology.
-However, such systems reach their limits when there is more than one person in
-the room.
-Force Sensors: Although force sensors are not contact-free, they are not noticed by the
-user due to their soft material properties and therefore also belong to the non-intrusive
-measurement methods. The resolution of such force sensors can vary greatly, ranging from
-a few pressure-sensing elements to over 1000 sensor elements distributed over an entire
-bed surface.
-In this work we only focus on classifying the user's lying position by using force sensors.
-3
-2
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/pressure_array.pdf}
+    \caption{Pressure Sensor Array}
+    \label{fig:sensorArray}
+    
+\end{figure}
+%\vspace*{0.5cm}
+\begin{figure}[h]
+   \centering
+    \includegraphics[width=0.6\textwidth]{img/sadek_fig.pdf}
+    \caption{Sensing Mat (optic fiber sensors)}
+    \label{fig:sadek}
+\end{figure}
+\begin{figure}[h]
+    \centering
+     \includegraphics[width=0.7\textwidth]{img/arimat.pdf}
+     \caption{Inflatable Mattress}
+     \label{fig:airmat}
+ \end{figure}
+
+
+%%%%%% TEXTILE SENSOR MATTRESS %%%%%%
+\subsection{Textile Pressure Mattress} \label{cap:textile}
+A particular type of pressure mattresses available nowadays are textile pressure sensor mattresses, based on piezoelectric, where each sensor appears as shown in Figure\ref{fig:sensomativeSensors}. This project involved two of this kind of mattresses: Sensomative\cite{sensomativeUrl} described in Chapter\ref{cap:SensomativePar} and SensingTex\cite{SensingConnectivity} described in Chapter\ref{cap:SensigTexPar}.
+
+These particular sensor mattresses appear like thin mattresses similar that can be easily installed with adjustable straps over a standard mattress. 
+Due to their small height, they are completely unobtrusive and and allow to monitor of both physiological and positional data without interfering with the patient's comfort.
+
+
+\begin{figure}[h]
+    \centering
+     \includegraphics[width=0.9\textwidth]{img/sensomative.pdf}
+     \caption{Sensomative textile sensors}
+     \label{fig:sensomativeSensors}
+ \end{figure}
+
+
 \begin{comment}
 
 %%

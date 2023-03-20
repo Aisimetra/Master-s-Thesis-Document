@@ -195,4 +195,37 @@ G.~Br{\"{u}}llmann, K.~Fritsch, R.~Thurnheer, and K.~E. Bloch, ``{Respiratory
   Position Sensor-Adjusted Calibration},'' {\em Respiration}, vol.~79,
   pp.~112--120, 12 2010.
 
+\bibitem{Calleja1505}
+J.~Calleja, S.~Esnaola, R.~Rubio, and J.~Dur{\'a}n, ``Comparison of a
+  cardiorespiratory device versus polysomnography for diagnosis of sleep
+  apnoea,'' {\em European Respiratory Journal}, vol.~20, no.~6, pp.~1505--1510,
+  2002.
+
+\bibitem{7318373}
+A.~Tataraidze, L.~Anishchenko, L.~Korostovtseva, B.~J. Kooij, M.~Bochkarev, and
+  Y.~Sviryaev, ``Sleep stage classification based on respiratory signal,'' in
+  {\em 2015 37th Annual International Conference of the IEEE Engineering in
+  Medicine and Biology Society (EMBC)}, pp.~358--361, 2015.
+
+\bibitem{1597499}
+S.~Redmond and C.~Heneghan, ``Cardiorespiratory-based sleep staging in subjects
+  with obstructive sleep apnea,'' {\em IEEE Transactions on Biomedical
+  Engineering}, vol.~53, no.~3, pp.~485--496, 2006.
+
+\bibitem{Holtzman2010ValidationEnvironments}
+M.~Holtzman, D.~Townsend, R.~Goubran, and F.~Knoefel, ``{Validation of pressure
+  sensors for physiological monitoring in home environments},'' {\em 2010 IEEE
+  International Workshop on Medical Measurements and Applications, MeMeA 2010 -
+  Proceedings}, pp.~38--42, 2010.
+
+\bibitem{Sadek2017NonintrusiveStudy}
+I.~Sadek, E.~Seet, J.~Biswas, B.~Abdulrazak, and M.~Mokhtari, ``{Nonintrusive
+  Vital Signs Monitoring for Sleep Apnea Patients: A Preliminary Study},'' {\em
+  IEEE Access}, vol.~6, pp.~2506--2514, 12 2017.
+
+\bibitem{articleAir}
+P.~Chow, G.~Nagendra, J.~Abisheganaden, and Y.~Wang, ``Respiratory monitoring
+  using an air-mattress system,'' {\em Physiological measurement}, vol.~21,
+  pp.~345--54, 09 2000.
+
 \end{thebibliography}
