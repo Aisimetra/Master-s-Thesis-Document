@@ -97,12 +97,13 @@ This part of the protocol aims to provide a known rhythm to the breath rate acco
 %%%%% INSTRUMENT %%%%%
 
 \section{Instruments}
-The project involved two textile sensor mattresses: Sensomative \ref{SensomativePar} and SensingTex \ref{SensigTexPar} and a rocking bed Somnomat Casa \ref{cap:Somnomat}
-The chosen instrument to collect the ground truth, cardiopulmonary polysomnography, is Nox A1, discuss in subsection \ref{NOXA1}.
+The project involved two textile sensor mattresses: Sensomative and SensingTex (described in Chapter \ref{cap:SensomativePar} - \ref{cap:SensigTexPar}) and a rocking bed Somnomat Casa described in Chapter \ref{cap:Somnomat}.
+
+The chosen instrument to collect the ground truth, cardiopulmonary polysomnography, is Nox A1, described in Chapter \ref{cap:NOXA1}.
 
 %%%%% SENSOMATIVE %%%%%
 
-\subsection{Sensomative}\label{SensomativePar}
+\subsection{Sensomative}\label{cap:SensomativePar}
 Sensomative (Rothenburg, Switzerland)\cite{sensomativeUrl} is a start-up company, founded in 2015 in Switzerland, which produces textile pressure-measuring mats. These are based on the same principle as resistive touchpads. The sensor mass
 consists of two layers of conductive textile which are separated from each other by a spacer grid. 
 
@@ -121,7 +122,7 @@ This mattress is commonly used to investigate position since is possible to have
 
 However, its dimension of 40 cm x 80 cm does not allow it to cover the entire mattress so it is crucial to find the correct position to detect the desirable data. In this project, the aim is to estimate the respiration rate so the position chosen is under the lungs, so from just above the shoulder to the middle of the abdomen.
 
-This is to be able to track the movement of the thorax during respiration. The movement is extracted and evaluated from the single sensor channel of the mattress, for the inhalation phase it has been seen an increase in pressure and during the exhalation phase a decrease. Following a pattern [DATA] similar to nasal pressure or RIP Flow, recorded by the cardiopulmonary polysomnography \ref{NOXA1}. 
+This is to be able to track the movement of the thorax during respiration. The movement is extracted and evaluated from the single sensor channel of the mattress, for the inhalation phase it has been seen an increase in pressure and during the exhalation phase a decrease. Following a pattern [DATA] similar to nasal pressure or RIP Flow, recorded by the cardiopulmonary polysomnography \ref{cap:NOXA1}. 
 
 The data for this mattress are a subsection of the entire data and come from a previous data collection of one of the supervisors of this thesis, Manul Fujis \cite{ManuelZurich}, who kindly make them available to inspect further the possibility to estimate respiratory and hearth rate from this mattress and also to have the data to do a preliminary study of the general feasibility to extract this physiological data. 
 
@@ -136,9 +137,9 @@ The data for this mattress are a subsection of the entire data and come from a p
 \vspace*{0.5cm}
 
 %%%%% SENSINGTEX %%%%%
-\subsection{SensingTex} \label{SensigTexPar}
+\subsection{SensingTex} \label{cap:SensigTexPar}
 The instrument on which this thesis is focalised then is SensigTex \cite{SensingConnectivity}, visible in Fig \ref{fig:sensingtex} this is a commercially available textile pressure sensor mattress. 
-The Mattress Mat Dev Kit is capable to cover the entire area of a bed measuring 192cm x 94cm, with 48 x 22 sensor elements and a sampling rate of 10Hz. This means that is five times slower than Sensomative (Chapter \ref{SensomativePar}), but that is already installed in a hospital ward of the \textit{University of Bern} for the study research on movement disorders during sleep in patients with Parkinson's disease. The ability to estimate breath could be helpful for that study and then this project focused on this possibility.
+The Mattress Mat Dev Kit is capable to cover the entire area of a bed measuring 192cm x 94cm, with 48 x 22 sensor elements and a sampling rate of 10Hz. This means that is five times slower than Sensomative (Chapter \ref{cap:SensomativePar}), but that is already installed in a hospital ward of the \textit{University of Bern} for the study research on movement disorders during sleep in patients with Parkinson's disease. The ability to estimate breath could be helpful for that study and then this project focused on this possibility.
 
 This mattress is already implemented in the context of position classification, because as shown in Figure \ref{fig:sensingtexData}, is possible to retrieve the position of the person on it. The raw data has is own scale between in range 0-256 (minimum-maximum). 
 
@@ -164,7 +165,7 @@ Looking closer into signals of singles channels is possible to see a pattern tha
 %\vspace*{0.5cm}
 
 %%%%% NOXA1 %%%%%
-\subsection{Nox A1, polysomnography} \label{NOXA1}
+\subsection{Nox A1, polysomnography} \label{cap:NOXA1}
 As explained in Chapter \ref{cap:cardiorespiratory} the cardiopulmonary polysomnography is an accepted method to monitor physiological data during sleep.
 
 Since in the data collection conducted during the thesis, further explained in Chaper \ref{cap:dataCollection}, it has been necessary to have a gold standard to track respiratory rate and validate estimated respiratory rate from the pipeline, described in Chapter\ref*{cap:pipeline}.
@@ -211,17 +212,20 @@ The possibility to estimate the respiratory rate of a person while the rocking b
 
 During the thesis' project has been conducted a data collection because the data from Sensingtex where not has been collected yet.
 However, the availability of a rocking bed give to this data collection a second objective.
+The primary objective has been to collect data from SensingTex to understand the feasibility of extracting breath rate from the mat; 
+the second goal is to understand if the movement of the rocking bed could influence the signal.
 
-The primary objective has been to collect data from SensingTex to understand the feasibility of extracting breath rate from the mat; the second goal is to understand if the movement of the rocking bed could influence the signal.\newline
+The participant involved was 6, half male and half female, between 20-30 years old, who were asked to lie on a standard mattress covered with the sensor mattresses in a specific position, for the first part of the data collection (described in Chapter \ref{cap:NormalBed}), and on a rocking bed while it is moving, for the second part of the data collection (described in Chapter \ref{cap:RockingBed}).
+Each participant wore a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical), described in Chapter \ref{cap:NOXA1}. The total length of the data collection for each participant it is 32 minutes long.
 
-The participant involved was 6, half male and half female, between 20-30 years old, who were asked to lie on a standard mattress covered with the sensor mattresses in a specific position. 
-After the 4 minutes, they were asked to turn around in another position following a specific pattern: supine, left side, prone, right side.
-Each participant wore a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical) that was
-monitoring respiratory inductance plethysmography (RIP) which is a method of evaluating pulmonary ventilation by measuring the movement of the chest and abdominal wall, nasal pressure, pulse and heart rate with ECG. 
-The study was divided into two phases:
 %%%%% NORMAL BED %%%%%
 \subsection{Normal Bed}\label{cap:NormalBed}
-The setting for the first phase involves the pressure mat over a standard bed. During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. We asked the participant to perform a set of five jumps before lying down, so they performed a total of 20 jumps.
+The first part of the data collection aims to undestand the feasibility of extracting breath rate from the mat, so the setting involves the pressure mat over a standard bed.  
+
+During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. Since this study is performed in a laboratory condition to recreiate this it has been asked to the participant to perform a set of five jumps before lying down, so it is expected to find in the data this varaibility that is firstly checked with the data coming from the ground truth.
+
+The participant perform the jumps and tha lying down on mattress in a specific position for 4 minutes.
+After that they were asked to stand up, performe other 4 jumps and lydown again. This is done for each of the position of the pattern: supine, left side, prone, right side. The total number of performed jumps are 20 and the toal time for this part is around 18 minutes (compreise of the jumps time).
 %%%%% ROCKING BED %%%%%
 \subsection{Rocking Bed}\label{cap:RockingBed}
 The setting for the second phase, since in this part we want to collect the data while the Somnomat is moving, we fixed the period for the movement of the bed at 4 seconds (15 periods in a minute) with an acceleration of 0.25 $m/s^2$. Also, for this phase, they have been asked to turn around following the specific pattern: supine, left side, prone, right side.
