@@ -1933,11 +1933,11 @@ INPUT ./img/PLACE HOLDER.pdf
 INPUT ./img/PLACE HOLDER.pdf
 INPUT img/PLACE HOLDER.pdf
 INPUT ./img/PLACE HOLDER.pdf
-INPUT ./img/full.pdf
-INPUT ./img/full.pdf
-INPUT img/full.pdf
-INPUT ./img/full.pdf
-INPUT ./img/full.pdf
+INPUT ./img/full_new.pdf
+INPUT ./img/full_new.pdf
+INPUT img/full_new.pdf
+INPUT ./img/full_new.pdf
+INPUT ./img/full_new.pdf
 INPUT ./Chapter/Data Analysis.tex
 INPUT Chapter/Data Analysis.tex
 INPUT ./Chapter/Data Analysis.tex
@@ -1967,31 +1967,31 @@ INPUT ./img/pipeline.pdf
 INPUT img/pipeline.pdf
 INPUT ./img/pipeline.pdf
 INPUT ./img/pipeline.pdf
-INPUT ./img/stationaryTotal.jpg
-INPUT ./img/stationaryTotal.jpg
-INPUT img/stationaryTotal.jpg
-INPUT ./img/stationaryTotal.jpg
-INPUT ./img/stationaryTotal.jpg
-INPUT ./img/spakePartial.jpg
-INPUT ./img/spakePartial.jpg
-INPUT img/spakePartial.jpg
-INPUT ./img/spakePartial.jpg
-INPUT ./img/spakePartial.jpg
-INPUT ./img/noisy.jpg
-INPUT ./img/noisy.jpg
-INPUT img/noisy.jpg
-INPUT ./img/noisy.jpg
-INPUT ./img/noisy.jpg
-INPUT ./img/spike_total.jpg
-INPUT ./img/spike_total.jpg
-INPUT img/spike_total.jpg
-INPUT ./img/spike_total.jpg
-INPUT ./img/spike_total.jpg
-INPUT ./img/goodSpikes.png
-INPUT ./img/goodSpikes.png
-INPUT img/goodSpikes.png
-INPUT ./img/goodSpikes.png
-INPUT ./img/goodSpikes.png
+INPUT ./img/stationary.pdf
+INPUT ./img/stationary.pdf
+INPUT img/stationary.pdf
+INPUT ./img/stationary.pdf
+INPUT ./img/stationary.pdf
+INPUT ./img/spakePartial.pdf
+INPUT ./img/spakePartial.pdf
+INPUT img/spakePartial.pdf
+INPUT ./img/spakePartial.pdf
+INPUT ./img/spakePartial.pdf
+INPUT ./img/noisy.pdf
+INPUT ./img/noisy.pdf
+INPUT img/noisy.pdf
+INPUT ./img/noisy.pdf
+INPUT ./img/noisy.pdf
+INPUT ./img/spike_total.pdf
+INPUT ./img/spike_total.pdf
+INPUT img/spike_total.pdf
+INPUT ./img/spike_total.pdf
+INPUT ./img/spike_total.pdf
+INPUT ./img/goodSpikes.pdf
+INPUT ./img/goodSpikes.pdf
+INPUT img/goodSpikes.pdf
+INPUT ./img/goodSpikes.pdf
+INPUT ./img/goodSpikes.pdf
 INPUT ./img/gooddb.jpeg
 INPUT ./img/gooddb.jpeg
 INPUT img/gooddb.jpeg
@@ -2007,11 +2007,11 @@ INPUT ./img/lev2.png
 INPUT img/lev2.png
 INPUT ./img/lev2.png
 INPUT ./img/lev2.png
-INPUT ./img/404.jpg
-INPUT ./img/404.jpg
-INPUT img/404.jpg
-INPUT ./img/404.jpg
-INPUT ./img/404.jpg
+INPUT ./img/579.pdf
+INPUT ./img/579.pdf
+INPUT img/579.pdf
+INPUT ./img/579.pdf
+INPUT ./img/579.pdf
 INPUT ./img/404_wave.jpg
 INPUT ./img/404_wave.jpg
 INPUT img/404_wave.jpg

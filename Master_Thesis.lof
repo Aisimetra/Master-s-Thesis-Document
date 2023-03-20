@@ -13,31 +13,31 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Sensomative over a bed\relax }}{20}{figure.caption.12}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Sensomative data\relax }}{21}{figure.caption.13}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces SensigTex over a bed\relax }}{22}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces SensigTex Data\relax }}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces SensigTex Data \relax }}{23}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Nox A1™ PSG System device of NoxMedical\relax }}{24}{figure.caption.16}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Somnomat\relax }}{25}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Place holder normal bed\relax }}{27}{figure.caption.18}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Place holder rocking bed\relax }}{27}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Full recording\relax }}{28}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Full recording of a participant - 42 minutes long\relax }}{28}{figure.caption.20}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Breath pattern\relax }}{30}{figure.caption.21}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces MODWTMRA reconstruction\relax }}{30}{figure.caption.22}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces 4 minute\relax }}{31}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 1 minute\relax }}{31}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Pipeline\relax }}{32}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Stationary Signal\relax }}{34}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Spike Signal\relax }}{34}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Noisy Signal\relax }}{35}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Stationary Signal\relax }}{35}{figure.caption.31}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Good signal\relax }}{36}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Daubechies wavelet with two vanishing moments\relax }}{38}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Raw Data of Channel 404\relax }}{38}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Stationary Signal\relax }}{39}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Channel 404 Filtered - with Wavelet\relax }}{40}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Savitzky-Golay filter\relax }}{42}{figure.caption.38}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Channel 404 Filtered - with Savitz-Golay filter\relax }}{43}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Euclidean\relax }}{44}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Length\relax }}{45}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Heatmap of channels with the highest confidence\relax }}{46}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 1 minute\relax }}{32}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Pipeline\relax }}{33}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Raw Data - Channel 500 - Stationary on a Value\relax }}{34}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Raw Data - Channel 100 - Partial Stationary Signal\relax }}{34}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Raw Data - Channel 121 - Small amplitude\relax }}{35}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Raw Data - Channel 322 - Massive presence of Spike\relax }}{35}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Raw Data - Channel 404 - Small presence of spikes\relax }}{36}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Daubechies wavelet with two vanishing moments\relax }}{38}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Raw Data - Channel 579 - Massive presence of Spike\relax }}{38}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Stationary Signal\relax }}{39}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Channel 404 Filtered - with Wavelet\relax }}{40}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Savitzky-Golay filter\relax }}{42}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Channel 404 Filtered - with Savitz-Golay filter\relax }}{43}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Euclidean\relax }}{44}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Length\relax }}{45}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Heatmap of channels with the highest confidence\relax }}{46}{figure.caption.47}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

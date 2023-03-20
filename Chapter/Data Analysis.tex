@@ -46,12 +46,18 @@ Many of these channels present a signal that is stationary on a value; others pr
 
 Since the designed pipeline aims to replicate a semi-realtime analysis, it takes in input a sliding window of 60 seconds that is moving, for each position, through the 4-minute recording obtained after the cleaning of the data (Chapter \ref{cap:dataProcessing}). Figure \ref{fig:recordingCut4} shows a 4-minute recording with a highlighted window of 60 seconds, which can be consulted in more detail in figure \ref{fig:recordingCut1}.
 
+\vspace{0.5cm}
+
 \begin{figure}[h]
     \centering    
-    \includegraphics[width=1.1\textwidth]{img/4minute.pdf}
+    \includegraphics[width=\textwidth]{img/4minute.pdf}
     \caption{4 minute}
     \label{fig:recordingCut4}
-    \includegraphics[width=1.1\textwidth]{img/1minute.pdf}
+\end{figure}
+\vspace{0.7cm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/1minute.pdf}
     \caption{1 minute}
     \label{fig:recordingCut1}
 \end{figure}
@@ -74,40 +80,9 @@ If one of these criteria is not passed the signal is not further analysed, but i
 For this reason, it has been implemented a version of the pipeline where the criteria are binary, they can be passed or not (1 passed, 0 not passed), and a version where some criteria give as an answer the percentage of the channel that could contain valuable information (hereafter also referred to as "weighted method"). For each criterion, the following section will explain the different outputs of the metrics, in the case of binary or weighted approach.
 In both cases, the final confidence is the mean of percentages of each criterion.
 
-\begin{comment}
-In Table \ref{tab:metrics} are summurized the criteria explained int Chapter\ref{cap:excCrit}.
-
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-     & Binary & Weighted \\
-     \hline
-
-     Stationary signals on a value &   &  \\
-    \hline
-    \end{tabular}
-    \caption{Excluding Criteria}
-    \label{tab:excluding}
-\end{table}
-
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-     & Binary & Weighted \\
-     \hline
-
-     Stationary signals on a value &   &  \\
-    \hline
-    \end{tabular}
-    \caption{Criteria to asset the percentage}
-    \label{tab:metrics}
-\end{table}
-\end{comment}
 
 \subsection{Excluding criteria}\label{cap:excCrit}
-The first step of this pipeline excludes those signals for the entire window length that is stationary on value, with small amplitude, or present only interference from the mattress. So channels do not have meaningful information, in case this behaviour is present in a part of the signal the output for the metric is different based on the binary or weighted approach. Only artefacts are an excluding only criterion.
+The first step of this pipeline excludes those signals for the entire window length that is stationary on value, with small amplitude, or present only interference from the mattress. So channels do not have meaningful information, in case this behaviour is present in a part of the signal the output for the metric is different based on the binary or weighted approach. Artefacts are the only excluding criteria.
 
 \subsubsection*{Stationary signals on a value}\label{cap:stationary}
 A stationary signal on a value is defined as a signal that remains on the same value for the entire length of the window.
@@ -118,15 +93,15 @@ Nevertheless, If the channel presents only a part of the signal stationary on a 
 \vspace*{0.5cm}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/stationaryTotal.jpg}
-    \caption{Stationary Signal}
+    \includegraphics[width=\textwidth]{img/stationary.pdf}
+    \caption{Raw Data - Channel 500 -  Stationary on a Value}
     \label{fig:stationaryTotal}
 \end{figure}
-
+\vspace*{0.5cm}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/spakePartial.jpg}
-    \caption{Spike Signal}
+    \includegraphics[width=\textwidth]{img/spakePartial.pdf}
+    \caption{Raw Data - Channel 100 - Partial Stationary Signal}
     \label{fig:spikePartial}
 \end{figure}
 
@@ -140,8 +115,8 @@ As in the previous case, due to the moving window nature of the pipeline after t
 %\vspace*{1.0cm}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/noisy.jpg}
-    \caption{Noisy Signal}
+    \includegraphics[width=\textwidth]{img/noisy.pdf}
+    \caption{Raw Data - Channel 121 - Small amplitude}
     \label{fig:noisy}
 \end{figure}
 
@@ -153,15 +128,15 @@ Since these artefacts are visible also in channels that present a good respirato
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/spike_total.jpg}
-    \caption{Stationary Signal}
+    \includegraphics[width=\textwidth]{img/spike_total.pdf}
+    \caption{Raw Data - Channel 322 - Massive presence of Spike}
     \label{fig:spikeTotal}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/goodSpikes.png}
-    \caption{Good signal}
+    \includegraphics[width=\textwidth]{img/goodSpikes.pdf}
+    \caption{Raw Data - Channel 404 - Small presence of spikes}
     \label{fig:goodSignal}
 \end{figure}
 
@@ -224,8 +199,8 @@ The signal is decomposed in 13 levels, as shown in Figure \ref{fig:level1}, and 
 The resulting wave is given as input to a peak finder to point out the moment between inhaling and exhaling, visible as a peak in the wave and counted as a breath. Since the window is 60 seconds long, these peaks are interpreted as rpm. The resulting plot is shown in Figure \ref{fig:404Filt}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/404.jpg}
-    \caption{Raw Data of Channel 404}
+    \includegraphics[width=\textwidth]{img/579.pdf}
+    \caption{Raw Data - Channel 579 - Massive presence of Spike}
     \label{fig:404}
 \end{figure}
 

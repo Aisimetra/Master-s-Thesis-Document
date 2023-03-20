@@ -20,18 +20,18 @@
 \contentsline {chapter}{\numberline {4}Data Analysis}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Preliminary Study on Sensomative Mattress}{29}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Pipeline}{31}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Weighted and binary method}{33}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Excluding criteria}{33}{subsection.4.2.2}%
-\contentsline {subsubsection}{Spikes Signals}{35}{section*.30}%
+\contentsline {subsection}{\numberline {4.2.1}Weighted and binary method}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Excluding criteria}{32}{subsection.4.2.2}%
+\contentsline {subsubsection}{Spikes Signals}{35}{section*.31}%
 \contentsline {subsection}{\numberline {4.2.3}Denoised Signals}{36}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Multiresolution Overlap Discrete Wavelet Transform}{36}{subsection.4.2.4}%
-\contentsline {subsubsection}{Application in the Pipeline}{37}{section*.35}%
+\contentsline {subsubsection}{Application in the Pipeline}{37}{section*.36}%
 \contentsline {subsection}{\numberline {4.2.5}Savitz-Golay filter}{40}{subsection.4.2.5}%
-\contentsline {subsubsection}{Application in the Pipeline}{43}{section*.39}%
+\contentsline {subsubsection}{Application in the Pipeline}{43}{section*.40}%
 \contentsline {subsection}{\numberline {4.2.6}Subsequent analyses of the filtered signal}{43}{subsection.4.2.6}%
-\contentsline {subsubsection}{Respiratory Rate over a Threshold}{43}{section*.41}%
-\contentsline {subsubsection}{Distance peaks valley}{44}{section*.42}%
-\contentsline {subsubsection}{Lenght of breath}{44}{section*.44}%
+\contentsline {subsubsection}{Respiratory Rate over a Threshold}{43}{section*.42}%
+\contentsline {subsubsection}{Distance peaks valley}{44}{section*.43}%
+\contentsline {subsubsection}{Lenght of breath}{44}{section*.45}%
 \contentsline {subsection}{\numberline {4.2.7}Compute the Respiratory Rate}{45}{subsection.4.2.7}%
 \contentsline {subsection}{\numberline {4.2.8}Result of the Pipeline (visual)}{45}{subsection.4.2.8}%
 \contentsline {chapter}{\numberline {5}Result}{47}{chapter.5}%
@@ -39,7 +39,7 @@
 \contentsline {subsection}{\numberline {5.1.1}Mean absolute error (MAE)}{47}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Mean absolute percentage error (MAPE)}{47}{subsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.1.3}Root Mean Square Error (RMSE) }{47}{subsection.5.1.3}%
-\contentsline {subsubsection}{Back position with still mattress}{49}{section*.47}%
+\contentsline {subsubsection}{Back position with still mattress}{49}{section*.48}%
 \contentsline {section}{\numberline {5.2}Back position with moving mattress}{50}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Result for Wavelet }{50}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Result for Savitz-Golay filter }{50}{section.5.4}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2023.1.12)  20 MAR 2023 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2023.1.12)  20 MAR 2023 23:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1346,6 +1346,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--199
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
+
+ []
+
 [1
 
 
@@ -1363,13 +1368,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--199
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.249 \end{titlepage}
+l.251 \end{titlepage}
                       [1
 
 
 
 ]
-Package marginnote Info: Using workaround for absolute page number on input line 249.
+Package marginnote Info: Using workaround for absolute page number on input line 251.
  (./Master_Thesis.toc
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/12'
 (microtype)             (new value: 12.0pt) on input line 4.
@@ -1554,24 +1559,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--257
  []
 
 [27 <./img/PLACE HOLDER.pdf>]
-<img/full.pdf, id=566, 1029.8475pt x 161.60374pt>
-File: img/full.pdf Graphic file (type pdf)
-<use img/full.pdf>
-Package pdftex.def Info: img/full.pdf  used on input line 264.
-(pdftex.def)             Requested size: 460.08159pt x 72.19577pt.
-
-Overfull \hbox (41.82791pt too wide) in paragraph at lines 264--265
- [][] 
- []
-
-) (./Chapter/Data Analysis.tex [28 <./img/full.pdf>]
+<img/full_new.pdf, id=566, 990.70125pt x 236.885pt>
+File: img/full_new.pdf Graphic file (type pdf)
+<use img/full_new.pdf>
+Package pdftex.def Info: img/full_new.pdf  used on input line 264.
+(pdftex.def)             Requested size: 418.25368pt x 100.00789pt.
+) (./Chapter/Data Analysis.tex [28 <./img/full_new.pdf>]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<img/breath_presentation.jpg, id=586, 2402.9775pt x 869.2475pt>
+<img/breath_presentation.jpg, id=582, 2402.9775pt x 869.2475pt>
 File: img/breath_presentation.jpg Graphic file (type jpg)
 <use img/breath_presentation.jpg>
 Package pdftex.def Info: img/breath_presentation.jpg  used on input line 19.
@@ -1579,7 +1579,7 @@ Package pdftex.def Info: img/breath_presentation.jpg  used on input line 19.
 [29
 
 ]
-<img/sensomative_manu.png, id=594, 1467.4825pt x 673.51625pt>
+<img/sensomative_manu.png, id=590, 1467.4825pt x 673.51625pt>
 File: img/sensomative_manu.png Graphic file (type png)
 <use img/sensomative_manu.png>
 Package pdftex.def Info: img/sensomative_manu.png  used on input line 32.
@@ -1590,136 +1590,129 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
  []
 
 [30 <./img/breath_presentation.jpg> <./img/sensomative_manu.png>]
-<img/4minute.pdf, id=604, 1041.8925pt x 165.61874pt>
+<img/4minute.pdf, id=600, 863.225pt x 204.765pt>
 File: img/4minute.pdf Graphic file (type pdf)
 <use img/4minute.pdf>
-Package pdftex.def Info: img/4minute.pdf  used on input line 51.
-(pdftex.def)             Requested size: 460.08159pt x 73.13528pt.
-
-Overfull \hbox (41.82791pt too wide) in paragraph at lines 51--52
- [][] 
- []
-
-<img/1minute.pdf, id=605, 1046.91125pt x 168.63pt>
+Package pdftex.def Info: img/4minute.pdf  used on input line 53.
+(pdftex.def)             Requested size: 418.25368pt x 99.21404pt.
+<img/1minute.pdf, id=601, 865.2325pt x 204.765pt>
 File: img/1minute.pdf Graphic file (type pdf)
 <use img/1minute.pdf>
-Package pdftex.def Info: img/1minute.pdf  used on input line 54.
-(pdftex.def)             Requested size: 460.08159pt x 74.10478pt.
+Package pdftex.def Info: img/1minute.pdf  used on input line 60.
+(pdftex.def)             Requested size: 418.25368pt x 98.98282pt.
 
-Overfull \hbox (41.82791pt too wide) in paragraph at lines 54--55
- [][] 
- []
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 pdfTeX warning: pdflatex (file ./img/pipeline.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<img/pipeline.pdf, id=607, 597.50786pt x 845.04686pt>
+<img/pipeline.pdf, id=603, 597.50786pt x 845.04686pt>
 File: img/pipeline.pdf Graphic file (type pdf)
 <use img/pipeline.pdf>
-Package pdftex.def Info: img/pipeline.pdf  used on input line 63.
+Package pdftex.def Info: img/pipeline.pdf  used on input line 69.
 (pdftex.def)             Requested size: 376.42575pt x 532.36945pt.
-[31 <./img/4minute.pdf> <./img/1minute.pdf>] [32 <./img/pipeline.pdf>]
-<img/stationaryTotal.jpg, id=644, 1762.585pt x 419.5675pt>
-File: img/stationaryTotal.jpg Graphic file (type jpg)
-<use img/stationaryTotal.jpg>
-Package pdftex.def Info: img/stationaryTotal.jpg  used on input line 121.
-(pdftex.def)             Requested size: 418.25368pt x 99.55869pt.
- [33]
-<img/spakePartial.jpg, id=651, 1754.555pt x 419.5675pt>
-File: img/spakePartial.jpg Graphic file (type jpg)
-<use img/spakePartial.jpg>
-Package pdftex.def Info: img/spakePartial.jpg  used on input line 128.
-(pdftex.def)             Requested size: 418.25368pt x 100.01323pt.
+[31 <./img/4minute.pdf>] [32 <./img/1minute.pdf>] [33 <./img/pipeline.pdf>]
+<img/stationary.pdf, id=637, 877.2775pt x 211.79124pt>
+File: img/stationary.pdf Graphic file (type pdf)
+<use img/stationary.pdf>
+Package pdftex.def Info: img/stationary.pdf  used on input line 96.
+(pdftex.def)             Requested size: 418.25368pt x 100.97676pt.
+<img/spakePartial.pdf, id=638, 893.3375pt x 209.78375pt>
+File: img/spakePartial.pdf Graphic file (type pdf)
+<use img/spakePartial.pdf>
+Package pdftex.def Info: img/spakePartial.pdf  used on input line 103.
+(pdftex.def)             Requested size: 418.25368pt x 98.22064pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
-
- []
-
-[34 <./img/stationaryTotal.jpg> <./img/spakePartial.jpg>]
-<img/noisy.jpg, id=661, 1762.585pt x 419.5675pt>
-File: img/noisy.jpg Graphic file (type jpg)
-<use img/noisy.jpg>
-Package pdftex.def Info: img/noisy.jpg  used on input line 143.
-(pdftex.def)             Requested size: 418.25368pt x 99.55869pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 110--113
 
  []
 
-<img/spike_total.jpg, id=664, 1563.8425pt x 371.3875pt>
-File: img/spike_total.jpg Graphic file (type jpg)
-<use img/spike_total.jpg>
-Package pdftex.def Info: img/spike_total.jpg  used on input line 156.
-(pdftex.def)             Requested size: 418.25368pt x 99.32957pt.
-<img/goodSpikes.png, id=665, 776.793pt x 186.588pt>
-File: img/goodSpikes.png Graphic file (type png)
-<use img/goodSpikes.png>
-Package pdftex.def Info: img/goodSpikes.png  used on input line 163.
-(pdftex.def)             Requested size: 418.25368pt x 100.46559pt.
-[35 <./img/noisy.jpg> <./img/spike_total.jpg>] [36 <./img/goodSpikes.png>]
-Overfull \hbox (17.73653pt too wide) in paragraph at lines 189--190
+[34 <./img/stationary.pdf> <./img/spakePartial.pdf>]
+<img/noisy.pdf, id=658, 1096.095pt x 262.9825pt>
+File: img/noisy.pdf Graphic file (type pdf)
+<use img/noisy.pdf>
+Package pdftex.def Info: img/noisy.pdf  used on input line 118.
+(pdftex.def)             Requested size: 418.25368pt x 100.3517pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
+
+ []
+
+<img/spike_total.pdf, id=661, 900.36375pt x 213.79875pt>
+File: img/spike_total.pdf Graphic file (type pdf)
+<use img/spike_total.pdf>
+Package pdftex.def Info: img/spike_total.pdf  used on input line 131.
+(pdftex.def)             Requested size: 418.25368pt x 99.3175pt.
+<img/goodSpikes.pdf, id=662, 1023.825pt x 244.915pt>
+File: img/goodSpikes.pdf Graphic file (type pdf)
+<use img/goodSpikes.pdf>
+Package pdftex.def Info: img/goodSpikes.pdf  used on input line 138.
+(pdftex.def)             Requested size: 418.25368pt x 100.05328pt.
+[35 <./img/noisy.pdf> <./img/spike_total.pdf>] [36 <./img/goodSpikes.pdf>]
+Overfull \hbox (17.73653pt too wide) in paragraph at lines 164--165
 []\OT1/cmr/m/n/12 (-20) and $\OML/cmm/m/it/12 J[]$ \OT1/cmr/m/n/12 (-20) is the num-ber of lev-els of wavelet de-com-po-si-tion cal-cu-lated as $\OML/cmm/m/it/12 floor\OMX/MnSymbolE/m/n/12 à\OML/cmm/m/it/12 log[]\OMX/MnSymbolE/m/n/12 à\OML/cmm/m/it/12 N\OMX/MnSymbolE/m/n/12 çç$\OT1/cmr/m/n/12 (-20) . 
  []
 
-<img/gooddb.jpeg, id=682, 562.1pt x 421.575pt>
+<img/gooddb.jpeg, id=690, 562.1pt x 421.575pt>
 File: img/gooddb.jpeg Graphic file (type jpg)
 <use img/gooddb.jpeg>
-Package pdftex.def Info: img/gooddb.jpeg  used on input line 203.
+Package pdftex.def Info: img/gooddb.jpeg  used on input line 178.
 (pdftex.def)             Requested size: 250.95476pt x 188.2146pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/lev1.png, id=685, 865.2325pt x 548.0475pt>
+<img/lev1.png, id=693, 865.2325pt x 548.0475pt>
 File: img/lev1.png Graphic file (type png)
 <use img/lev1.png>
-Package pdftex.def Info: img/lev1.png  used on input line 213.
+Package pdftex.def Info: img/lev1.png  used on input line 188.
 (pdftex.def)             Requested size: 418.25368pt x 264.92465pt.
-<img/lev2.png, id=686, 865.2325pt x 542.025pt>
+<img/lev2.png, id=694, 865.2325pt x 542.025pt>
 File: img/lev2.png Graphic file (type png)
 <use img/lev2.png>
-Package pdftex.def Info: img/lev2.png  used on input line 214.
+Package pdftex.def Info: img/lev2.png  used on input line 189.
 (pdftex.def)             Requested size: 418.25368pt x 262.01338pt.
-<img/404.jpg, id=691, 1881.0275pt x 443.6575pt>
-File: img/404.jpg Graphic file (type jpg)
-<use img/404.jpg>
-Package pdftex.def Info: img/404.jpg  used on input line 227.
-(pdftex.def)             Requested size: 418.25368pt x 98.64748pt.
+<img/579.pdf, id=699, 1350.04375pt x 321.2pt>
+File: img/579.pdf Graphic file (type pdf)
+<use img/579.pdf>
+Package pdftex.def Info: img/579.pdf  used on input line 202.
+(pdftex.def)             Requested size: 418.25368pt x 99.50725pt.
 [37]
-<img/404_wave.jpg, id=707, 1415.2875pt x 439.6425pt>
+<img/404_wave.jpg, id=715, 1415.2875pt x 439.6425pt>
 File: img/404_wave.jpg Graphic file (type jpg)
 <use img/404_wave.jpg>
-Package pdftex.def Info: img/404_wave.jpg  used on input line 234.
+Package pdftex.def Info: img/404_wave.jpg  used on input line 209.
 (pdftex.def)             Requested size: 418.25368pt x 129.9215pt.
- [38 <./img/gooddb.jpeg> <./img/404.jpg>] [39 <./img/lev1.png> <./img/lev2.png>] [40 <./img/404_wave.jpg>]
-<img/sg_expl.png, id=724, 612.2875pt x 581.17125pt>
+ [38 <./img/gooddb.jpeg> <./img/579.pdf>] [39 <./img/lev1.png> <./img/lev2.png>] [40 <./img/404_wave.jpg>]
+<img/sg_expl.png, id=736, 612.2875pt x 581.17125pt>
 File: img/sg_expl.png Graphic file (type png)
 <use img/sg_expl.png>
-Package pdftex.def Info: img/sg_expl.png  used on input line 287.
+Package pdftex.def Info: img/sg_expl.png  used on input line 262.
 (pdftex.def)             Requested size: 418.25368pt x 397.00027pt.
  [41] [42 <./img/sg_expl.png>]
-<img/404sg.jpg, id=740, 1341.01pt x 415.5525pt>
+<img/404sg.jpg, id=752, 1341.01pt x 415.5525pt>
 File: img/404sg.jpg Graphic file (type jpg)
 <use img/404sg.jpg>
-Package pdftex.def Info: img/404sg.jpg  used on input line 306.
+Package pdftex.def Info: img/404sg.jpg  used on input line 281.
 (pdftex.def)             Requested size: 418.25368pt x 129.6062pt.
  [43
 
  <./img/404sg.jpg>]
-<img/euclidian.png, id=751, 843.15pt x 258.858pt>
+<img/euclidian.png, id=763, 843.15pt x 258.858pt>
 File: img/euclidian.png Graphic file (type png)
 <use img/euclidian.png>
-Package pdftex.def Info: img/euclidian.png  used on input line 332.
+Package pdftex.def Info: img/euclidian.png  used on input line 307.
 (pdftex.def)             Requested size: 418.25368pt x 128.4096pt.
-<img/x_axis.png, id=753, 843.15pt x 258.858pt>
+<img/x_axis.png, id=765, 843.15pt x 258.858pt>
 File: img/x_axis.png Graphic file (type png)
 <use img/x_axis.png>
-Package pdftex.def Info: img/x_axis.png  used on input line 344.
+Package pdftex.def Info: img/x_axis.png  used on input line 319.
 (pdftex.def)             Requested size: 418.25368pt x 128.4096pt.
  [44 <./img/euclidian.png>] [45 <./img/x_axis.png>]
-<img/total.png, id=769, 229.8186pt x 423.5022pt>
+<img/total.png, id=782, 229.8186pt x 423.5022pt>
 File: img/total.png Graphic file (type png)
 <use img/total.png>
-Package pdftex.def Info: img/total.png  used on input line 367.
+Package pdftex.def Info: img/total.png  used on input line 342.
 (pdftex.def)             Requested size: 271.86234pt x 500.98836pt.
 ) (./Chapter/Result.tex [46 <./img/total.png>]
 Chapter 5.
@@ -1794,28 +1787,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--166
 
 [59])
 
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 280.
-
-
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 282.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 284.
 
 [60] (./Master_Thesis.aux)
 Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6270CB2A7826EF9ACB81C0AF9A7EC9B9;7218.
  ) 
 Here is how much of TeX's memory you used:
- 50726 strings out of 478268
- 1103803 string characters out of 5835366
- 1529864 words of memory out of 5000000
+ 50727 strings out of 478268
+ 1103957 string characters out of 5835366
+ 1530093 words of memory out of 5000000
  67596 multiletter control sequences out of 15000+600000
  491509 words of font info for 175 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,103p,1134b,822s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Master_Thesis.pdf (62 pages, 9810984 bytes).
+Output written on Master_Thesis.pdf (62 pages, 9418138 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
- 828 compressed objects within 9 object streams
- 200 named destinations out of 1000 (max. 500000)
+ 1039 PDF objects out of 1200 (max. 8388607)
+ 835 compressed objects within 9 object streams
+ 201 named destinations out of 1000 (max. 500000)
  44149 words of extra memory for PDF output out of 51595 (max. 10000000)
 
