@@ -34,10 +34,10 @@
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Raw Data - Channel 579 - Massive presence of Spike\relax }}{38}{figure.caption.37}%
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Stationary Signal\relax }}{39}{figure.caption.35}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Channel 404 Filtered - with Wavelet\relax }}{40}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Channel 404 Filtered - with Savitz-Golay filter\relax }}{41}{figure.caption.41}%
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Savitzky-Golay filter\relax }}{42}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Channel 404 Filtered - with Savitz-Golay filter\relax }}{43}{figure.caption.41}%
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Euclidean\relax }}{44}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Length\relax }}{45}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Length\relax }}{44}{figure.caption.46}%
 \contentsline {figure}{\numberline {4.19}{\ignorespaces Heatmap of channels with the highest confidence\relax }}{46}{figure.caption.47}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

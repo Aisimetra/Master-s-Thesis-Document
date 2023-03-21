@@ -44,6 +44,7 @@ The designed pipeline aims to replicate a semi-realtime analysis using the data 
 The SensingTex has a total number of sensors of 1056, and consequently, the same number of signals from the mattress; this leads to the necessity of an algorithm to discriminate the ones from whom it is possible to extract valuable information about the respiratory rate of the person on the mattress. A person's body can not cover the entire mattress and activate all sensors (hereafter referred to as “Channels”) simultaneously.
 Many of these channels present a signal that is stationary on a value; others present just interference from the mattress. From just a few sensors, it is possible to retrieve a respiratory pattern and extract the respiratory rate per minute (rpm). Therefore becomes necessary to design a metric that underlines these channels. The meaning of this metric must be interpreted as confidence expressed as the goodness of the signal in percentual.
 
+
 Since the designed pipeline aims to replicate a semi-realtime analysis, it takes in input a sliding window of 60 seconds that is moving, for each position, through the 4-minute recording obtained after the cleaning of the data (Chapter \ref{cap:dataProcessing}). Figure \ref{fig:recordingCut4} shows a 4-minute recording with a highlighted window of 60 seconds, which can be consulted in more detail in figure \ref{fig:recordingCut1}.
 
 \vspace{0.5cm}
@@ -185,7 +186,8 @@ The decomposition of the signal of channel 404 (Figure \ref{fig:404}), is shown 
 
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\textwidth]{img/lev1.png}
+   % \includegraphics[width=\textwidth]{img/lev1.png}
+   \includegraphics[width=\textwidth]{img/level1_new.pdf}
     \includegraphics[width=\textwidth]{img/lev2.png}
     \caption{Stationary Signal}
     \label{fig:level1}
@@ -195,7 +197,7 @@ The decomposition of the signal of channel 404 (Figure \ref{fig:404}), is shown 
 \subsubsection{Application in the Pipeline}
 To show the application of the MOWDTMRA in the pipeline, the signal in Figure \ref{fig:404}, which has not been excluded by the criteria explained in Chapter \ref{cap:excCrit} is taken as an example.
 
-The signal is decomposed in 13 levels, as shown in Figure \ref{fig:level1}, and choose the levels that are added together to reconstruct the signal of breath rate, in the context of this project the $9^{th}$ and $10^{th}$ level. The levels are chosen to recreate a wave that best fits the original wave of the signal but excludes the noise.
+The signal is decomposed into 13 levels, as shown in Figure \ref{fig:level1}, and choose the levels that are added together to reconstruct the signal of breath rate, in the context of this project the $9^{th}$ and $10^{th}$ level. The levels are chosen to recreate a wave that best fits the original wave of the signal but excludes the noise.
 The resulting wave is given as input to a peak finder to point out the moment between inhaling and exhaling, visible as a peak in the wave and counted as a breath. Since the window is 60 seconds long, these peaks are interpreted as rpm. The resulting plot is shown in Figure \ref{fig:404Filt}.
 \begin{figure}[H]
     \centering
@@ -263,7 +265,6 @@ An example of how the Savitzky–Golay filter works is shown in Figure \ref{fig:
     \caption{Savitzky-Golay filter}
     \label{fig:4sg explain}
 \end{figure}
-\clearpage
 
 
 
@@ -297,9 +298,10 @@ Since this project is a preliminary analysis of the feasibility to use pressure 
 So %exclude 
 the channels with a signal with more than 30 rpm, to admit a part of the error in our reconstruction and arrive at the limit given by literature between healthy and problematic and lead to a 0\% percentage of confidence.
 
+%%%%% peaks balley %%%%%
 \subsubsection{Distance peaks valley} \label{cap:Euclidian}
 The signal is then given as input to an algorithm that points out the valley of the filtered signal and not only the peaks.
-The distance between valley and peaks is calculated with Euclidean distance, if the value between the signal's valley and peaks should differ inside the interval of ±20$\%$ from the preceding breath the signal is considered to be meaningful and lead to a 100\% percentage of confidence.
+The distance between the valley and peaks is calculated with Euclidean distance, if the value between the signal's valley and peaks should differ inside the interval of ±20$\%$ from the preceding breath the signal is considered to be meaningful and lead to a 100\% percentage of confidence.
 \vspace*{0.5cm}
 
 \begin{figure}[H]
@@ -308,10 +310,10 @@ The distance between valley and peaks is calculated with Euclidean distance, if 
     \caption{Euclidean}
     \label{fig:Euclidean}
 \end{figure}
-\vspace*{0.3cm}
 
+%%%%% length breath %%%%%
 \subsubsection{Lenght of breath} \label{cap:BrethLength}
-The valley calculated in Chapter \ref{cap:BrethLength} are taken into account to calculate the distance between peaks and valleys on the time axis, to check the length of inspiration and expiratory phase. The difference should not vary between ±20 \% from the previous breath. If the signal is in this range the channel is considered meaningful and leads to a 100\% percentage of confidence.\\
+The valleys calculated in Chapter \ref{cap:BrethLength} are taken into account to calculate the distance between peaks and valleys on the time axis, to check the length of inspiration and expiratory phase. The difference should not vary between ±20 \% from the previous breath. If the signal is in this range the channel is considered meaningful and leads to a 100\% percentage of confidence.\\
 \vspace*{0.5cm}
 
 \begin{figure}[H]
@@ -322,22 +324,28 @@ The valley calculated in Chapter \ref{cap:BrethLength} are taken into account to
 \end{figure}
 \vspace*{0.3cm}
 
-\subsection{Compute the Respiratory Rate}
+%%%%% compute respiratory rate %%%%%
+\subsection{Compute the Respiratory Rate} \label{cap:computeRespiratory}
 
-At the end of the pipeline, for each method: binary or weighted; for each approach: MODWTMRA and Savitzky–Golay filter, it has been saved the result of each of them. In case it is been decided to perform the approach and methods, there are a total of four combinations:
+At the end of the pipeline, for each method: binary or weighted; for each approach: MODWTMRA and Savitzky–Golay filter, it has been saved the result of each of them. In case it is been decided to perform all the possible approaches and methods, there are a total of four combinations:
 \begin{itemize}
-    \item MODWTMRA filter with a binary approach
-    \item MODWTMRA filter with MODWTMRA approach
-    \item Savitzky–Golay filter with a binary approach
-    \item Savitzky–Golay filter with MODWTMRA approach   
+    \item MODWTMRA with binary approach
+    \item MODWTMRA with weighted approach
+    \item Savitzky–Golay filter with binary approach
+    \item Savitzky–Golay filter with weighted approach   
 \end{itemize}
 
-In the end, to calculate the rpm, the channels with the highest accuracy, which can be chosened at the beginning of the pipeline, are taken into account, and the rpm is computed as the average of the number of peaks of the signals.
+In the end, to calculate the rpm, the channels with the highest confidence, which can be chosen at the beginning of the pipeline, are taken into account, and the rpm is computed as the average of the number of peaks (hereafter referred to as "pks") of those signals.
 
-\subsection{Result of the Pipeline (visual)}
+As an example, if the chosen threshold for confidence is 80\% and 5 channels are over it with the following value: 13pks, 14pks, 12pks, 13pks, 14pks; the result rpm is the average, so 13.2rpm.
+
+The rpm value is computed for each position of both conditions (normal bed and rocking bed).
+
+%%%%% result visually %%%%%
+\subsection{Result of the Pipeline (visual)} \label{cap:resultVisual}
 As a result, the pipeline is also available a heatmap that allows visualizing where the channels with the highest percentage of confidence, understand where are in respect of the body. Figure \ref{fig:heat}, is an example of the resulting heatmap, where the channels with the highest value are red and with lower are green up to blue when the channels have the 0\% of representing a respiratory pattern.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.65\textwidth]{img/total.png}
     \caption{Heatmap of channels with the highest confidence}
