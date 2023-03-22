@@ -122,9 +122,9 @@ This mattress is commonly used to investigate position since is possible to have
 
 However, its dimension of 40 cm x 80 cm does not allow it to cover the entire mattress so it is crucial to find the correct position to detect the desirable data. In this project, the aim is to estimate the respiration rate so the position chosen is under the lungs, so from just above the shoulder to the middle of the abdomen.
 
-This is to be able to track the movement of the thorax during respiration. The movement is extracted and evaluated from the single sensor channel of the mattress, for the inhalation phase it has been seen an increase in pressure and during the exhalation phase a decrease. Following a pattern [DATA] similar to nasal pressure or RIP Flow, recorded by the cardiopulmonary polysomnography \ref{cap:NOXA1}. 
+This is to be able to track the movement of the thorax during respiration. The movement is extracted and evaluated from the single sensor channel of the mattress, for the inhalation phase it has been seen an increase in pressure and during the exhalation phase a decrease. Following a pattern, as shown in Figure \ref{fig:breathPresent}, similar to nasal pressure or respiratory inductance plethysmography, recorded by the cardiopulmonary polysomnography, described in section \ref{cap:NOXA1}. 
 
-The data for this mattress are a subsection of the entire data and come from a previous data collection of one of the supervisors of this thesis, Manul Fujis \cite{ManuelZurich}, who kindly make them available to inspect further the possibility to estimate respiratory rate from this mattress and also to have the data to do a preliminary study of the general feasibility to extract this physiological data. 
+The data for this mattress are a subsection of the entire data and come from a previous data collection of one of the supervisors of this thesis, Manuel Fujis \cite{ManuelZurich}, who kindly make them available to inspect further the possibility to estimate respiratory rate from this mattress and also to have the data to do a preliminary study of the general feasibility to extract this physiological data. 
 
 
 
@@ -143,7 +143,7 @@ The Mattress Mat Dev Kit is capable to cover the entire area of a bed measuring 
 
 This mattress is already implemented in the context of position classification because as shown in Figure \ref{fig:sensingtexData}, is possible to retrieve the position of the person on it. The raw data has a scale in the range of 0-256 (minimum-maximum). 
 
-Looking closer into signals of singles channels is possible to see a pattern that resembles a breathing rhythm,  similar to the data that can
+Looking closer into signals of single channels is possible to see a pattern that resembles a breathing rhythm,  similar to the data that can
  be retrieved from the nasal pressure exerted on the cannula of cardiorespiratory polysomnography, as shown in Figure \ref{fig:404}.
 
 
@@ -215,7 +215,7 @@ However, the availability of a rocking bed gives this data collection a second o
 The primary objective has been to collect data from SensingTex to understand the feasibility of extracting breath rate from the mat; 
 the second goal is to understand if the movement of the rocking bed could influence the signal.
 
-The participant involved was 6, half male and half female, between 20-30 years old, who were asked to lie on a standard mattress covered with the sensor mattresses in a specific position, for the first part of the data collection (described in Chapter \ref{cap:NormalBed}), and on a rocking bed while it is moving, for the second part of the data collection (described in Chapter \ref{cap:RockingBed}).
+The participant involved were 6, half male and half female, between 20-30 years old, who were asked to lie on a standard mattress covered with the sensor mattresses in a specific position, for the first part of the data collection (described in Chapter \ref{cap:NormalBed}), and on a rocking bed while it is moving, for the second part of the data collection (described in Chapter \ref{cap:RockingBed}).
 Each participant wore a cardiorespiratory wireless and portable polysomnography device (Nox A1 PSG of Nox Medical), described in Chapter \ref{cap:NOXA1}. The total length of the data collection for each participant is 36 minutes long divided into 4 minutes in each of the 4 positions with normal bed and with Somnomat.
 
 %%%%% NORMAL BED %%%%%
@@ -225,7 +225,7 @@ The first part of the data collection aims to understand the feasibility of extr
 During the night and through the different sleep stages, the breath rate increase or decreases, so we decide to insert a similar variability in our data. Since this study is performed in a laboratory condition to recreate this it has been asked to the participant to perform a set of five jumps before lying down, so it is expected to find in the data this variability that is firstly checked with the data coming from the ground truth.
 
 The participant performs the jumps and then lies down on a mattress in a specific position for 4 minutes.
-After that, they were asked to stand up, perform the other 4 jumps and go down again. This is done for each of the positions of the pattern: supine left side, prone, and right side. The total number of jumps performed is 20 and the Toal time for this part is about 18 minutes (including getting in and out of bed and jump time).
+After that, they were asked to stand up, perform the other 4 jumps and go down again. This is done for each of the positions of the pattern: supine, left side, prone, and right side. The total number of jumps performed is 20 and the Toal time for this part is about 18 minutes (including getting in and out of bed and jump time).
 
 \begin{figure}[H]
     \centering
