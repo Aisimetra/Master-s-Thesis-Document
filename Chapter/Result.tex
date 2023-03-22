@@ -2,48 +2,47 @@
 
 \chapter{Result}
 
-At the end of the pipeline, has been computed a respiratory rate per minute (rpm), for each position of both conditions (normal bed and rocking bed). This number is obtained as the average of the number of peaks of the channels with the highest confidence that outstrip the value of confidence set as a minimum, at the beginning of the pipeline, to accept the channels, as discussed in Chapter \ref{cap:computeRespiratory}. 
-
-The following section \ref{cap:metrics} presented the metric used to asset the error between the estimated rpm resulting from the pipeline and the one given by the ground truth. These metrics are commonly employed to determine the difference between medical instruments    \cite{Hunt2015IdentificationExercise,HoogAntink2020BallistocardiographyIntervention, Sadek2020AStudy}.
+At the end of the pipeline, has been computed a respiratory rate per minute (rpm), for each position of both conditions (normal bed and rocking bed). This number is obtained as the average of the number of peaks of the channels with the highest confidence that outstrip the value of confidence set as a minimum, at the beginning of the pipeline, to accept the channels (in this case has been 80\%), as discussed in Chapter \ref{cap:computeRespiratory}. 
+The following section \ref{cap:metrics} presented the metric used to asset the error between the estimated rpm resulting from the pipeline and the one given by the ground truth. These metrics are commonly employed to determine the difference between medical instruments \cite{Hunt2015IdentificationExercise,HoogAntink2020BallistocardiographyIntervention, Sadek2020AStudy}.
 To assert better how the pipeline works, it also shows visually the raw data of the channel with the highest confidence, his reconstruction or filtering and nasal pressure at that moment.
 
 The results are divided into the different combinations of approaches and methods applied to the different positions and conditions.
 The result for the following combination can be found in the section:
 \begin{itemize}
-  \item section \ref*{cap:ResultMODWTRAB}: Multiresolution Overlap Discrete Wavelet Transform \\ (MODWTMRA) with binary approach.
-  \item section \ref*{cap:ResultMODWTRAW}: MMultiresolution Overlap Discrete Wavelet Transform \\ (MODWTMRA) with weighted approach
-  \item section \ref*{cap:ResultSGB}: Savitzky–Golay filter with binary approach
-  \item section \ref*{cap:ResultSGW}: Savitzky–Golay filter with weighted approach   
+  \item   Multiresolution Overlap Discrete Wavelet Transform  (MODWTMRA) with binary approach.
+  \item  Multiresolution Overlap Discrete Wavelet Transform  (MODWTMRA) with weighted approach
+  \item Savitzky–Golay filter with binary approach
+  \item  Savitzky–Golay filter with weighted approach   
 \end{itemize}
 
 
 
 \section{Evaluation Metrics} \label{cap:metrics}
 To evaluate the result of the pipeline has been chosen metrics that are on the same scale as the target prediction. This decision has been done to preserve the scale and has an estimation of the difference based on the number of breaths per minute, in our result from the actual value.
-The chosen evaluation metrics are: Mean absolute error (MAE), discussed in section \ref{cap:mae} and Mean absolute percentage error (MAPE), discussed in section \ref{cap:mape} %and Root Mean Square Error (RMSE), discussed in section \ref{cap:rmse}.
+The chosen evaluation metrics are: Mean absolute error (MAE), discussed in section \ref{cap:mae} and Mean absolute percentage error (MAPE), discussed in section \ref{cap:mape}. These metrics are usually presented combined with the Bland–Altman plot, further discussed in section \ref{cap:plottino}.
 
 
 \subsection{Mean absolute error} \label{cap:mae}
 Mean Absolute Error (MAE) is the average absolute error between actual and predicted values.  It is a measure of model accuracy given on the same scale as the prediction target, it can be seen as the average error that the model's prediction has in comparison with their corresponding actual targets.
 
-\vspace{0.5cm}
+\vspace{0.45cm}
 
 $$MAE = \frac{1}{n} \sum_{i=1}^{n}|y_i-x_i|$$
 
-\vspace{0.5cm}
+\vspace{0.45cm}
 
 where $y_i$ is the prediction (pipeline's result), $x_i$ the true value (ground truth respiration rate) and $n$ sample size.
 
 \subsection {Mean absolute percentage error} \label{cap:mape}
 Mean Absolute Percentage Error (MAPE) is the mean of all absolute percentage errors between the predicted and actual values.
 MAPE is the average percentage difference between predictions and their intended targets in the database.
-\vspace{0.5cm}
+\vspace{0.45cm}
 
 $$MAPE = \frac{100}{n} \sum_{i=1}^{n}\bigg | \frac{y_i-x_i}{x_i}\bigg |$$ 
 
-\vspace{0.5cm}
+\vspace{0.4cm}
 
-where $y_i$ is the prediction (pipeline's result), $x_i$ the true value (ground truth respiration rate) and $n$ sample size.
+where $y_i$ is the prediction (pipeline's result), $x_i$ the true value (ground truth respiration rate) and $n$ sample size. 
 
  %\subsection{Root Mean Square Error (RMSE) }\label{cap:rmse}
  %Root Mean Squared Error (RMSE) is the square root of the mean squared error between the predicted and actual values.
@@ -53,27 +52,228 @@ where $y_i$ is the prediction (pipeline's result), $x_i$ the true value (ground 
 %\begin{itemize}  \item SGf = Savitzky–Golay filter \item resp rate = data extracted from Noxtural   \item toolbox = toolbox for analyzing respiratory recordings %\cite{Noto2018AutomatedToolbox} \end{itemize}
 
 
+%%%%%% Bland–Altman %%%%%%
+\subsection{Bland–Altman Plot} \label{cap:plottino}
+The Bland-Altman plot is highly employed in medical statistics to visualize the difference in measurements between two different instruments or two different measurement techniques. An example is shown in Figure \ref{fig:exxampleBland}.
+
+\vspace{1cm}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{img/balnd1.pdf}
+  \caption{Example of Bland Altman Plot}
+  \label{fig:exxampleBland}
+\end{figure}
+\vspace{1cm}
+
+The \textit{x-axis} of the plot displays the average measurement of the two instruments and the \textit{y-axis} displays the difference in measurements between the two instruments. In the plot are present also three lines, the central black represents the average difference in measurements between the two instruments also known as ``bias'' between the two measurements, as far from zero as large the average difference is large. The red dotted lines are the limits of the agreement, defined as the mean difference $\pm 1.96$ standard deviation of the difference. 
+
+
 
 
 \clearpage
 \section{Result for MODWTMRA} \label{cap:ResultMODWTRA}
+
+
 This section of the result is divided into normal bed, section \ref{cap:ResultNormalBed1}, and rocking bed \ref{cap:ResultRockingBed1}. Inside both sections are presented the result for each position for the binary and weighted approach.
-\subsection{Result Normal Bed}   \label{cap:ResultNormalBed1}
+
+%%%%%% NORMAL BED %%%%%%
+\section{Normal Bed}
+
+The participant in this phase has to perform a series of jumps before lying on the mattress due to recreating the increase or decrease of the breath rate between the different sleep stages. This phase aims to understand the feasibility of extracting breath rate from the mat. For this phase, the mattress is placed on a standard bed.
+
+
+%%%%%% NORMAL BED - SUPINE %%%%%%
+
+\subsubsection{Result Normal Bed in Supine Position}   \label{cap:ResultNormalBed1}
+
+The estimated respiratory rate per minute (rpm) while the participants are supine with the mattress placed on a normal bed is further presented. Given the use of a moving window to simulate a real-time pipeline, the estimated rpm for each window is shown. 
+The total number of windows is 18 since the window is 60 seconds long and the entire recording for the position is 4 minutes long. Table \ref{tab:SupineNormalStill} presented the estimated rpm using binary and weighted approach compared with the rpm given by the ground truth. The approaches retrieve an almost identical rpm, this result may be due to the choice of the minimum confidence value at 80\% that allows keeping only the best signal, maybe with higher confidence can be seen a higher difference between the two approaches. 
+
+\vspace{0.5cm}
 \input{Chapter/metrics/MOWDT_back_still.tex}
 
+Table \ref{tab:SupineNormalStillMetrics} present the average rpm for both approaches  
+and the relative mean absolute error (MAE) and mean absolute percentage error (MAPE). As just discussed in the previous paragraph there is no substantial difference between the two different approaches. The data on which to focus more is the number of breaths that the algorithm misses, represented by MAE and expressed in percentage by MAPE. The average number is 2rpm, which means that if we consider the estimated average of 14.5rpm the error is almost 20\%, quite high for an approach that must be used in the medical field.
 
+%\vspace{0.5cm}
+\input{Chapter/metrics/SupineMetrics.tex}
+
+Figure \ref{fig:baln1} show the Bland–Altman plot, presented in section \ref{cap:plottino}, of the estimated rpm from the pipeline compared to the value of the ground truth. It helps to visualize the data from Table \ref{tab:SupineNormalStillMetrics} in respect of the error. Since the result for the approaches are similar the data presented with this plot refers to the weighted approach only.
+
+Figure \ref{fig:rec} shows the denoised signal using MODWTMRA with the highest accuracy (92\%) for the supine position with a normal mattress.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{img/balnd1.pdf}
+
+  \caption{Bland Altman Plot of estimated rpm from the pipeline compared to the value of the ground truth - Normal bed and supine position}
+  \label{fig:baln1}
+  \vspace{1.5cm}
+  \includegraphics[width=\textwidth]{img/404.jpg}
+  \includegraphics[width=\textwidth]{img/404_wave.jpg}
+\caption{Raw data and denoised signal using MODWTMRA of the channel with the highest percentage of confidence (92\%) - Normal bed and supine position}
+  \label{fig:rec}
+\end{figure}
+
+
+%%%%%% NORMAL BED - LEFT %%%%%%
+\subsubsection{Result Normal Bed in Left Side Position}   \label{cap:ResultNormalBed2}
+
+The estimated respiratory rate per minute (rpm) while the participants are on the left side with the mattress placed on a normal bed is further presented. Given the use of a moving window to simulate a real-time pipeline, the estimated rpm for each window is shown. 
+The total number of windows is 18 since the window is 60 seconds long and the entire recording for the position is 4 minutes long. Table \ref{tab:LeftNormalStill} presented the estimated rpm using binary and weighted approach compared with the rpm given by the ground truth. The approaches retrieve an almost identical rpm, this result may be due to the choice of the minimum confidence value at 80\% that allows keeping only the best signal, maybe with higher confidence can be seen a higher difference between the two approaches. 
+
+\vspace{1.3cm}
+%\input{Chapter/metrics/result_left_still.tex}
+\input{Chapter/metrics/MOWDT_left_still.tex}
+
+\vspace{0.5cm}
+
+Table \ref{tab:LeftNormalStillMetrics} present the average rpm for both approaches  
+and the relative mean absolute error (MAE) and mean absolute percentage error (MAPE). As just discussed in the previous paragraph there is no substantial difference between the two different approaches. The data on which to focus more is the number of breaths that the algorithm misses, represented by MAE and expressed in percentage by MAPE. The average number is 2.5rpm, which means that if we consider the estimated average of 15.3rpm the error is over 24\%, worst than in the supine position, probably due to the smaller contact area between the body and the mattress.
+
+\vspace{1cm}
+\input{Chapter/metrics/LeftStillMetrics.tex}
+\vspace{0.5cm}
+
+Figure \ref{fig:baln2} show the Bland–Altman plot, presented in section \ref{cap:plottino}, of the estimated rpm from the pipeline compared to the value of the ground truth. It helps to visualize the data from Table \ref{tab:LeftNormalStillMetrics} in respect of the error. Since the result for the approaches is similar the data presented with this plot refers to the weighted approach only.
+
+Figure \ref{fig:rec} shows the denoised signal using MODWTMRA with the highest accuracy (92\%) for the supine position with a normal mattress.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{img/balnd2.png}
+
+  \caption{Bland Altman Plot of estimated rpm from the pipeline compared to the value of the ground truth - Normal bed and left side}
+  \label{fig:baln2}
+  \vspace{1.5cm}
+  \includegraphics[width=\textwidth]{img/404.jpg}
+  \includegraphics[width=\textwidth]{img/404_wave.jpg}
+\caption{Raw data and denoised signal using MODWTMRA of the channel with the highest percentage of confidence (92\%) - Normal bed and supine position}
+  \label{fig:rec}
+\end{figure}
+
+
+\clearpage
+%%%%%% NORMAL BED - PRONE %%%%%%
+\subsubsection{Result Normal Bed in Prone Side Position}   \label{cap:ResultNormalBed3}
+
+The estimated respiratory rate per minute (rpm) while the participants are on the left side with the mattress placed on a normal bed is further presented. Given the use of a moving window to simulate a real-time pipeline, the estimated rpm for each window is shown. 
+The total number of windows is 18 since the window is 60 seconds long and the entire recording for the position is 4 minutes long. Table \ref{tab:ProneNormalStill} presented the estimated rpm using binary and weighted approach compared with the rpm given by the ground truth. The approaches retrieve an almost identical rpm, this result may be due to the choice of the minimum confidence value at 80\% that allows keeping only the best signal, maybe with higher confidence can be seen a higher difference between the two approaches. 
+
+\vspace{1.3cm}
+%\input{Chapter/metrics/result_left_still.tex}
+\input{Chapter/metrics/MOWDT_prone.tex}
+
+\vspace{0.5cm}
+
+Table \ref{tab:ProneNormalStillMetrics} present the average rpm for both approaches  
+and the relative mean absolute error (MAE) and mean absolute percentage error (MAPE). As just discussed in the previous paragraph there is no substantial difference between the two different approaches. The data on which to focus more is the number of breaths that the algorithm misses, represented by MAE and expressed in percentage by MAPE. The average number is 2.8rpm, which means that if we consider the estimated average of 15rpm the error is over 36\%, worst worse than the two previous results it may depend on the movement of the chest in the prone position changes.
+
+in the supine position, probably due to the smaller contact area between the body and the mattress.
+
+\vspace{1.3cm}
+\input{Chapter/metrics/ProneStillMetrics.tex}
+\vspace{0.5cm}
+
+Figure \ref{fig:baln2} show the Bland–Altman plot, presented in section \ref{cap:plottino}, of the estimated rpm from the pipeline compared to the value of the ground truth. It helps to visualize the data from Table \ref{tab:ProneNormalStillMetrics} in respect of the error. Since the result for the approaches is similar the data presented with this plot refers to the weighted approach only.
+
+Figure \ref{fig:rec} shows the denoised signal using MODWTMRA with the highest accuracy (92\%) for the supine position with a normal mattress.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{img/balnd3.png}
+
+  \caption{Bland Altman Plot of estimated rpm from the pipeline compared to the value of the ground truth - Normal bed and prone position}
+  \label{fig:baln2}
+  \vspace{1.5cm}
+  \includegraphics[width=\textwidth]{img/404.jpg}
+  \includegraphics[width=\textwidth]{img/404_wave.jpg}
+\caption{Raw data and denoised signal using MODWTMRA of the channel with the highest percentage of confidence (92\%) - Normal bed and supine position}
+  \label{fig:rec}
+\end{figure}
+
+\clearpage
+%%%%%% NORMAL BED - RIGHT %%%%%%
+\subsubsection{Result Normal Bed in Right Side Position}   \label{cap:ResultNormalBed4}
+
+The estimated respiratory rate per minute (rpm) while the participants are on the left side with the mattress placed on a normal bed is further presented. Given the use of a moving window to simulate a real-time pipeline, the estimated rpm for each window is shown. 
+The total number of windows is 18 since the window is 60 seconds long and the entire recording for the position is 4 minutes long. Table \ref{tab:LeftNormalStill} presented the estimated rpm using binary and weighted approach compared with the rpm given by the ground truth. The approaches retrieve an almost identical rpm, this result may be due to the choice of the minimum confidence value at 80\% that allows keeping only the best signal, maybe with higher confidence can be seen a higher difference between the two approaches. 
+
+\vspace{1cm}
+%\input{Chapter/metrics/result_left_still.tex}
+\input{Chapter/metrics/MOWDT_left_still.tex}
+
+\vspace{0.5cm}
+
+Table \ref{tab:LeftNormalStillMetrics} present the average rpm for both approaches  
+and the relative mean absolute error (MAE) and mean absolute percentage error (MAPE). As just discussed in the previous paragraph there is no substantial difference between the two different approaches. The data on which to focus more is the number of breaths that the algorithm misses, represented by MAE and expressed in percentage by MAPE. The average number is 2.5rpm, which means that if we consider the estimated average of 15.3rpm the error is over 24\%, worst than in the supine position, probably due to the smaller contact area between the body and the mattress.
+
+\vspace{1cm}
+\input{Chapter/metrics/LeftStillMetrics.tex}
+\vspace{0.5cm}
+
+Figure \ref{fig:baln2} show the Bland–Altman plot, presented in section \ref{cap:plottino}, of the estimated rpm from the pipeline compared to the value of the ground truth. It helps to visualize the data from Table \ref{tab:LeftNormalStillMetrics} in respect of the error. Since the result for the approaches is similar the data presented with this plot refers to the weighted approach only.
+
+Figure \ref{fig:rec} shows the denoised signal using MODWTMRA with the highest accuracy (92\%) for the supine position with a normal mattress.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{img/balnd2.png}
+
+  \caption{Bland Altman Plot of estimated rpm from the pipeline compared to the value of the ground truth - Normal bed and left side}
+  \label{fig:baln2}
+  \vspace{1.5cm}
+  \includegraphics[width=\textwidth]{img/404.jpg}
+  \includegraphics[width=\textwidth]{img/404_wave.jpg}
+\caption{Raw data and denoised signal using MODWTMRA of the channel with the highest percentage of confidence (92\%) - Normal bed and supine position}
+  \label{fig:rec}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\clearpage
+\section{Result for Savitzky–Golay filter} \label{cap:ResultSG}
 \subsubsection*{Position 1 corporation Weighted e binary}
 \subsection{Result Rocking Bed}   \label{cap:ResultRockingBed1}
 
+
+\section{Final Remarks on the Results}
+
+This chapter presented the results of the pipeline. Since it has several parameters that can be chosen and they influence the outcome, they are commented on.
+
+%\subsection{Evaluation of the approaches}
+The pipeline allows choosing which approach to use to denoise the signal, in order to be able to give it as input to a peak finder. The different approaches are Multiresolution Overlap Discrete Wavelet Transform (described in Chapter \ref{Wavelet}) and Savitzky–Golay filter (described in Chapter \ref{sg}).
+Both approaches are used in the context of the estimation of respiratory rate \cite{Sadek2017NonintrusiveStudy, Chen2008UnconstrainedSleep}, for this reason, it has been very important to have the possibility to compare them to understand which one could perform better in the context of this thesis.
+
+The result presented in the previous section highlighted how the Savitzky–Golay filter has a lower error in respect of the wavelet approach. In fact, focusing on the MAPE it is 10\% lower in most of the positions and in both settings. The average error is 1 breath in respect of MODWTMRA which arrive up to 4 in the case of a prone position with a rocking bed.
+
+
+%\subsection{Evaluation of the settings}
+
+One of the aims of the data collection conducted during this study, described in Chapter \ref{cap:dataCollection}, has been to understand if the movement of the rocking bed could influence the signal from the mattress.
+Even if the bed is designed to have an inaudible rocking mechanism, it is reasonable to expect that the movement could influence the data acquisition. The raw data visually present more noise, but the denoise approaches are able to exclude it and estimate the respiratory rate.
+This can be seen in the reconstruction of the data, as shown in figure [PLACEHOLDER], and also in the result of the metrics that have a slight increase of the error but not higher as expected.
+From the respiratory rate point of view, the influence on the error is mostly given by the chosen approach rather than the bed set. 
+
+The position of the participant on the bed also seems to be decisive, in the prone position the error increases particularly and in the supine has the minimum error. It may depend on the movement of the chest that in the prone position changes.\\
+
+
+\begin{comment}
 
 %\input{Chapter/metrics/result_back_still.tex}
 \input{Chapter/metrics/result_back_still_metrics.tex}
 
 
-\section{Back position with moving mattress}
+\subsubsection{Back position with moving mattress}
 \input{Chapter/metrics/result_back_mov.tex}
 \input{Chapter/metrics/result_back_mov_metrics.tex}
-\section{Left position with still mattress}
+\subsubsection{Left position with still mattress}
 \input{Chapter/metrics/result_left_still.tex}
 \input{Chapter/metrics/result_left_still_metrics.tex}
 
@@ -96,10 +296,4 @@ This section of the result is divided into normal bed, section \ref{cap:ResultNo
 %\section{Right position with moving mattress}
 \input{Chapter/metrics/result_right_mov.tex}
 \input{Chapter/metrics/result_right_mov_metrics.tex}
-
-
-\section{Comparison between the two approaches  (wavelet and SG filter)}
-\section{Discussion performance on normal vs rocking bed }
-
-
-%\missingfigure{sample text yolo}
+\end{comment}
